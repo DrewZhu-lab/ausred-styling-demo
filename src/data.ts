@@ -2,10 +2,10 @@ const img = (id: string, w = 1600) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
 
 export const heroSlides = [
-  { img: img('1600585154340-be6161a56a0c', 2000), alt: 'Styled open-plan living room' },
-  { img: img('1600607687939-ce8a6c25118c', 2000), alt: 'Contemporary staged interior' },
-  { img: img('1618221195710-dd6b41faaea6', 2000), alt: 'Neutral-toned styled living space' },
-  { img: img('1600566753086-00f18fb6b3ea', 2000), alt: 'Modern styled family home' },
+  { img: img('1600585154340-be6161a56a0c', 2000), alt: 'Styled open-plan living room', caption: 'Mosman Residence' },
+  { img: img('1600607687939-ce8a6c25118c', 2000), alt: 'Contemporary staged interior', caption: 'Double Bay Apartment' },
+  { img: img('1618221195710-dd6b41faaea6', 2000), alt: 'Neutral-toned styled living space', caption: 'Paddington Terrace' },
+  { img: img('1600566753086-00f18fb6b3ea', 2000), alt: 'Modern styled family home', caption: 'Northbridge House' },
 ]
 
 export type StylePreview = {

@@ -8,7 +8,7 @@ export default function Footer() {
       </div>
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-10 text-center text-sm">
         <p className="leading-none text-cream">
-          <span className="font-display text-xl">Vale&amp;Co.</span>
+          <span className="font-display text-xl tracking-[0.06em]">Vale&amp;Co.</span>
           <span className="mt-1 block text-[9px] font-medium tracking-[0.5em] text-cream/60">
             STYLING
           </span>

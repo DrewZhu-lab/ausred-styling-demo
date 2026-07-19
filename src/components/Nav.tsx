@@ -25,7 +25,7 @@ export default function Nav() {
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#top" className={`leading-none ${solid ? 'text-ink' : 'text-white'}`}>
-          <span className="font-display text-2xl">Vale&amp;Co.</span>
+          <span className="font-display text-2xl tracking-[0.06em]">Vale&amp;Co.</span>
           <span
             className={`mt-1 block text-center text-[9px] font-medium tracking-[0.5em] ${
               solid ? 'text-ink/60' : 'text-white/75'

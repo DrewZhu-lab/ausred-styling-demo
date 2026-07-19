@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Footer() {
   return (
     <footer className="bg-ink text-cream/60">
@@ -14,10 +16,13 @@ export default function Footer() {
           </span>
         </p>
         <nav className="flex flex-wrap justify-center gap-6">
-          <a href="#ai-studio" className="hover:text-cream">AI Preview</a>
-          <a href="#portfolio" className="hover:text-cream">Our Work</a>
-          <a href="#services" className="hover:text-cream">Services</a>
-          <a href="#contact" className="hover:text-cream">Contact</a>
+          <Link to="/ai" className="hover:text-cream">AI Preview</Link>
+          <Link to="/services" className="hover:text-cream">Services</Link>
+          <Link to="/packages" className="hover:text-cream">Packages</Link>
+          <Link to="/gallery" className="hover:text-cream">Gallery</Link>
+          <Link to="/locations" className="hover:text-cream">Locations</Link>
+          <Link to="/about" className="hover:text-cream">About</Link>
+          <Link to="/contact" className="hover:text-cream">Contact</Link>
         </nav>
         <p className="text-xs text-cream/40">
           © 2026 Vale&amp;Co. Styling · A brand of Ausred International Investment Group

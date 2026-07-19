@@ -87,6 +87,53 @@ export const projects = [
   { suburb: 'Mascot', type: 'Apartment · Airbnb styling', img: img('1567016432779-094069958ea5') },
 ]
 
+export const packages = [
+  {
+    name: 'The Essential',
+    tagline: '公寓与紧凑户型的核心布置',
+    blurb: 'Styling for the rooms that sell — living, dining and master bedroom. Ideal for apartments and compact homes going to market.',
+    includes: ['Living, dining & master styling', 'Art & accessories', '6-week hire, delivery & install', 'Pre-photography style check'],
+    featured: false,
+  },
+  {
+    name: 'The Signature',
+    tagline: 'Most popular',
+    blurb: 'Whole-home staging with a cohesive style story from entry to outdoor space — our most-booked package for houses and townhouses.',
+    includes: ['Every room styled', 'Full art, greenery & soft styling', '6-week hire, delivery & install', 'Open-home refresh visit'],
+    featured: true,
+  },
+  {
+    name: 'The Luxe',
+    tagline: '高端物业',
+    blurb: 'Designer furniture and layered styling for prestige listings where presentation drives the price conversation.',
+    includes: ['Premium designer pieces', 'Dual living & outdoor zones', 'Extended hire options', 'Stylist on-site for photography'],
+    featured: false,
+  },
+  {
+    name: 'Turn-Key Living',
+    tagline: 'Airbnb 与出租房',
+    blurb: 'A complete purchase package for short-stay and rental properties — furniture, linen and styling kit, ready for the first booking.',
+    includes: ['Furniture purchase package', 'Linen & styling kit', 'Install & listing-photo styling', 'Restock recommendations'],
+    featured: false,
+  },
+]
+
+export const locationRegions = [
+  { region: 'Eastern Suburbs', suburbs: ['Bondi', 'Double Bay', 'Bellevue Hill', 'Randwick', 'Coogee', 'Kensington'] },
+  { region: 'Lower North Shore', suburbs: ['Mosman', 'Cremorne', 'Neutral Bay', 'Northbridge', 'Chatswood', 'Lane Cove'] },
+  { region: 'Inner West', suburbs: ['Balmain', 'Newtown', 'Ashfield', 'Burwood', 'Strathfield', 'Five Dock'] },
+  { region: 'Upper North Shore & Hills', suburbs: ['Epping', 'Eastwood', 'Gordon', 'Castle Hill', 'Kellyville', 'Ryde'] },
+  { region: 'City & South', suburbs: ['Sydney CBD', 'Zetland', 'Mascot', 'Wolli Creek', 'Hurstville', 'Sutherland'] },
+]
+
+export const processSteps = [
+  { step: '01', title: 'Discovery Call', text: 'A quick call about your property, timeline and campaign — within 24 hours of your enquiry.' },
+  { step: '02', title: 'Consultation & Proposal', text: 'On-site or video walkthrough, then a tailored styling proposal and quote.' },
+  { step: '03', title: 'Styling Day', text: 'Our team delivers and installs everything in a single day, ready for the camera.' },
+  { step: '04', title: 'Photography & Open Homes', text: 'Your agent shoots and lists; we keep the home open-home ready.' },
+  { step: '05', title: 'Collection', text: 'Sold? We collect everything — or extend week to week until it is.' },
+]
+
 export const services = [
   {
     title: 'Full Property Staging',

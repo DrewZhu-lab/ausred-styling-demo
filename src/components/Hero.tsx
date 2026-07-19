@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { heroSlides } from '../data'
 
 const SLOGAN_LINES = ['Style Spaces.', 'Elevate Living.', 'Inspire Value.']
@@ -6,14 +7,21 @@ const INTRO_LIFT_MS = 2300
 const INTRO_DONE_MS = 3150
 const SLIDE_MS = 6000
 
+// 开场动画每个会话只播一次（切换页面回来不重播）
+let introPlayed = false
+
 export default function Hero() {
   const [index, setIndex] = useState(0)
   // 0: intro overlay showing · 1: overlay lifting, content revealing · 2: done
-  const [stage, setStage] = useState(0)
+  const [stage, setStage] = useState(introPlayed ? 2 : 0)
 
   useEffect(() => {
+    if (introPlayed) return
     const t1 = window.setTimeout(() => setStage(1), INTRO_LIFT_MS)
-    const t2 = window.setTimeout(() => setStage(2), INTRO_DONE_MS)
+    const t2 = window.setTimeout(() => {
+      setStage(2)
+      introPlayed = true
+    }, INTRO_DONE_MS)
     return () => {
       clearTimeout(t1)
       clearTimeout(t2)
@@ -80,18 +88,18 @@ export default function Hero() {
           }`}
           style={{ animationDelay: '1.25s' }}
         >
-          <a
-            href="#ai-studio"
+          <Link
+            to="/ai"
             className="rounded-full bg-brand px-7 py-3 font-medium text-white transition-colors hover:bg-brand-dark"
           >
             Preview my home with AI
-          </a>
-          <a
-            href="#portfolio"
+          </Link>
+          <Link
+            to="/gallery"
             className="rounded-full border border-white/60 px-7 py-3 font-medium text-white transition-colors hover:bg-white/10"
           >
             View our work
-          </a>
+          </Link>
         </div>
       </div>
 

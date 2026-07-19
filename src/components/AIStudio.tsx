@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { MapPin, Sparkles } from 'lucide-react'
 import { addressSuggestions, stylePreviews } from '../data'
 
@@ -137,12 +138,12 @@ export default function AIStudio() {
               Our stylists would love to show you more. Book a free consultation and
               we’ll create previews for your exact rooms — no obligation.
             </p>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="mt-5 inline-block rounded-full bg-brand px-8 py-3 font-medium text-white transition-colors hover:bg-brand-dark"
             >
               Book a free consultation
-            </a>
+            </Link>
           </div>
         )}
 
@@ -206,12 +207,12 @@ export default function AIStudio() {
               ))}
             </div>
             <div className="mt-10 flex flex-col items-center gap-3">
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="rounded-full bg-brand px-8 py-3 font-medium text-white transition-colors hover:bg-brand-dark"
               >
                 Book a free consultation for {address.split(',')[0]}
-              </a>
+              </Link>
               <button onClick={reset} className="text-sm text-ink/50 underline-offset-2 hover:underline">
                 Try another address
               </button>

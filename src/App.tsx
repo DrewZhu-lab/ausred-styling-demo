@@ -1,25 +1,41 @@
+import { useEffect } from 'react'
+import { HashRouter, Route, Routes, useLocation } from 'react-router-dom'
 import Nav from './components/Nav'
-import Hero from './components/Hero'
-import AIStudio from './components/AIStudio'
-import Portfolio from './components/Portfolio'
-import Story from './components/Story'
-import Services from './components/Services'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import AIPage from './pages/AIPage'
+import ServicesPage from './pages/ServicesPage'
+import PackagesPage from './pages/PackagesPage'
+import GalleryPage from './pages/GalleryPage'
+import LocationsPage from './pages/LocationsPage'
+import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [pathname])
+  return null
+}
 
 export default function App() {
   return (
-    <>
+    <HashRouter>
+      <ScrollToTop />
       <Nav />
-      <main>
-        <Hero />
-        <AIStudio />
-        <Portfolio />
-        <Story />
-        <Services />
-        <Contact />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ai" element={<AIPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/packages" element={<PackagesPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/locations" element={<LocationsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
       <Footer />
-    </>
+    </HashRouter>
   )
 }

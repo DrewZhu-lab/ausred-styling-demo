@@ -31,12 +31,14 @@ export default function Hero() {
         <p className="animate-fade-up mb-4 text-xs font-medium uppercase tracking-[0.35em] text-white/80">
           Property Styling · Sydney
         </p>
-        <h1 className="animate-fade-up-delay-1 font-display max-w-3xl text-4xl leading-tight md:text-6xl">
-          Homes styled to sell faster, for more
+        <h1 className="animate-fade-up-delay-1 font-display max-w-4xl text-4xl leading-tight md:text-6xl">
+          Style Spaces. Elevate Living.
+          <br />
+          Inspire Value.
         </h1>
         <p className="animate-fade-up-delay-2 mt-5 max-w-xl text-white/85">
-          AusRed Styling stages properties that buyers fall for — and with our AI Style
-          Studio, you can preview your own home restyled before we lift a cushion.
+          Vale&amp;Co. Styling stages homes that sell faster, for more — and with our AI
+          Style Studio, you can preview your own home restyled before we lift a cushion.
         </p>
         <div className="animate-fade-up-delay-2 mt-8 flex flex-wrap justify-center gap-4">
           <a

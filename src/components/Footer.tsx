@@ -1,9 +1,17 @@
 export default function Footer() {
   return (
-    <footer className="bg-ink py-10 text-cream/60">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 text-center text-sm">
-        <p className="font-display text-xl text-cream">
-          AUSRED <span className="text-brand">Styling</span>
+    <footer className="bg-ink text-cream/60">
+      <div className="border-b border-cream/10 py-6 text-center">
+        <p className="px-6 text-xs font-medium tracking-[0.35em] text-cream/80">
+          STYLE SPACES. ELEVATE LIVING. INSPIRE VALUE.
+        </p>
+      </div>
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-10 text-center text-sm">
+        <p className="leading-none text-cream">
+          <span className="font-display text-xl">Vale&amp;Co.</span>
+          <span className="mt-1 block text-[9px] font-medium tracking-[0.5em] text-cream/60">
+            STYLING
+          </span>
         </p>
         <nav className="flex flex-wrap justify-center gap-6">
           <a href="#ai-studio" className="hover:text-cream">AI Preview</a>
@@ -12,7 +20,8 @@ export default function Footer() {
           <a href="#contact" className="hover:text-cream">Contact</a>
         </nav>
         <p className="text-xs text-cream/40">
-          © 2026 Ausred International Investment Group Pty Ltd · ABN 97 608 594 592
+          © 2026 Vale&amp;Co. Styling · A brand of Ausred International Investment Group
+          Pty Ltd · ABN 97 608 594 592
         </p>
       </div>
     </footer>

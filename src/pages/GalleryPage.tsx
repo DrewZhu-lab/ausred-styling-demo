@@ -7,8 +7,8 @@ export default function GalleryPage() {
     <main className="pt-2">
       <PageHeader
         eyebrow="Gallery"
-        title="Our Work"
-        intro="Every campaign is styled to the buyer profile of its suburb — then measured against the sale."
+        title="Our Signature Styles"
+        intro="Six distinct looks, each tailored to your home and the buyers in your suburb — from calm Japandi to hotel-grade Modern Luxe."
       />
       <Portfolio />
       <CTABand />

@@ -65,27 +65,12 @@ export const addressSuggestions = [
   '301/2 Chifley Square, Sydney NSW 2000',
 ]
 
-export const stats = [
-  { value: '280+', label: 'Homes styled' },
-  { value: '12%', label: 'Average premium over guide' },
-  { value: '18 days', label: 'Average time on market' },
-]
-
 // Same photo on both sides — the Before half is desaturated in CSS. Placeholder
 // until real project before/after pairs are available.
 export const featuredComparison = {
   suburb: 'Surry Hills',
   img: img('1522708323590-d24dbb6b0267', 2000),
 }
-
-export const projects = [
-  { suburb: 'Mosman', type: 'Family home · Full staging', img: img('1600566753086-00f18fb6b3ea') },
-  { suburb: 'Surry Hills', type: 'Terrace · Partial styling', img: img('1586023492125-27b2c045efd7') },
-  { suburb: 'Bondi', type: 'Apartment · Full staging', img: img('1560185127-6ed189bf02f4') },
-  { suburb: 'Chatswood', type: 'Apartment · Full staging', img: img('1617806118233-18e1de247200') },
-  { suburb: 'Paddington', type: 'Terrace · Interior design', img: img('1594026112284-02bb6f3352fe') },
-  { suburb: 'Mascot', type: 'Apartment · Airbnb styling', img: img('1556020685-ae41abfc9365') },
-]
 
 export const packages = [
   {

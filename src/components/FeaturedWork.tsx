@@ -30,7 +30,7 @@ export default function FeaturedWork() {
 
         <div className="mt-14 grid gap-6 sm:grid-cols-3">
           {projects.slice(0, 3).map((p) => (
-            <figure key={p.suburb + p.type} className="group relative overflow-hidden rounded-2xl">
+            <figure key={p.suburb + p.type} className="group relative overflow-hidden rounded-t-[9rem] rounded-b-2xl">
               <img
                 src={p.img}
                 alt={`${p.suburb} — ${p.type}`}

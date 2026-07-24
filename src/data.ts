@@ -2,10 +2,10 @@ const img = (id: string, w = 1600) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
 
 export const heroSlides = [
-  { img: img('1600585154340-be6161a56a0c', 2000), alt: 'Styled open-plan living room', caption: 'Mosman Residence' },
-  { img: img('1600607687939-ce8a6c25118c', 2000), alt: 'Contemporary staged interior', caption: 'Double Bay Apartment' },
-  { img: img('1618221195710-dd6b41faaea6', 2000), alt: 'Neutral-toned styled living space', caption: 'Paddington Terrace' },
-  { img: img('1600566753086-00f18fb6b3ea', 2000), alt: 'Modern styled family home', caption: 'Northbridge House' },
+  { img: img('1631679706909-1844bbd07221', 2000), alt: 'Cream boucle living room in warm natural light', caption: 'Mosman Residence' },
+  { img: img('1618221195710-dd6b41faaea6', 2000), alt: 'Neutral-toned styled living space', caption: 'Double Bay Apartment' },
+  { img: img('1617103996702-96ff29b1c467', 2000), alt: 'Warm textured living room with natural fibres', caption: 'Paddington Terrace' },
+  { img: img('1600210492486-724fe5c67fb0', 2000), alt: 'Tan leather living room with gallery wall', caption: 'Northbridge House' },
 ]
 
 export type StylePreview = {
@@ -20,13 +20,13 @@ export const stylePreviews: StylePreview[] = [
     name: 'Contemporary',
     blurb: 'Clean lines and warm neutrals — the broadest buyer appeal.',
     tags: ['Warm neutrals', 'Statement art', 'Soft texture'],
-    img: img('1586023492125-27b2c045efd7'),
+    img: img('1616486338812-3dadae4b4ace'),
   },
   {
     name: 'Coastal Hamptons',
     blurb: 'Light, airy and relaxed — made for harbour and beachside suburbs.',
     tags: ['White linen', 'Oak', 'Blue accents'],
-    img: img('1560185007-cde436f6a4d0'),
+    img: img('1505693416388-ac5ce068fe85'),
   },
   {
     name: 'Japandi',
@@ -79,12 +79,12 @@ export const featuredComparison = {
 }
 
 export const projects = [
-  { suburb: 'Mosman', type: 'Family home · Full staging', img: img('1600596542815-ffad4c1539a9') },
-  { suburb: 'Surry Hills', type: 'Terrace · Partial styling', img: img('1598928506311-c55ded91a20c') },
+  { suburb: 'Mosman', type: 'Family home · Full staging', img: img('1600566753086-00f18fb6b3ea') },
+  { suburb: 'Surry Hills', type: 'Terrace · Partial styling', img: img('1586023492125-27b2c045efd7') },
   { suburb: 'Bondi', type: 'Apartment · Full staging', img: img('1560185127-6ed189bf02f4') },
   { suburb: 'Chatswood', type: 'Apartment · Full staging', img: img('1617806118233-18e1de247200') },
-  { suburb: 'Paddington', type: 'Terrace · Interior design', img: img('1583847268964-b28dc8f51f92') },
-  { suburb: 'Mascot', type: 'Apartment · Airbnb styling', img: img('1567016432779-094069958ea5') },
+  { suburb: 'Paddington', type: 'Terrace · Interior design', img: img('1594026112284-02bb6f3352fe') },
+  { suburb: 'Mascot', type: 'Apartment · Airbnb styling', img: img('1556020685-ae41abfc9365') },
 ]
 
 export const packages = [

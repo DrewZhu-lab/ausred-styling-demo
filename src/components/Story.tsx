@@ -10,7 +10,11 @@ export default function Story() {
           thoughtful styling and timeless design, we create spaces that feel
           effortless, welcoming, and enduring.”
         </p>
-        <div className="mx-auto mt-8 h-px w-16 bg-brand/50" />
+        <div className="mx-auto mt-8 flex items-center justify-center gap-3 text-oak">
+          <span className="h-px w-10 bg-oak/40" />
+          <span className="text-[9px]">◆</span>
+          <span className="h-px w-10 bg-oak/40" />
+        </div>
       </div>
     </section>
   )

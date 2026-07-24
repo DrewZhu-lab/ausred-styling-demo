@@ -173,7 +173,7 @@ export default function AIStudio() {
               {stylePreviews.map((style, i) => (
                 <article
                   key={style.name}
-                  className="animate-fade-up overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-md"
+                  className="animate-fade-up overflow-hidden rounded-t-[9rem] rounded-b-2xl bg-white shadow-sm transition-shadow hover:shadow-md"
                   style={{ animationDelay: `${i * 0.08}s` }}
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
@@ -184,7 +184,7 @@ export default function AIStudio() {
                       className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                     />
                     {i === 0 && (
-                      <span className="absolute right-3 top-3 rounded-full bg-brand px-3 py-1 text-xs font-medium text-white">
+                      <span className="absolute bottom-3 left-3 rounded-full bg-brand px-3 py-1 text-xs font-medium text-white">
                         Top pick for your area
                       </span>
                     )}

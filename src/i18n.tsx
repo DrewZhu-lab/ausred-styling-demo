@@ -23,7 +23,7 @@ const en = {
   },
   hero: {
     eyebrow: 'Property Styling · Sydney',
-    sub: 'Vale&Co. Styling stages homes that sell faster, for more — and with our AI Style Studio, you can preview your own home restyled before we lift a cushion.',
+    sub: 'Vale&Co. Styling stages homes that sell faster, for more — timeless, Parisian-inspired interiors, styled for your suburb and your buyers.',
     ctaAI: 'Preview my home with AI',
     ctaWork: 'View our styles',
     scroll: 'Scroll',
@@ -160,7 +160,7 @@ const zh: Dict = {
   },
   hero: {
     eyebrow: '悉尼房产软装与销售布置',
-    sub: 'Vale&Co. Styling 让房子卖得更快、卖得更好——通过 AI Style Studio，你可以在我们动手之前，先预览自己家的布置效果。',
+    sub: 'Vale&Co. Styling 让房子卖得更快、卖得更好——以经得起时间的法式格调，为你的街区与买家量身布置。',
     ctaAI: 'AI 预览我的家',
     ctaWork: '查看风格作品',
     scroll: 'Scroll',
@@ -294,7 +294,7 @@ const zhHant: Dict = {
   },
   hero: {
     eyebrow: '雪梨房產軟裝與銷售佈置',
-    sub: 'Vale&Co. Styling 讓房子賣得更快、賣得更好——透過 AI Style Studio，你可以在我們動手之前，先預覽自己家的佈置效果。',
+    sub: 'Vale&Co. Styling 讓房子賣得更快、賣得更好——以經得起時間的法式格調，為你的街區與買家量身佈置。',
     ctaAI: 'AI 預覽我的家',
     ctaWork: '查看風格作品',
     scroll: 'Scroll',
@@ -427,7 +427,7 @@ const ko: Dict = {
   },
   hero: {
     eyebrow: '시드니 프로퍼티 스타일링',
-    sub: 'Vale&Co. Styling은 집이 더 빨리, 더 좋은 가격에 팔리도록 스타일링합니다. AI Style Studio로 시공 전에 우리 집의 스타일링을 미리 확인해 보세요.',
+    sub: 'Vale&Co. Styling은 집이 더 빨리, 더 좋은 가격에 팔리도록 스타일링합니다 — 시간이 지나도 변치 않는 프렌치 감성으로, 지역과 구매자에 맞춘 스타일링.',
     ctaAI: 'AI로 우리 집 미리보기',
     ctaWork: '스타일 보러 가기',
     scroll: 'Scroll',

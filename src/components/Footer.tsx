@@ -4,7 +4,6 @@ import { useLang } from '../i18n'
 export default function Footer() {
   const { t } = useLang()
   const links = [
-    { to: '/ai', label: t.nav.ai },
     { to: '/services', label: t.nav.services },
     { to: '/packages', label: t.nav.packages },
     { to: '/gallery', label: t.nav.gallery },

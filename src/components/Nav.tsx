@@ -13,7 +13,6 @@ export default function Nav() {
 
   const links = [
     { to: '/', label: t.nav.home },
-    { to: '/ai', label: t.nav.ai },
     { to: '/services', label: t.nav.services },
     { to: '/packages', label: t.nav.packages },
     { to: '/gallery', label: t.nav.gallery },

@@ -105,14 +105,8 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
               </div>
               <div className="mt-7 flex flex-col gap-2">
                 <Link
-                  to="/ai"
-                  className="rounded-full bg-brand px-6 py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-brand-dark"
-                >
-                  {t.hero.ctaAI}
-                </Link>
-                <Link
                   to="/contact"
-                  className="rounded-full border border-ink/20 px-6 py-2.5 text-center text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
+                  className="rounded-full bg-brand px-6 py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-brand-dark"
                 >
                   {t.cta.button}
                 </Link>

@@ -4,7 +4,6 @@ import { LanguageProvider } from './i18n'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-import AIPage from './pages/AIPage'
 import ServicesPage from './pages/ServicesPage'
 import PackagesPage from './pages/PackagesPage'
 import GalleryPage from './pages/GalleryPage'
@@ -28,7 +27,6 @@ export default function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/ai" element={<AIPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/packages" element={<PackagesPage />} />
           <Route path="/gallery" element={<GalleryPage />} />

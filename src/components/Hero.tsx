@@ -90,10 +90,10 @@ export default function Hero() {
           style={{ animationDelay: '1.25s' }}
         >
           <Link
-            to="/ai"
+            to="/contact"
             className="rounded-full bg-brand px-7 py-3 font-medium text-white transition-colors hover:bg-brand-dark"
           >
-            {t.hero.ctaAI}
+            {t.cta.button}
           </Link>
           <Link
             to="/gallery"

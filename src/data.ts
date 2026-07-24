@@ -2,30 +2,30 @@ const img = (id: string, w = 1600) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
 
 export const heroSlides = [
-  { img: img('1631679706909-1844bbd07221', 2000), alt: 'Cream boucle living room in warm natural light', caption: 'Mosman Residence' },
-  { img: img('1618221195710-dd6b41faaea6', 2000), alt: 'Neutral-toned styled living space', caption: 'Double Bay Apartment' },
-  { img: img('1617103996702-96ff29b1c467', 2000), alt: 'Warm textured living room with natural fibres', caption: 'Paddington Terrace' },
-  { img: img('1600210492486-724fe5c67fb0', 2000), alt: 'Tan leather living room with gallery wall', caption: 'Northbridge House' },
+  { img: img('1728649054288-61f332ee389b', 2000), alt: 'Cream French living room with arched mirror and marble fireplace', caption: 'Mosman Residence' },
+  { img: img('1680773525653-f14b98e5acf6', 2000), alt: 'Cream panelled walls with trumeau mirror', caption: 'Double Bay Apartment' },
+  { img: img('1617972582658-45dd3162f128', 2000), alt: 'Wood-panelled salon with marble fireplace', caption: 'Bellevue Hill House' },
+  { img: img('1552475157-a68a1826ddb3', 2000), alt: 'Classic French salon with mouldings and fireplace', caption: 'Paddington Terrace' },
 ]
 
 // 六种风格的配图（顺序固定：Contemporary, Coastal Hamptons, Japandi, Scandinavian, Modern Luxe, Mid-Century）
 export const styleImgs = [
-  img('1616486338812-3dadae4b4ace'),
-  img('1505693416388-ac5ce068fe85'),
-  img('1554995207-c18c203602cb'),
-  img('1556228453-efd6c1ff04f6'),
-  img('1540518614846-7eded433c457'),
-  img('1493809842364-78817add7ffb'),
+  img('1633330977020-2bdfb8530cc2'),
+  img('1615874694520-474822394e73'),
+  img('1700226034367-2fb120f48dfa'),
+  img('1725034474154-b4108c93bd3b'),
+  img('1593987314040-8e0ac84ae724'),
+  img('1752108037856-47c91b82d7f5'),
 ]
 
-// 画廊：每种风格 3 张图（与 styleImgs 同顺序，首图一致）
+// 画廊：每种风格 2–3 张图（与 styleImgs 同顺序，首图一致）
 export const styleGalleries = [
-  [styleImgs[0], img('1631679706909-1844bbd07221'), img('1618221195710-dd6b41faaea6')],
-  [styleImgs[1], img('1556020685-ae41abfc9365'), img('1600607687939-ce8a6c25118c')],
-  [styleImgs[2], img('1594026112284-02bb6f3352fe'), img('1522708323590-d24dbb6b0267')],
-  [styleImgs[3], img('1617806118233-18e1de247200'), img('1560185127-6ed189bf02f4')],
-  [styleImgs[4], img('1611892440504-42a792e24d32'), img('1600566753086-00f18fb6b3ea')],
-  [styleImgs[5], img('1600210492486-724fe5c67fb0'), img('1586023492125-27b2c045efd7')],
+  [styleImgs[0], img('1728649060658-8e64dccf2711')],
+  [styleImgs[1], img('1728649054288-61f332ee389b')],
+  [styleImgs[2], img('1642155920958-554ea053b886')],
+  [styleImgs[3], img('1700049749742-821f04ed3700')],
+  [styleImgs[4], img('1696413542101-2479dd479982')],
+  [styleImgs[5], img('1617972582658-45dd3162f128')],
 ]
 
 export const addressSuggestions = [
@@ -43,7 +43,7 @@ export const addressSuggestions = [
 // until real project before/after pairs are available.
 export const featuredComparison = {
   suburb: 'Surry Hills',
-  img: img('1522708323590-d24dbb6b0267', 2000),
+  img: img('1742541656775-5fc717774c02', 2000),
 }
 
 export const locationRegions = [

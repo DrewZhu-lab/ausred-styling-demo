@@ -82,7 +82,7 @@ export default function AIStudio() {
         </div>
 
         <div className="relative mx-auto mt-10 max-w-xl">
-          <div className="flex items-center gap-2 rounded-full border border-ink/10 bg-white p-2 pl-5 shadow-sm">
+          <div className="flex items-center gap-2 rounded-full border border-ink/10 bg-linen p-2 pl-5 shadow-sm">
             <MapPin size={18} className="shrink-0 text-brand" />
             <input
               value={address}
@@ -106,7 +106,7 @@ export default function AIStudio() {
           </div>
 
           {focused && suggestions.length > 0 && (
-            <ul className="absolute inset-x-0 top-full z-20 mt-2 overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-lg">
+            <ul className="absolute inset-x-0 top-full z-20 mt-2 overflow-hidden rounded-2xl border border-ink/10 bg-linen shadow-lg">
               {suggestions.map((s) => (
                 <li key={s}>
                   <button
@@ -129,7 +129,7 @@ export default function AIStudio() {
         </div>
 
         {phase === 'limit' && (
-          <div className="mx-auto mt-12 max-w-lg rounded-2xl bg-white p-8 text-center shadow-sm">
+          <div className="mx-auto mt-12 max-w-lg rounded-2xl bg-linen p-8 text-center shadow-sm">
             <Sparkles size={22} className="mx-auto text-brand" />
             <h3 className="font-display mt-3 text-2xl">
               You’ve used your {FREE_PREVIEWS} free previews
@@ -173,7 +173,7 @@ export default function AIStudio() {
               {stylePreviews.map((style, i) => (
                 <article
                   key={style.name}
-                  className="animate-fade-up overflow-hidden rounded-t-[9rem] rounded-b-2xl bg-white shadow-sm transition-shadow hover:shadow-md"
+                  className="animate-fade-up overflow-hidden rounded-t-[9rem] rounded-b-2xl bg-linen shadow-sm transition-shadow hover:shadow-md"
                   style={{ animationDelay: `${i * 0.08}s` }}
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">

@@ -1,6 +1,6 @@
 export default function Story() {
   return (
-    <section id="story" className="bg-white py-24">
+    <section id="story" className="bg-linen py-24">
       <div className="mx-auto max-w-3xl px-6 text-center">
         <p className="mb-6 text-xs font-medium uppercase tracking-[0.3em] text-brand">
           Our Story

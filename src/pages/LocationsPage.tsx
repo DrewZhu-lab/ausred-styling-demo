@@ -14,7 +14,7 @@ export default function LocationsPage() {
       <section className="pb-24">
         <div className="mx-auto grid max-w-6xl gap-6 px-6 sm:grid-cols-2 lg:grid-cols-3">
           {locationRegions.map((r) => (
-            <article key={r.region} className="rounded-2xl border border-ink/10 bg-white p-6">
+            <article key={r.region} className="rounded-2xl border border-ink/10 bg-linen p-6">
               <h2 className="flex items-center gap-2 font-display text-xl">
                 <MapPin size={18} className="text-brand" />
                 {r.region}

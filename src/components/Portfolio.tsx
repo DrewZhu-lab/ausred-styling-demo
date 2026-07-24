@@ -3,18 +3,9 @@ import BeforeAfter from './BeforeAfter'
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-24">
+    <section id="portfolio" className="pb-24 pt-4">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-brand">Our Work</p>
-          <h2 className="font-display text-3xl md:text-5xl">Results you can walk through</h2>
-          <p className="mt-4 text-ink/70">
-            Every campaign is styled to the buyer profile of its suburb — then measured
-            against the sale.
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-8 text-center sm:grid-cols-3">
+        <div className="grid gap-8 text-center sm:grid-cols-3">
           {stats.map((s) => (
             <div key={s.label}>
               <p className="font-display text-4xl text-brand md:text-5xl">{s.value}</p>

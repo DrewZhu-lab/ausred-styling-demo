@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Clock, Mail, MapPin } from 'lucide-react'
 
 const inputClass =
-  'w-full rounded-xl border border-ink/10 bg-white px-4 py-3 text-sm outline-none transition-colors placeholder:text-ink/40 focus:border-brand'
+  'w-full rounded-xl border border-ink/10 bg-linen px-4 py-3 text-sm outline-none transition-colors placeholder:text-ink/40 focus:border-brand'
 
 export default function Contact() {
   const [sent, setSent] = useState(false)
@@ -76,8 +76,8 @@ export default function Contact() {
               <Mail size={20} className="mt-0.5 shrink-0 text-brand" />
               <div>
                 <p className="text-sm font-medium">Email</p>
-                <a href="mailto:info.ausred@gmail.com" className="text-sm text-ink/70 hover:text-brand">
-                  info.ausred@gmail.com
+                <a href="mailto:admin@valeandco.com.au" className="text-sm text-ink/70 hover:text-brand">
+                  admin@valeandco.com.au
                 </a>
               </div>
             </div>

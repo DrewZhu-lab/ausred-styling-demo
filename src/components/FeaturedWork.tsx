@@ -7,8 +7,7 @@ export default function FeaturedWork() {
     <section className="py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-brand">Our Work</p>
-          <h2 className="font-display text-3xl md:text-5xl">Results you can walk through</h2>
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand">Our Work</p>
         </div>
 
         <div className="mt-12 grid gap-8 text-center sm:grid-cols-3">

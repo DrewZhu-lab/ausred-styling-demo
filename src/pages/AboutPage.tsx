@@ -20,7 +20,7 @@ export default function AboutPage() {
         intro="A Sydney styling studio backed by Ausred International Investment Group — pairing property market insight with timeless, liveable design."
       />
 
-      <section className="bg-white py-20">
+      <section className="bg-linen py-20">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <p className="font-display text-2xl leading-relaxed text-ink md:text-[1.75rem]">
             “At Vale&amp;Co., we believe every home deserves to tell a story. Through

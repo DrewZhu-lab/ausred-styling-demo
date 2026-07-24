@@ -18,7 +18,7 @@ export default function PackagesPage() {
             <article
               key={p.name}
               className={`flex flex-col rounded-2xl border p-6 transition-shadow hover:shadow-md ${
-                p.featured ? 'border-brand bg-white shadow-sm' : 'border-ink/10 bg-white'
+                p.featured ? 'border-brand bg-linen shadow-sm' : 'border-ink/10 bg-linen'
               }`}
             >
               {p.featured && (

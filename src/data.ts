@@ -18,6 +18,16 @@ export const styleImgs = [
   img('1493809842364-78817add7ffb'),
 ]
 
+// 画廊：每种风格 3 张图（与 styleImgs 同顺序，首图一致）
+export const styleGalleries = [
+  [styleImgs[0], img('1631679706909-1844bbd07221'), img('1618221195710-dd6b41faaea6')],
+  [styleImgs[1], img('1556020685-ae41abfc9365'), img('1600607687939-ce8a6c25118c')],
+  [styleImgs[2], img('1594026112284-02bb6f3352fe'), img('1522708323590-d24dbb6b0267')],
+  [styleImgs[3], img('1617806118233-18e1de247200'), img('1560185127-6ed189bf02f4')],
+  [styleImgs[4], img('1611892440504-42a792e24d32'), img('1600566753086-00f18fb6b3ea')],
+  [styleImgs[5], img('1600210492486-724fe5c67fb0'), img('1586023492125-27b2c045efd7')],
+]
+
 export const addressSuggestions = [
   '12 Campbell Parade, Bondi Beach NSW 2026',
   '45 Military Road, Mosman NSW 2088',

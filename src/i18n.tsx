@@ -32,12 +32,12 @@ const en = {
     explore: 'Explore all six styles',
   },
   styles: [
-    { name: 'Contemporary', blurb: 'Clean lines and warm neutrals — the broadest buyer appeal.', tags: ['Warm neutrals', 'Statement art', 'Soft texture'], img: styleImgs[0] },
-    { name: 'Coastal Hamptons', blurb: 'Light, airy and relaxed — made for harbour and beachside suburbs.', tags: ['White linen', 'Oak', 'Blue accents'], img: styleImgs[1] },
-    { name: 'Japandi', blurb: 'Japanese calm meets Scandi function. Quietly premium.', tags: ['Low profile', 'Natural timber', 'Muted palette'], img: styleImgs[2] },
-    { name: 'Scandinavian', blurb: 'Bright, uncluttered and family-friendly.', tags: ['Light timber', 'White walls', 'Cosy layers'], img: styleImgs[3] },
-    { name: 'Modern Luxe', blurb: 'Hotel-grade finish for premium listings.', tags: ['Velvet', 'Brass', 'Deep tones'], img: styleImgs[4] },
-    { name: 'Mid-Century', blurb: 'Character styling for terraces and warehouse conversions.', tags: ['Walnut', 'Curves', 'Earthy hues'], img: styleImgs[5] },
+    { name: 'Contemporary', blurb: 'Clean lines and warm neutrals — the broadest buyer appeal.', desc: 'Our most requested look. Warm neutrals, clean-lined furniture and layered soft textures photograph beautifully and appeal to the widest pool of buyers — ideal when you want broad, fast interest in your campaign.', tags: ['Warm neutrals', 'Statement art', 'Soft texture'], img: styleImgs[0] },
+    { name: 'Coastal Hamptons', blurb: 'Light, airy and relaxed — made for harbour and beachside suburbs.', desc: 'Crisp whites, weathered oak and relaxed linen create that instantly recognisable coastal calm. Perfect for harbourside and beachside homes, where buyers are purchasing a lifestyle as much as a floor plan.', tags: ['White linen', 'Oak', 'Blue accents'], img: styleImgs[1] },
+    { name: 'Japandi', blurb: 'Japanese calm meets Scandi function. Quietly premium.', desc: 'A quiet blend of Japanese minimalism and Scandinavian warmth — low-profile furniture, natural timber and a muted palette that make rooms feel calm, considered and premium.', tags: ['Low profile', 'Natural timber', 'Muted palette'], img: styleImgs[2] },
+    { name: 'Scandinavian', blurb: 'Bright, uncluttered and family-friendly.', desc: 'Bright, functional and family-friendly. Light timbers, white walls and cosy layered textiles maximise the sense of light and space in apartments and family homes alike.', tags: ['Light timber', 'White walls', 'Cosy layers'], img: styleImgs[3] },
+    { name: 'Modern Luxe', blurb: 'Hotel-grade finish for premium listings.', desc: 'Hotel-suite polish for prestige listings — velvet, brass, marble and deep accent tones that set an aspirational tone from the very first photo of the campaign.', tags: ['Velvet', 'Brass', 'Deep tones'], img: styleImgs[4] },
+    { name: 'Mid-Century', blurb: 'Character styling for terraces and warehouse conversions.', desc: 'Walnut tones, curved silhouettes and earthy hues that give terraces and warehouse conversions real character while staying refined and liveable.', tags: ['Walnut', 'Curves', 'Earthy hues'], img: styleImgs[5] },
   ],
   services: {
     eyebrow: 'Services',
@@ -90,6 +90,7 @@ const en = {
     title: 'Our Signature Styles',
     intro: 'Six distinct looks, each tailored to your home and the buyers in your suburb — from calm Japandi to hotel-grade Modern Luxe.',
     baCaption: 'Drag to compare — every style begins with the same room (demo imagery)',
+    hint: 'Tap any photo to see the style story',
   },
   packages: {
     eyebrow: 'Packages',
@@ -168,12 +169,12 @@ const zh: Dict = {
     explore: '探索全部六种风格',
   },
   styles: [
-    { name: 'Contemporary', blurb: '利落线条与温暖中性色——最广泛的买家接受度。', tags: ['暖调中性色', '艺术挂画', '柔软质感'], img: styleImgs[0] },
-    { name: 'Coastal Hamptons', blurb: '明亮、通透、松弛——为海港与海滨街区而生。', tags: ['白色亚麻', '橡木', '蓝色点缀'], img: styleImgs[1] },
-    { name: 'Japandi', blurb: '日式宁静与北欧功能的结合，低调而高级。', tags: ['低矮线条', '天然木材', '静谧色调'], img: styleImgs[2] },
-    { name: 'Scandinavian', blurb: '明亮、整洁、适合家庭。', tags: ['浅色木材', '白墙', '温馨层次'], img: styleImgs[3] },
-    { name: 'Modern Luxe', blurb: '酒店级质感，为高端房源而备。', tags: ['丝绒', '黄铜', '深色调'], img: styleImgs[4] },
-    { name: 'Mid-Century', blurb: '为排屋与仓库改造注入个性。', tags: ['胡桃木', '曲线', '大地色'], img: styleImgs[5] },
+    { name: 'Contemporary', blurb: '利落线条与温暖中性色——最广泛的买家接受度。', desc: '我们被预订最多的风格。温暖的中性色、利落的家具线条与层叠的柔软质感，非常上镜，也能打动最广泛的买家群体——适合追求快速、广泛关注度的房源。', tags: ['暖调中性色', '艺术挂画', '柔软质感'], img: styleImgs[0] },
+    { name: 'Coastal Hamptons', blurb: '明亮、通透、松弛——为海港与海滨街区而生。', desc: '清爽的白色、风化橡木与松弛的亚麻，构成一眼可辨的海滨宁静感。适合海港与海滨住宅——买家买的不只是户型，更是一种生活方式。', tags: ['白色亚麻', '橡木', '蓝色点缀'], img: styleImgs[1] },
+    { name: 'Japandi', blurb: '日式宁静与北欧功能的结合，低调而高级。', desc: '日式极简与北欧温暖的安静融合——低矮家具、天然木材与静谧色调，让空间显得从容、克制而高级。', tags: ['低矮线条', '天然木材', '静谧色调'], img: styleImgs[2] },
+    { name: 'Scandinavian', blurb: '明亮、整洁、适合家庭。', desc: '明亮、实用、适合家庭。浅色木材、白墙与温馨的织物层次，把公寓和家庭住宅的采光与空间感放到最大。', tags: ['浅色木材', '白墙', '温馨层次'], img: styleImgs[3] },
+    { name: 'Modern Luxe', blurb: '酒店级质感，为高端房源而备。', desc: '为高端房源准备的酒店套房质感——丝绒、黄铜、大理石与深色点缀，从广告第一张照片就定下令人向往的基调。', tags: ['丝绒', '黄铜', '深色调'], img: styleImgs[4] },
+    { name: 'Mid-Century', blurb: '为排屋与仓库改造注入个性。', desc: '胡桃木色、曲线轮廓与大地色调，为排屋与仓库改造注入真实个性，同时保持精致宜居。', tags: ['胡桃木', '曲线', '大地色'], img: styleImgs[5] },
   ],
   services: {
     eyebrow: '服务',
@@ -225,6 +226,7 @@ const zh: Dict = {
     title: '我们的招牌风格',
     intro: '六种截然不同的风格，为你的家与你所在街区的买家量身定制——从宁静的 Japandi 到酒店质感的 Modern Luxe。',
     baCaption: '拖动对比——每种风格都从同一个房间开始（示意图）',
+    hint: '点击任意图片，查看风格介绍',
   },
   packages: {
     eyebrow: '套餐',

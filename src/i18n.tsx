@@ -69,6 +69,14 @@ const en = {
       { step: '05', title: 'Collection', text: 'Sold? We collect everything — or extend week to week until it is.' },
     ],
   },
+  moodboard: {
+    eyebrow: 'Mood Boards',
+    title: 'See the look before a single sofa arrives',
+    body: 'Every proposal includes a mood board composed for your property — so you and your agent can see exactly where we are taking the home before any furniture moves in.',
+    includes: ['Overall style direction', 'Colour palette', 'Materials & textures', 'Key furniture pieces', 'Art, decor & greenery'],
+    note: 'Composed for your suburb, your buyers and your property’s light.',
+    boardLabel: 'Proposal · Mood Board',
+  },
   cta: {
     title: 'Ready to style your next sale?',
     button: 'Book a free consultation',
@@ -204,6 +212,14 @@ const zh: Dict = {
       { step: '05', title: '撤场', text: '售出即撤场——未售出可按周续租。' },
     ],
   },
+  moodboard: {
+    eyebrow: '风格提案 Mood Board',
+    title: '家具进场之前，先看见完成后的样子',
+    body: '每份方案都附带为你的房源定制的 mood board——在任何家具进场之前，你和中介就能清楚看到房子的整体方向。',
+    includes: ['整体风格方向', '色彩体系', '材质与质感', '主要家具', '艺术品、饰品与绿植'],
+    note: '依据你的区域、目标买家与房屋采光量身组合。',
+    boardLabel: 'Proposal · Mood Board',
+  },
   cta: {
     title: '准备好为下一次出售做布置了吗？',
     button: '预约免费咨询',
@@ -338,6 +354,14 @@ const zhHant: Dict = {
       { step: '05', title: '撤場', text: '售出即撤場——未售出可按週續租。' },
     ],
   },
+  moodboard: {
+    eyebrow: '風格提案 Mood Board',
+    title: '家具進場之前，先看見完成後的樣子',
+    body: '每份方案都附上為你的房源量身訂製的 mood board——在任何家具進場之前，你和仲介就能清楚看到房子的整體方向。',
+    includes: ['整體風格方向', '色彩體系', '材質與質感', '主要家具', '藝術品、飾品與綠植'],
+    note: '依據你的區域、目標買家與房屋採光量身組合。',
+    boardLabel: 'Proposal · Mood Board',
+  },
   cta: {
     title: '準備好為下一次出售做佈置了嗎？',
     button: '預約免費諮詢',
@@ -470,6 +494,14 @@ const ko: Dict = {
       { step: '04', title: '촬영·오픈 하우스', text: '중개인이 촬영·리스팅하는 동안 언제든 보여줄 수 있는 상태를 유지합니다.' },
       { step: '05', title: '철수', text: '매각 완료 시 철수 — 미매각 시 주 단위 연장 가능합니다.' },
     ],
+  },
+  moodboard: {
+    eyebrow: '무드 보드',
+    title: '가구가 들어오기 전에 완성된 모습을 먼저 확인하세요',
+    body: '모든 제안서에는 매물 맞춤 무드 보드가 포함됩니다. 가구가 들어오기 전에 집이 어떤 방향으로 완성될지 미리 확인할 수 있습니다.',
+    includes: ['전체 스타일 방향', '컬러 팔레트', '소재와 텍스처', '주요 가구', '아트·소품·그린 데코'],
+    note: '지역, 예상 구매자, 채광에 맞춰 구성합니다.',
+    boardLabel: 'Proposal · Mood Board',
   },
   cta: {
     title: '다음 매각을 위한 스타일링, 시작해 볼까요?',

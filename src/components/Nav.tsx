@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { Globe, Menu, X } from 'lucide-react'
-import { useLang } from '../i18n'
+import { ChevronDown, Globe, Menu, X } from 'lucide-react'
+import { langOptions, useLang } from '../i18n'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const [langOpen, setLangOpen] = useState(false)
+  const langRef = useRef<HTMLDivElement>(null)
   const { pathname } = useLocation()
   const { lang, setLang, t } = useLang()
 
@@ -28,10 +30,17 @@ export default function Nav() {
 
   useEffect(() => setOpen(false), [pathname])
 
+  // 点击外部关闭语言下拉
+  useEffect(() => {
+    const onDown = (e: MouseEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false)
+    }
+    document.addEventListener('mousedown', onDown)
+    return () => document.removeEventListener('mousedown', onDown)
+  }, [])
+
   // 只有首页顶部（深色 hero 之上）用透明白字，其余一律实底深字
   const solid = scrolled || pathname !== '/' || open
-
-  const toggleLang = () => setLang(lang === 'en' ? 'zh' : 'en')
 
   return (
     <header
@@ -74,16 +83,43 @@ export default function Nav() {
         </div>
 
         <div className="flex items-center gap-3">
-          <button
-            onClick={toggleLang}
-            aria-label="Switch language"
-            className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
-              solid ? 'text-ink/70 hover:text-brand' : 'text-white/85 hover:text-white'
-            }`}
-          >
-            <Globe size={15} />
-            {t.nav.langSwitch}
-          </button>
+          <div ref={langRef} className="relative">
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              aria-label="Select language"
+              aria-expanded={langOpen}
+              className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
+                solid ? 'text-ink/70 hover:text-brand' : 'text-white/85 hover:text-white'
+              }`}
+            >
+              <Globe size={15} />
+              <span className="hidden sm:inline">
+                {langOptions.find((o) => o.code === lang)?.label}
+              </span>
+              <ChevronDown size={13} className={`transition-transform ${langOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {langOpen && (
+              <ul className="absolute right-0 top-full z-50 mt-3 w-36 overflow-hidden rounded-xl border border-ink/10 bg-cream shadow-lg">
+                {langOptions.map((o) => (
+                  <li key={o.code}>
+                    <button
+                      onClick={() => {
+                        setLang(o.code)
+                        setLangOpen(false)
+                      }}
+                      className={`w-full px-4 py-2.5 text-left text-sm transition-colors ${
+                        o.code === lang
+                          ? 'bg-sand/60 font-medium text-brand'
+                          : 'text-ink/75 hover:bg-sand/40'
+                      }`}
+                    >
+                      {o.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
           <Link
             to="/contact"
             className="hidden rounded-full bg-brand px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-dark sm:block"
@@ -114,6 +150,21 @@ export default function Nav() {
                 {l.label}
               </NavLink>
             ))}
+            <div className="flex flex-wrap gap-2 pt-1">
+              {langOptions.map((o) => (
+                <button
+                  key={o.code}
+                  onClick={() => setLang(o.code)}
+                  className={`rounded-full border px-3.5 py-1.5 text-xs font-medium ${
+                    o.code === lang
+                      ? 'border-brand bg-brand text-white'
+                      : 'border-ink/20 text-ink/70'
+                  }`}
+                >
+                  {o.label}
+                </button>
+              ))}
+            </div>
             <Link
               to="/contact"
               className="mt-2 rounded-full bg-brand px-5 py-2.5 text-center text-sm font-medium text-white"

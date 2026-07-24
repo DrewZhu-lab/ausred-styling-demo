@@ -1,7 +1,14 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
 import { styleImgs } from './data'
 
-export type Lang = 'en' | 'zh'
+export type Lang = 'en' | 'zh' | 'zhHant' | 'ko'
+
+export const langOptions: { code: Lang; label: string }[] = [
+  { code: 'en', label: 'English' },
+  { code: 'zh', label: '简体中文' },
+  { code: 'zhHant', label: '繁體中文' },
+  { code: 'ko', label: '한국어' },
+]
 
 const en = {
   nav: {
@@ -13,7 +20,6 @@ const en = {
     locations: 'Locations',
     about: 'About',
     consult: 'Free consultation',
-    langSwitch: '中文',
   },
   hero: {
     eyebrow: 'Property Styling · Sydney',
@@ -151,7 +157,6 @@ const zh: Dict = {
     locations: '服务区域',
     about: '关于',
     consult: '免费咨询',
-    langSwitch: 'EN',
   },
   hero: {
     eyebrow: '悉尼房产软装与销售布置',
@@ -275,7 +280,274 @@ const zh: Dict = {
   },
 }
 
-const dicts: Record<Lang, Dict> = { en, zh }
+
+const zhHant: Dict = {
+  nav: {
+    home: '首頁',
+    ai: 'AI 預覽',
+    services: '服務',
+    packages: '方案',
+    gallery: '作品',
+    locations: '服務區域',
+    about: '關於',
+    consult: '免費諮詢',
+  },
+  hero: {
+    eyebrow: '雪梨房產軟裝與銷售佈置',
+    sub: 'Vale&Co. Styling 讓房子賣得更快、賣得更好——透過 AI Style Studio，你可以在我們動手之前，先預覽自己家的佈置效果。',
+    ctaAI: 'AI 預覽我的家',
+    ctaWork: '查看風格作品',
+    scroll: 'Scroll',
+  },
+  story: {
+    eyebrow: '品牌故事',
+    quote: '「在 Vale&Co.，我們相信每一個家都有值得講述的故事。透過用心的佈置與經得起時間的設計，我們創造鬆弛、溫暖而雋永的空間。」',
+  },
+  featured: {
+    eyebrow: '招牌風格',
+    explore: '探索全部六種風格',
+  },
+  styles: [
+    { name: 'Contemporary', blurb: '俐落線條與溫暖中性色——最廣泛的買家接受度。', desc: '我們最常被預訂的風格。溫暖的中性色、俐落的家具線條與層疊的柔軟質感，非常上鏡，也能打動最廣泛的買家群體——適合追求快速、廣泛關注度的房源。', tags: ['暖調中性色', '藝術掛畫', '柔軟質感'], img: styleImgs[0] },
+    { name: 'Coastal Hamptons', blurb: '明亮、通透、鬆弛——為海港與海濱街區而生。', desc: '清爽的白色、風化橡木與鬆弛的亞麻，構成一眼可辨的海濱寧靜感。適合海港與海濱住宅——買家買的不只是格局，更是一種生活方式。', tags: ['白色亞麻', '橡木', '藍色點綴'], img: styleImgs[1] },
+    { name: 'Japandi', blurb: '日式寧靜與北歐機能的結合，低調而高級。', desc: '日式極簡與北歐溫暖的安靜融合——低矮家具、天然木材與靜謐色調，讓空間顯得從容、克制而高級。', tags: ['低矮線條', '天然木材', '靜謐色調'], img: styleImgs[2] },
+    { name: 'Scandinavian', blurb: '明亮、整潔、適合家庭。', desc: '明亮、實用、適合家庭。淺色木材、白牆與溫馨的織品層次，把公寓和家庭住宅的採光與空間感放到最大。', tags: ['淺色木材', '白牆', '溫馨層次'], img: styleImgs[3] },
+    { name: 'Modern Luxe', blurb: '飯店級質感，為高端房源而備。', desc: '為高端房源準備的飯店套房質感——絲絨、黃銅、大理石與深色點綴，從廣告第一張照片就定下令人嚮往的基調。', tags: ['絲絨', '黃銅', '深色調'], img: styleImgs[4] },
+    { name: 'Mid-Century', blurb: '為排屋與倉庫改造注入個性。', desc: '胡桃木色、曲線輪廓與大地色調，為排屋與倉庫改造注入真實個性，同時保持精緻宜居。', tags: ['胡桃木', '曲線', '大地色'], img: styleImgs[5] },
+  ],
+  services: {
+    eyebrow: '服務',
+    title: '為每一次出售而佈置',
+    intro: '從單次諮詢到整套交付，我們按物業與市場靈活配置。',
+    pageIntro: '從單次諮詢到整套交付，我們按物業與市場靈活配置。每次合作都從免費、無義務的諮詢開始。',
+    items: [
+      { title: '全屋佈置 Full Staging', blurb: '為空置待售房屋提供全套家具、藝術品與軟裝。', includes: ['家具租賃（6 週）', '運輸與安裝', '拍攝前造型檢查'] },
+      { title: '局部佈置 Partial Styling', blurb: '利用你現有的家具，補齊能打動買家的關鍵單品。', includes: ['上門諮詢', '租賃單品混搭', '收納與斷捨離建議'] },
+      { title: '民宿與短租 Airbnb', blurb: '上鏡、耐用的整套配置，提升房價與好評。', includes: ['一站式配齊', '布草與軟裝包', '房源照片佈置'] },
+      { title: '室內設計 Interior Design', blurb: '為自住的家做個人化設計。', includes: ['概念與靈感板', '家具採購', '安裝與收尾'] },
+    ],
+  },
+  process: {
+    eyebrow: '服務流程',
+    title: '五步流程，一日佈置',
+    steps: [
+      { step: '01', title: '需求溝通', text: '收到諮詢後 24 小時內電話溝通房源、時間與銷售計畫。' },
+      { step: '02', title: '評估與方案', text: '實地或視訊看房，提供客製佈置方案與報價。' },
+      { step: '03', title: '佈置日', text: '團隊一天內完成運輸、安裝與佈置，隨時可拍。' },
+      { step: '04', title: '拍攝與開放看房', text: '仲介拍照上市，我們保持房屋隨時可看。' },
+      { step: '05', title: '撤場', text: '售出即撤場——未售出可按週續租。' },
+    ],
+  },
+  cta: {
+    title: '準備好為下一次出售做佈置了嗎？',
+    button: '預約免費諮詢',
+  },
+  ai: {
+    eyebrow: 'AI Style Studio',
+    title: '看看你家的六種可能',
+    intro: '輸入地址，AI 會參考我們在你附近佈置過的房屋，為你的物業預覽最適合你所在街區的風格。',
+    placeholder: '輸入你的房產地址…',
+    preview: '產生風格預覽',
+    styling: '產生中…',
+    usesLeft: (n: number) => `每位客戶 3 次免費預覽 · 剩餘 ${n} 次`,
+    usedAll: '免費預覽次數已用完',
+    steps: ['正在定位你的房產…', '正在查看我們在附近佈置過的房屋…', '正在匹配你所在街區最好賣的風格…', '正在產生預覽…'],
+    nearby: (n: number, addr: string) => `我們在 ${addr} 週邊 3 公里內佈置過 ${n} 套房屋。根據你所在街區的銷售表現：`,
+    topPick: '你所在街區的首選',
+    bookFor: (addr: string) => `為 ${addr} 預約免費諮詢`,
+    tryAnother: '換一個地址試試',
+    limitTitle: '3 次免費預覽已用完',
+    limitBody: '想看更多？預約免費諮詢，我們為你的真實房間製作預覽——無任何義務。',
+    demoNote: '示範版本——預覽圖僅為示意。正式版將基於你房屋的真實照片產生。',
+  },
+  gallery: {
+    eyebrow: '作品',
+    title: '我們的招牌風格',
+    intro: '六種截然不同的風格，為你的家與你所在街區的買家量身打造——從寧靜的 Japandi 到飯店質感的 Modern Luxe。',
+    baCaption: '拖曳對比——每種風格都從同一個房間開始（示意圖）',
+    hint: '點擊任意圖片，查看風格介紹',
+  },
+  packages: {
+    eyebrow: '方案',
+    title: '四種合作方式',
+    intro: '每個家都不一樣，報價都是量身打造的。選擇適合你銷售計畫的方案，細節與投入在免費諮詢中確認。',
+    mostPopular: '最受歡迎',
+    quoteBtn: '取得客製報價',
+    footnote: '價格在免費諮詢中確認，取決於物業大小、租期與家具檔次。支援按週續租，可協商彈性付款方式。',
+    items: [
+      { name: 'The Essential', tagline: '公寓與緊湊戶型', blurb: '佈置真正賣房的房間——客廳、餐廳與主臥。適合準備上市的公寓與緊湊戶型。', includes: ['客廳、餐廳與主臥佈置', '藝術品與軟裝', '6 週租期，含運輸安裝', '拍攝前造型檢查'], featured: false },
+      { name: 'The Signature', tagline: '全屋佈置', blurb: '從玄關到戶外空間，一條完整的風格敘事——獨立屋與聯排的最熱門選擇。', includes: ['每個房間全佈置', '全套藝術品、綠植與軟裝', '6 週租期，含運輸安裝', '開放看房前補妝'], featured: true },
+      { name: 'The Luxe', tagline: '高端房源', blurb: '設計師家具與多層次佈置，為以品質驅動價格的高端房源而備。', includes: ['高端設計師單品', '多客廳與戶外區域', '可延長租期', '拍攝當日造型師駐場'], featured: false },
+      { name: 'Turn-Key Living', tagline: '民宿與出租房', blurb: '短租與出租物業的整套買斷方案——家具、布草與軟裝包，交付即可接單。', includes: ['家具買斷套裝', '布草與軟裝包', '安裝與房源照片佈置', '補貨建議'], featured: false },
+    ],
+  },
+  locations: {
+    eyebrow: '服務區域',
+    title: '服務全雪梨',
+    intro: '從東區到 Hills，我們的團隊覆蓋大雪梨地區——提供中英雙語服務。',
+    note: '沒有找到你的區域？我們經常服務列表之外的區域——歡迎在免費諮詢中詢問。',
+  },
+  about: {
+    eyebrow: '關於我們',
+    title: 'Vale&Co. 的故事',
+    intro: '一家背靠 Ausred International Investment Group 的雪梨軟裝工作室——將房產市場洞察與經得起時間的設計結合在一起。',
+    values: ['自然', '明亮通透', '經典雋永', '極簡精緻', '注重細節'],
+  },
+  contact: {
+    eyebrow: '聯絡我們',
+    title: '為你的下一次出售做佈置',
+    intro: '告訴我們你的房源資訊，我們將在一個工作日內回覆檔期與客製報價。',
+    name: '姓名',
+    phone: '電話',
+    email: '電郵',
+    address: '房產地址（選填）',
+    service: '意向服務',
+    serviceOptions: ['全屋佈置', '局部佈置', '民宿與短租', '室內設計'],
+    message: '關於房源——幾房、時間、仲介…',
+    submit: '送出諮詢',
+    thanks: '謝謝！',
+    received: '你的諮詢已收到，我們將在一個工作日內與你聯絡。',
+    emailLabel: '電郵',
+    officeLabel: '辦公室',
+    hoursLabel: '營業時間',
+    hours: '週一至週五 9:00–17:30 · 週六預約制',
+  },
+}
+
+const ko: Dict = {
+  nav: {
+    home: '홈',
+    ai: 'AI 미리보기',
+    services: '서비스',
+    packages: '패키지',
+    gallery: '갤러리',
+    locations: '서비스 지역',
+    about: '소개',
+    consult: '무료 상담',
+  },
+  hero: {
+    eyebrow: '시드니 프로퍼티 스타일링',
+    sub: 'Vale&Co. Styling은 집이 더 빨리, 더 좋은 가격에 팔리도록 스타일링합니다. AI Style Studio로 시공 전에 우리 집의 스타일링을 미리 확인해 보세요.',
+    ctaAI: 'AI로 우리 집 미리보기',
+    ctaWork: '스타일 보러 가기',
+    scroll: 'Scroll',
+  },
+  story: {
+    eyebrow: '브랜드 스토리',
+    quote: '"Vale&Co.는 모든 집에 들려줄 이야기가 있다고 믿습니다. 세심한 스타일링과 시간이 지나도 변치 않는 디자인으로, 편안하고 따뜻하며 오래도록 아름다운 공간을 만듭니다."',
+  },
+  featured: {
+    eyebrow: '시그니처 스타일',
+    explore: '여섯 가지 스타일 모두 보기',
+  },
+  styles: [
+    { name: 'Contemporary', blurb: '깔끔한 라인과 따뜻한 뉴트럴 톤 — 가장 폭넓은 구매자에게 어필합니다.', desc: '가장 많이 선택되는 스타일입니다. 따뜻한 뉴트럴 톤, 깔끔한 가구 라인, 레이어드된 부드러운 텍스처는 사진에 아름답게 담기며 가장 넓은 구매자층의 마음을 사로잡습니다.', tags: ['웜 뉴트럴', '아트 포인트', '소프트 텍스처'], img: styleImgs[0] },
+    { name: 'Coastal Hamptons', blurb: '밝고 여유로운 분위기 — 하버·해변 지역에 잘 어울립니다.', desc: '화이트, 웨더드 오크, 린넨이 만드는 한눈에 알아볼 수 있는 해안의 평온함. 구매자가 라이프스타일까지 함께 구매하는 하버·해변 주택에 잘 어울립니다.', tags: ['화이트 린넨', '오크', '블루 포인트'], img: styleImgs[1] },
+    { name: 'Japandi', blurb: '일본의 고요함과 북유럽의 실용성. 조용한 프리미엄.', desc: '일본 미니멀리즘과 북유럽의 따뜻함이 어우러진 스타일 — 낮은 가구, 원목, 차분한 톤이 공간을 정돈되고 고급스럽게 만듭니다.', tags: ['로우 프로파일', '원목', '뮤트 톤'], img: styleImgs[2] },
+    { name: 'Scandinavian', blurb: '밝고 정돈된, 가족 친화적인 스타일.', desc: '밝고 실용적이며 가족 친화적입니다. 밝은 목재, 화이트 월, 포근한 텍스타일이 아파트와 주택의 채광과 공간감을 극대화합니다.', tags: ['라이트 우드', '화이트 월', '코지 레이어'], img: styleImgs[3] },
+    { name: 'Modern Luxe', blurb: '프리미엄 매물을 위한 호텔급 마감.', desc: '벨벳, 브라스, 마블과 딥 톤 포인트가 캠페인의 첫 사진부터 고급스러운 분위기를 완성합니다.', tags: ['벨벳', '브라스', '딥 톤'], img: styleImgs[4] },
+    { name: 'Mid-Century', blurb: '테라스·웨어하우스 개조 주택에 개성을 더합니다.', desc: '월넛 톤, 곡선 실루엣, 어스 톤 컬러가 테라스와 웨어하우스 개조 주택에 세련되면서도 살기 좋은 개성을 더합니다.', tags: ['월넛', '커브', '어스 톤'], img: styleImgs[5] },
+  ],
+  services: {
+    eyebrow: '서비스',
+    title: '모든 매각 캠페인을 위한 스타일링',
+    intro: '단일 상담부터 턴키 시공까지, 매물과 시장에 맞게 제안합니다.',
+    pageIntro: '단일 상담부터 턴키 시공까지, 매물과 시장에 맞게 제안합니다. 모든 프로젝트는 부담 없는 무료 상담으로 시작됩니다.',
+    items: [
+      { title: '풀 스테이징 Full Staging', blurb: '공실 매물을 위한 가구·아트·소품 풀 세팅.', includes: ['가구 렌탈(6주)', '배송 및 설치', '촬영 전 스타일 점검'] },
+      { title: '부분 스타일링 Partial', blurb: '보유 가구를 활용하고, 팔리는 포인트를 더합니다.', includes: ['방문 상담', '렌탈 가구 믹스매치', '정리 컨설팅'] },
+      { title: '에어비앤비·단기임대', blurb: '사진발 좋고 내구성 있는 풀 세팅으로 숙박료와 리뷰를 올립니다.', includes: ['턴키 가구 세팅', '린넨·스타일링 키트', '리스팅 사진 스타일링'] },
+      { title: '인테리어 디자인', blurb: '계속 살 집을 위한 맞춤 디자인.', includes: ['컨셉·무드보드', '가구 구매 대행', '설치 및 마무리'] },
+    ],
+  },
+  process: {
+    eyebrow: '진행 과정',
+    title: '다섯 단계, 하루 설치',
+    steps: [
+      { step: '01', title: '상담 전화', text: '문의 후 24시간 내에 매물·일정·캠페인에 대해 통화합니다.' },
+      { step: '02', title: '방문 상담·제안', text: '현장 또는 화상으로 확인 후 맞춤 제안과 견적을 드립니다.' },
+      { step: '03', title: '스타일링 데이', text: '하루 만에 배송·설치·스타일링을 완료합니다.' },
+      { step: '04', title: '촬영·오픈 하우스', text: '중개인이 촬영·리스팅하는 동안 언제든 보여줄 수 있는 상태를 유지합니다.' },
+      { step: '05', title: '철수', text: '매각 완료 시 철수 — 미매각 시 주 단위 연장 가능합니다.' },
+    ],
+  },
+  cta: {
+    title: '다음 매각을 위한 스타일링, 시작해 볼까요?',
+    button: '무료 상담 예약',
+  },
+  ai: {
+    eyebrow: 'AI Style Studio',
+    title: '우리 집의 여섯 가지 가능성',
+    intro: '주소를 입력하면 AI가 주변 스타일링 사례를 참고해, 해당 지역에서 가장 잘 팔리는 스타일로 미리보기를 만들어 드립니다.',
+    placeholder: '주소를 입력하세요…',
+    preview: '스타일 미리보기',
+    styling: '생성 중…',
+    usesLeft: (n: number) => `고객당 무료 미리보기 3회 · ${n}회 남음`,
+    usedAll: '무료 미리보기를 모두 사용했습니다',
+    steps: ['매물 위치 확인 중…', '주변 스타일링 사례 검토 중…', '지역에서 잘 팔리는 스타일 매칭 중…', '미리보기 생성 중…'],
+    nearby: (n: number, addr: string) => `${addr} 반경 3km 내에서 ${n}채를 스타일링했습니다. 이 지역 판매 데이터 기준:`,
+    topPick: '이 지역 추천 스타일',
+    bookFor: (addr: string) => `${addr} 무료 상담 예약`,
+    tryAnother: '다른 주소로 시도',
+    limitTitle: '무료 미리보기 3회를 모두 사용했습니다',
+    limitBody: '더 보고 싶으시다면 무료 상담을 예약하세요. 실제 방 사진으로 미리보기를 만들어 드립니다 — 부담 없이.',
+    demoNote: '데모 화면입니다 — 미리보기는 예시입니다. 정식 버전은 실제 집 사진으로 생성됩니다.',
+  },
+  gallery: {
+    eyebrow: '갤러리',
+    title: '시그니처 스타일',
+    intro: '차분한 Japandi부터 호텔급 Modern Luxe까지 — 집과 지역 구매자에 맞춘 여섯 가지 스타일.',
+    baCaption: '드래그로 비교해 보세요 — 모든 스타일은 같은 방에서 시작됩니다(예시 이미지)',
+    hint: '사진을 누르면 스타일 소개를 볼 수 있습니다',
+  },
+  packages: {
+    eyebrow: '패키지',
+    title: '네 가지 협업 방식',
+    intro: '집마다 다르기에 견적도 맞춤입니다. 캠페인에 맞는 패키지를 고르시면, 무료 상담에서 세부 사항과 비용을 확정합니다.',
+    mostPopular: '가장 인기',
+    quoteBtn: '맞춤 견적 받기',
+    footnote: '가격은 무료 상담에서 확정되며 매물 크기·렌탈 기간·가구 등급에 따라 달라집니다. 주 단위 연장 및 유연한 결제 방식 협의 가능.',
+    items: [
+      { name: 'The Essential', tagline: '아파트·컴팩트 주택', blurb: '실제로 집을 파는 공간 — 거실, 다이닝, 마스터 침실을 스타일링합니다. 매각 준비 중인 아파트와 컴팩트 주택에 적합합니다.', includes: ['거실·다이닝·마스터 스타일링', '아트·소품', '6주 렌탈, 배송·설치 포함', '촬영 전 스타일 점검'], featured: false },
+      { name: 'The Signature', tagline: '전체 스테이징', blurb: '현관부터 야외 공간까지 하나의 스타일 스토리 — 주택·타운하우스에서 가장 인기 있는 패키지입니다.', includes: ['모든 공간 스타일링', '아트·그린·소프트 스타일링 풀 세팅', '6주 렌탈, 배송·설치 포함', '오픈 하우스 전 리프레시 방문'], featured: true },
+      { name: 'The Luxe', tagline: '프리미엄 매물', blurb: '디자이너 가구와 레이어드 스타일링 — 프레젠테이션이 가격을 좌우하는 프리미엄 매물을 위해.', includes: ['프리미엄 디자이너 가구', '복수 거실·야외 공간', '렌탈 기간 연장 가능', '촬영 당일 스타일리스트 상주'], featured: false },
+      { name: 'Turn-Key Living', tagline: '에어비앤비·임대', blurb: '단기임대·임대 매물을 위한 풀 구매 패키지 — 가구, 린넨, 스타일링 키트까지 바로 운영 가능한 상태로.', includes: ['가구 구매 패키지', '린넨·스타일링 키트', '설치·리스팅 사진 스타일링', '보충 구매 가이드'], featured: false },
+    ],
+  },
+  locations: {
+    eyebrow: '서비스 지역',
+    title: '시드니 전역 서비스',
+    intro: '동부에서 힐스까지, 시드니 전역에 배송·설치합니다 — 영어·중국어 상담 가능.',
+    note: '목록에 없는 지역도 자주 진행합니다 — 무료 상담에서 문의해 주세요.',
+  },
+  about: {
+    eyebrow: '소개',
+    title: 'Vale&Co. 이야기',
+    intro: 'Ausred International Investment Group이 뒷받침하는 시드니 스타일링 스튜디오 — 부동산 시장에 대한 이해와 시간이 지나도 변치 않는 디자인을 결합합니다.',
+    values: ['내추럴', '밝고 환한', '타임리스', '미니멀·정제', '디테일 중심'],
+  },
+  contact: {
+    eyebrow: '문의',
+    title: '다음 매각을 위한 스타일링',
+    intro: '매물 정보를 남겨 주시면 영업일 1일 이내에 가능한 일정과 맞춤 견적을 안내해 드립니다.',
+    name: '이름',
+    phone: '전화번호',
+    email: '이메일',
+    address: '매물 주소(선택)',
+    service: '관심 서비스',
+    serviceOptions: ['풀 스테이징', '부분 스타일링', '에어비앤비·단기임대', '인테리어 디자인'],
+    message: '매물 정보 — 방 개수, 일정, 중개인…',
+    submit: '문의 보내기',
+    thanks: '감사합니다!',
+    received: '문의가 접수되었습니다. 영업일 1일 이내에 연락드리겠습니다.',
+    emailLabel: '이메일',
+    officeLabel: '오피스',
+    hoursLabel: '운영 시간',
+    hours: '월–금 9:00–17:30 · 토 예약제',
+  },
+}
+
+const dicts: Record<Lang, Dict> = { en, zh, zhHant, ko }
 
 const LangCtx = createContext<{ lang: Lang; setLang: (l: Lang) => void; t: Dict }>({
   lang: 'en',
@@ -289,7 +561,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   )
   useEffect(() => {
     localStorage.setItem('valeco-lang', lang)
-    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en'
+    const htmlLang: Record<Lang, string> = { en: 'en', zh: 'zh-CN', zhHant: 'zh-Hant', ko: 'ko' }
+    document.documentElement.lang = htmlLang[lang]
   }, [lang])
   return <LangCtx.Provider value={{ lang, setLang, t: dicts[lang] }}>{children}</LangCtx.Provider>
 }

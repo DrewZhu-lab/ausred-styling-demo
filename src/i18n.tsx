@@ -52,7 +52,7 @@ const en = {
     pageIntro:
       'From a single consultation to a full turn-key fit-out, we scale to the property and the market. Every engagement starts with a free, no-obligation consultation.',
     items: [
-      { title: 'Full Property Staging', blurb: 'Complete furniture, art and accessories for vacant homes going to market.', includes: ['Furniture hire (6 weeks)', 'Delivery & install', 'Pre-photography style check'] },
+      { title: 'Full Property Staging', blurb: 'Complete furniture, art and accessories for vacant homes going to market.', includes: ['Furniture hire (8 weeks)', 'Delivery & install', 'Pre-photography style check'] },
       { title: 'Partial Styling', blurb: 'We work with what you own and layer in what sells.', includes: ['On-site consultation', 'Blending hire pieces', 'Declutter guidance'] },
       { title: 'Airbnb & Short-Stay', blurb: 'Photogenic, durable fit-outs that lift nightly rates and reviews.', includes: ['Turn-key furnishing', 'Linen & styling kit', 'Listing photo styling'] },
       { title: 'Interior Design', blurb: 'Personalised design for the home you plan to keep.', includes: ['Concept & mood boards', 'Furniture procurement', 'Install & finishing'] },
@@ -114,8 +114,8 @@ const en = {
     quoteBtn: 'Get a tailored quote',
     footnote: 'Pricing is confirmed at your free consultation and depends on property size, hire period and furniture tier. Extensions available week to week; flexible payment options on request.',
     items: [
-      { name: 'The Essential', tagline: 'Apartments & compact homes', blurb: 'Styling for the rooms that sell — living, dining and master bedroom. Ideal for apartments and compact homes going to market.', includes: ['Living, dining & master styling', 'Art & accessories', '6-week hire, delivery & install', 'Pre-photography style check'], featured: false },
-      { name: 'The Signature', tagline: 'Whole-home staging', blurb: 'Whole-home staging with a cohesive style story from entry to outdoor space — our most-booked package for houses and townhouses.', includes: ['Every room styled', 'Full art, greenery & soft styling', '6-week hire, delivery & install', 'Open-home refresh visit'], featured: true },
+      { name: 'The Essential', tagline: 'Apartments & compact homes', blurb: 'Styling for the rooms that sell — living, dining and master bedroom. Ideal for apartments and compact homes going to market.', includes: ['Living, dining & master styling', 'Art & accessories', '8-week hire, delivery & install', 'Pre-photography style check'], featured: false },
+      { name: 'The Signature', tagline: 'Whole-home staging', blurb: 'Whole-home staging with a cohesive style story from entry to outdoor space — our most-booked package for houses and townhouses.', includes: ['Every room styled', 'Full art, greenery & soft styling', '8-week hire, delivery & install', 'Open-home refresh visit'], featured: true },
       { name: 'The Luxe', tagline: 'Prestige listings', blurb: 'Designer furniture and layered styling for prestige listings where presentation drives the price conversation.', includes: ['Premium designer pieces', 'Dual living & outdoor zones', 'Extended hire options', 'Stylist on-site for photography'], featured: false },
       { name: 'Turn-Key Living', tagline: 'Airbnb & rentals', blurb: 'A complete purchase package for short-stay and rental properties — furniture, linen and styling kit, ready for the first booking.', includes: ['Furniture purchase package', 'Linen & styling kit', 'Install & listing-photo styling', 'Restock recommendations'], featured: false },
     ],
@@ -195,7 +195,7 @@ const zh: Dict = {
     intro: '从单次咨询到整套交付，我们按物业与市场灵活配置。',
     pageIntro: '从单次咨询到整套交付，我们按物业与市场灵活配置。每次合作都从免费、无义务的咨询开始。',
     items: [
-      { title: '全屋布置 Full Staging', blurb: '为空置待售房屋提供全套家具、艺术品与软装。', includes: ['家具租赁（6 周）', '运输与安装', '拍摄前造型检查'] },
+      { title: '全屋布置 Full Staging', blurb: '为空置待售房屋提供全套家具、艺术品与软装。', includes: ['家具租赁（8 周）', '运输与安装', '拍摄前造型检查'] },
       { title: '局部布置 Partial Styling', blurb: '利用你现有的家具，补齐能打动买家的关键单品。', includes: ['上门咨询', '租赁单品混搭', '收纳与断舍离建议'] },
       { title: '民宿与短租 Airbnb', blurb: '上镜、耐用的整套配置，提升房价与好评。', includes: ['一站式配齐', '布草与软装包', '房源照片布置'] },
       { title: '室内设计 Interior Design', blurb: '为自住的家做个性化设计。', includes: ['概念与灵感板', '家具采购', '安装与收尾'] },
@@ -257,8 +257,8 @@ const zh: Dict = {
     quoteBtn: '获取定制报价',
     footnote: '价格在免费咨询中确认，取决于物业大小、租期与家具档次。支持按周续租，可协商灵活付款方式。',
     items: [
-      { name: 'The Essential', tagline: '公寓与紧凑户型', blurb: '布置真正卖房的房间——客厅、餐厅与主卧。适合准备上市的公寓与紧凑户型。', includes: ['客厅、餐厅与主卧布置', '艺术品与软装', '6 周租期，含运输安装', '拍摄前造型检查'], featured: false },
-      { name: 'The Signature', tagline: '全屋布置', blurb: '从玄关到户外空间，一条完整的风格叙事——独立屋与联排的最热门选择。', includes: ['每个房间全布置', '全套艺术品、绿植与软装', '6 周租期，含运输安装', '开放看房前补妆'], featured: true },
+      { name: 'The Essential', tagline: '公寓与紧凑户型', blurb: '布置真正卖房的房间——客厅、餐厅与主卧。适合准备上市的公寓与紧凑户型。', includes: ['客厅、餐厅与主卧布置', '艺术品与软装', '8 周租期，含运输安装', '拍摄前造型检查'], featured: false },
+      { name: 'The Signature', tagline: '全屋布置', blurb: '从玄关到户外空间，一条完整的风格叙事——独立屋与联排的最热门选择。', includes: ['每个房间全布置', '全套艺术品、绿植与软装', '8 周租期，含运输安装', '开放看房前补妆'], featured: true },
       { name: 'The Luxe', tagline: '高端房源', blurb: '设计师家具与多层次布置，为以品质驱动价格的高端房源而备。', includes: ['高端设计师单品', '多客厅与户外区域', '可延长租期', '拍摄当日造型师驻场'], featured: false },
       { name: 'Turn-Key Living', tagline: '民宿与出租房', blurb: '短租与出租物业的整套买断方案——家具、布草与软装包，交付即可接单。', includes: ['家具买断套装', '布草与软装包', '安装与房源照片布置', '补货建议'], featured: false },
     ],
@@ -337,7 +337,7 @@ const zhHant: Dict = {
     intro: '從單次諮詢到整套交付，我們按物業與市場靈活配置。',
     pageIntro: '從單次諮詢到整套交付，我們按物業與市場靈活配置。每次合作都從免費、無義務的諮詢開始。',
     items: [
-      { title: '全屋佈置 Full Staging', blurb: '為空置待售房屋提供全套家具、藝術品與軟裝。', includes: ['家具租賃（6 週）', '運輸與安裝', '拍攝前造型檢查'] },
+      { title: '全屋佈置 Full Staging', blurb: '為空置待售房屋提供全套家具、藝術品與軟裝。', includes: ['家具租賃（8 週）', '運輸與安裝', '拍攝前造型檢查'] },
       { title: '局部佈置 Partial Styling', blurb: '利用你現有的家具，補齊能打動買家的關鍵單品。', includes: ['上門諮詢', '租賃單品混搭', '收納與斷捨離建議'] },
       { title: '民宿與短租 Airbnb', blurb: '上鏡、耐用的整套配置，提升房價與好評。', includes: ['一站式配齊', '布草與軟裝包', '房源照片佈置'] },
       { title: '室內設計 Interior Design', blurb: '為自住的家做個人化設計。', includes: ['概念與靈感板', '家具採購', '安裝與收尾'] },
@@ -399,8 +399,8 @@ const zhHant: Dict = {
     quoteBtn: '取得客製報價',
     footnote: '價格在免費諮詢中確認，取決於物業大小、租期與家具檔次。支援按週續租，可協商彈性付款方式。',
     items: [
-      { name: 'The Essential', tagline: '公寓與緊湊戶型', blurb: '佈置真正賣房的房間——客廳、餐廳與主臥。適合準備上市的公寓與緊湊戶型。', includes: ['客廳、餐廳與主臥佈置', '藝術品與軟裝', '6 週租期，含運輸安裝', '拍攝前造型檢查'], featured: false },
-      { name: 'The Signature', tagline: '全屋佈置', blurb: '從玄關到戶外空間，一條完整的風格敘事——獨立屋與聯排的最熱門選擇。', includes: ['每個房間全佈置', '全套藝術品、綠植與軟裝', '6 週租期，含運輸安裝', '開放看房前補妝'], featured: true },
+      { name: 'The Essential', tagline: '公寓與緊湊戶型', blurb: '佈置真正賣房的房間——客廳、餐廳與主臥。適合準備上市的公寓與緊湊戶型。', includes: ['客廳、餐廳與主臥佈置', '藝術品與軟裝', '8 週租期，含運輸安裝', '拍攝前造型檢查'], featured: false },
+      { name: 'The Signature', tagline: '全屋佈置', blurb: '從玄關到戶外空間，一條完整的風格敘事——獨立屋與聯排的最熱門選擇。', includes: ['每個房間全佈置', '全套藝術品、綠植與軟裝', '8 週租期，含運輸安裝', '開放看房前補妝'], featured: true },
       { name: 'The Luxe', tagline: '高端房源', blurb: '設計師家具與多層次佈置，為以品質驅動價格的高端房源而備。', includes: ['高端設計師單品', '多客廳與戶外區域', '可延長租期', '拍攝當日造型師駐場'], featured: false },
       { name: 'Turn-Key Living', tagline: '民宿與出租房', blurb: '短租與出租物業的整套買斷方案——家具、布草與軟裝包，交付即可接單。', includes: ['家具買斷套裝', '布草與軟裝包', '安裝與房源照片佈置', '補貨建議'], featured: false },
     ],
@@ -478,7 +478,7 @@ const ko: Dict = {
     intro: '단일 상담부터 턴키 시공까지, 매물과 시장에 맞게 제안합니다.',
     pageIntro: '단일 상담부터 턴키 시공까지, 매물과 시장에 맞게 제안합니다. 모든 프로젝트는 부담 없는 무료 상담으로 시작됩니다.',
     items: [
-      { title: '풀 스테이징 Full Staging', blurb: '공실 매물을 위한 가구·아트·소품 풀 세팅.', includes: ['가구 렌탈(6주)', '배송 및 설치', '촬영 전 스타일 점검'] },
+      { title: '풀 스테이징 Full Staging', blurb: '공실 매물을 위한 가구·아트·소품 풀 세팅.', includes: ['가구 렌탈(8주)', '배송 및 설치', '촬영 전 스타일 점검'] },
       { title: '부분 스타일링 Partial', blurb: '보유 가구를 활용하고, 팔리는 포인트를 더합니다.', includes: ['방문 상담', '렌탈 가구 믹스매치', '정리 컨설팅'] },
       { title: '에어비앤비·단기임대', blurb: '사진발 좋고 내구성 있는 풀 세팅으로 숙박료와 리뷰를 올립니다.', includes: ['턴키 가구 세팅', '린넨·스타일링 키트', '리스팅 사진 스타일링'] },
       { title: '인테리어 디자인', blurb: '계속 살 집을 위한 맞춤 디자인.', includes: ['컨셉·무드보드', '가구 구매 대행', '설치 및 마무리'] },
@@ -540,8 +540,8 @@ const ko: Dict = {
     quoteBtn: '맞춤 견적 받기',
     footnote: '가격은 무료 상담에서 확정되며 매물 크기·렌탈 기간·가구 등급에 따라 달라집니다. 주 단위 연장 및 유연한 결제 방식 협의 가능.',
     items: [
-      { name: 'The Essential', tagline: '아파트·컴팩트 주택', blurb: '실제로 집을 파는 공간 — 거실, 다이닝, 마스터 침실을 스타일링합니다. 매각 준비 중인 아파트와 컴팩트 주택에 적합합니다.', includes: ['거실·다이닝·마스터 스타일링', '아트·소품', '6주 렌탈, 배송·설치 포함', '촬영 전 스타일 점검'], featured: false },
-      { name: 'The Signature', tagline: '전체 스테이징', blurb: '현관부터 야외 공간까지 하나의 스타일 스토리 — 주택·타운하우스에서 가장 인기 있는 패키지입니다.', includes: ['모든 공간 스타일링', '아트·그린·소프트 스타일링 풀 세팅', '6주 렌탈, 배송·설치 포함', '오픈 하우스 전 리프레시 방문'], featured: true },
+      { name: 'The Essential', tagline: '아파트·컴팩트 주택', blurb: '실제로 집을 파는 공간 — 거실, 다이닝, 마스터 침실을 스타일링합니다. 매각 준비 중인 아파트와 컴팩트 주택에 적합합니다.', includes: ['거실·다이닝·마스터 스타일링', '아트·소품', '8주 렌탈, 배송·설치 포함', '촬영 전 스타일 점검'], featured: false },
+      { name: 'The Signature', tagline: '전체 스테이징', blurb: '현관부터 야외 공간까지 하나의 스타일 스토리 — 주택·타운하우스에서 가장 인기 있는 패키지입니다.', includes: ['모든 공간 스타일링', '아트·그린·소프트 스타일링 풀 세팅', '8주 렌탈, 배송·설치 포함', '오픈 하우스 전 리프레시 방문'], featured: true },
       { name: 'The Luxe', tagline: '프리미엄 매물', blurb: '디자이너 가구와 레이어드 스타일링 — 프레젠테이션이 가격을 좌우하는 프리미엄 매물을 위해.', includes: ['프리미엄 디자이너 가구', '복수 거실·야외 공간', '렌탈 기간 연장 가능', '촬영 당일 스타일리스트 상주'], featured: false },
       { name: 'Turn-Key Living', tagline: '에어비앤비·임대', blurb: '단기임대·임대 매물을 위한 풀 구매 패키지 — 가구, 린넨, 스타일링 키트까지 바로 운영 가능한 상태로.', includes: ['가구 구매 패키지', '린넨·스타일링 키트', '설치·리스팅 사진 스타일링', '보충 구매 가이드'], featured: false },
     ],

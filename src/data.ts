@@ -39,11 +39,11 @@ export const addressSuggestions = [
   '301/2 Chifley Square, Sydney NSW 2000',
 ]
 
-// Same photo on both sides — the Before half is desaturated in CSS. Placeholder
-// until real project before/after pairs are available.
+// 空房（before）与布置完成（after）为两处示意房源；正式上线需换成同一房源的真实对比照。
 export const featuredComparison = {
   suburb: 'Surry Hills',
-  img: img('1742541656775-5fc717774c02', 2000),
+  before: img('1757742690834-aa581b9f53b2', 2000),
+  after: img('1742541656775-5fc717774c02', 2000),
 }
 
 export const locationRegions = [

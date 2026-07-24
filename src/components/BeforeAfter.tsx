@@ -1,17 +1,16 @@
 import { useState } from 'react'
 
-// Both sides show the same photo; the Before half is desaturated to read as
-// "unstyled". Swap for a real before/after photo pair when available.
-export default function BeforeAfter({ image }: { image: string }) {
+// 左右为两张真实照片：空房（before）与布置完成（after）。
+export default function BeforeAfter({ before, after }: { before: string; after: string }) {
   const [pos, setPos] = useState(50)
 
   return (
     <div className="relative aspect-[16/9] select-none overflow-hidden rounded-2xl shadow-md">
-      <img src={image} alt="After styling" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={after} alt="After styling" className="absolute inset-0 h-full w-full object-cover" />
       <img
-        src={image}
+        src={before}
         alt="Before styling"
-        className="absolute inset-0 h-full w-full object-cover grayscale brightness-90"
+        className="absolute inset-0 h-full w-full object-cover"
         style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
       />
 

@@ -9,7 +9,7 @@ export default function Portfolio() {
     <section id="portfolio" className="pb-24 pt-4">
       <div className="mx-auto max-w-6xl px-6">
         <div>
-          <BeforeAfter image={featuredComparison.img} />
+          <BeforeAfter before={featuredComparison.before} after={featuredComparison.after} />
           <p className="mt-3 text-center text-sm text-ink/50">{t.gallery.baCaption}</p>
         </div>
 

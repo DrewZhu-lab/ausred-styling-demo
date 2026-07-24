@@ -2,30 +2,30 @@ const img = (id: string, w = 1600) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
 
 export const heroSlides = [
-  { img: img('1728649054288-61f332ee389b', 2000), alt: 'Cream French living room with arched mirror and marble fireplace', caption: 'Mosman Residence' },
-  { img: img('1680773525653-f14b98e5acf6', 2000), alt: 'Cream panelled walls with trumeau mirror', caption: 'Double Bay Apartment' },
-  { img: img('1617972582658-45dd3162f128', 2000), alt: 'Wood-panelled salon with marble fireplace', caption: 'Bellevue Hill House' },
-  { img: img('1552475157-a68a1826ddb3', 2000), alt: 'Classic French salon with mouldings and fireplace', caption: 'Paddington Terrace' },
+  { img: img('1633505899118-4ca6bd143043', 2000), alt: 'Bright living room with two cream sofas and olive tree', caption: 'Mosman Residence' },
+  { img: img('1600488999806-8efb986d87b1', 2000), alt: 'Walnut dining table with black-framed windows', caption: 'Double Bay Apartment' },
+  { img: img('1631048500344-8d01227385b3', 2000), alt: 'Neutral styled bedroom with oak floors', caption: 'Bellevue Hill House' },
+  { img: img('1750639258774-9a714379a093', 2000), alt: 'Curved cream sofa with paired artwork', caption: 'Paddington Terrace' },
 ]
 
-// 六种风格的配图（顺序固定：Contemporary, Coastal Hamptons, Japandi, Scandinavian, Modern Luxe, Mid-Century）
+// 六个功能区的配图（顺序固定：客厅、休闲会客区、餐厅、厨房、卧室、卫浴 — 与 i18n t.styles 同序）
 export const styleImgs = [
-  img('1633330977020-2bdfb8530cc2'),
-  img('1615874694520-474822394e73'),
-  img('1700226034367-2fb120f48dfa'),
-  img('1725034474154-b4108c93bd3b'),
-  img('1593987314040-8e0ac84ae724'),
-  img('1752108037856-47c91b82d7f5'),
+  img('1761330439671-a7f20c285c5e'),
+  img('1691036561573-4b76998b60de'),
+  img('1600488999806-8efb986d87b1'),
+  img('1502005097973-6a7082348e28'),
+  img('1631048501851-4aa85ffc3be8'),
+  img('1763485956243-50068d04a1ad'),
 ]
 
-// 画廊：每种风格 2–3 张图（与 styleImgs 同顺序，首图一致）
+// 画廊：每个功能区 2 张图（与 styleImgs 同顺序，首图一致）
 export const styleGalleries = [
-  [styleImgs[0], img('1728649060658-8e64dccf2711')],
-  [styleImgs[1], img('1728649054288-61f332ee389b')],
-  [styleImgs[2], img('1642155920958-554ea053b886')],
-  [styleImgs[3], img('1700049749742-821f04ed3700')],
-  [styleImgs[4], img('1696413542101-2479dd479982')],
-  [styleImgs[5], img('1617972582658-45dd3162f128')],
+  [styleImgs[0], img('1750639258774-9a714379a093')],
+  [styleImgs[1], img('1609081144289-eacc3108cd03')],
+  [styleImgs[2], img('1593136596203-7212b076f4d2')],
+  [styleImgs[3], img('1699695726278-f3f57f9356c4')],
+  [styleImgs[4], img('1631048500344-8d01227385b3')],
+  [styleImgs[5], img('1610178167104-488495443e01')],
 ]
 
 export const addressSuggestions = [

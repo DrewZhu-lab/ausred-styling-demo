@@ -23,9 +23,9 @@ const en = {
   },
   hero: {
     eyebrow: 'Property Styling · Sydney',
-    sub: 'Vale&Co. Styling stages homes that sell faster, for more — timeless, Parisian-inspired interiors, styled for your suburb and your buyers.',
+    sub: 'Vale&Co. Styling stages homes that sell faster, for more — warm, contemporary interiors styled for your suburb and your buyers.',
     ctaAI: 'Preview my home with AI',
-    ctaWork: 'View our styles',
+    ctaWork: 'View our work',
     scroll: 'Scroll',
   },
   story: {
@@ -34,16 +34,16 @@ const en = {
       '“At Vale&Co., we believe every home deserves to tell a story. Through thoughtful styling and timeless design, we create spaces that feel effortless, welcoming, and enduring.”',
   },
   featured: {
-    eyebrow: 'Signature Styles',
-    explore: 'Explore all six styles',
+    eyebrow: 'Room by Room',
+    explore: 'Explore every room',
   },
   styles: [
-    { name: 'Contemporary', blurb: 'Clean lines and warm neutrals — the broadest buyer appeal.', desc: 'Our most requested look. Warm neutrals, clean-lined furniture and layered soft textures photograph beautifully and appeal to the widest pool of buyers — ideal when you want broad, fast interest in your campaign.', tags: ['Warm neutrals', 'Statement art', 'Soft texture'], img: styleImgs[0] },
-    { name: 'Coastal Hamptons', blurb: 'Light, airy and relaxed — made for harbour and beachside suburbs.', desc: 'Crisp whites, weathered oak and relaxed linen create that instantly recognisable coastal calm. Perfect for harbourside and beachside homes, where buyers are purchasing a lifestyle as much as a floor plan.', tags: ['White linen', 'Oak', 'Blue accents'], img: styleImgs[1] },
-    { name: 'Japandi', blurb: 'Japanese calm meets Scandi function. Quietly premium.', desc: 'A quiet blend of Japanese minimalism and Scandinavian warmth — low-profile furniture, natural timber and a muted palette that make rooms feel calm, considered and premium.', tags: ['Low profile', 'Natural timber', 'Muted palette'], img: styleImgs[2] },
-    { name: 'Scandinavian', blurb: 'Bright, uncluttered and family-friendly.', desc: 'Bright, functional and family-friendly. Light timbers, white walls and cosy layered textiles maximise the sense of light and space in apartments and family homes alike.', tags: ['Light timber', 'White walls', 'Cosy layers'], img: styleImgs[3] },
-    { name: 'Modern Luxe', blurb: 'Hotel-grade finish for premium listings.', desc: 'Hotel-suite polish for prestige listings — velvet, brass, marble and deep accent tones that set an aspirational tone from the very first photo of the campaign.', tags: ['Velvet', 'Brass', 'Deep tones'], img: styleImgs[4] },
-    { name: 'Mid-Century', blurb: 'Character styling for terraces and warehouse conversions.', desc: 'Walnut tones, curved silhouettes and earthy hues that give terraces and warehouse conversions real character while staying refined and liveable.', tags: ['Walnut', 'Curves', 'Earthy hues'], img: styleImgs[5] },
+    { name: 'Living Room', blurb: 'The hero shot of every campaign — sofa, media unit and layered texture.', desc: 'The room buyers judge first, online and at the open home. We anchor it with a generous sofa, a clean media wall and layered texture in warm neutrals — so the hero shot of your campaign does its job.', tags: ['Statement sofa', 'Media unit', 'Warm neutrals'], img: styleImgs[0] },
+    { name: 'Sitting & Lounge', blurb: 'A second living moment that sells extra space.', desc: 'An armchair, a floor lamp and a soft rug turn a quiet corner or second living area into a moment buyers remember — proof the floor plan offers more ways to live.', tags: ['Accent armchair', 'Floor lamp', 'Reading corner'], img: styleImgs[1] },
+    { name: 'Dining', blurb: 'A set table helps buyers picture life at home.', desc: 'A timber table, comfortable chairs and simple set styling under good light. Buyers linger where they can imagine dinner — we make the dining zone feel like the heart of the home.', tags: ['Timber table', 'Set styling', 'Pendant light'], img: styleImgs[2] },
+    { name: 'Kitchen', blurb: 'Styled benchtops keep the hero of the home clean and warm.', desc: 'Kitchens sell homes. We clear the clutter and style benchtops with greenery, boards and stoneware so the space reads clean, warm and ready to cook in.', tags: ['Clear benchtops', 'Greenery', 'Stoneware'], img: styleImgs[3] },
+    { name: 'Bedrooms', blurb: 'Layered bedding and soft light for an instant retreat.', desc: 'Layered bedding, bedside lamps and soft textures give every bedroom a hotel-calm feel — from the master suite to the single room that needs to look bigger than it is.', tags: ['Layered bedding', 'Bedside styling', 'Soft light'], img: styleImgs[4] },
+    { name: 'Bathroom', blurb: 'Spa touches that make small rooms feel considered.', desc: 'Fresh towels, stone tones and a few spa touches — candles, timber, greenery — turn the most functional room in the house into a considered one.', tags: ['Spa towels', 'Stone tones', 'Greenery'], img: styleImgs[5] },
   ],
   services: {
     eyebrow: 'Services',
@@ -101,10 +101,10 @@ const en = {
   },
   gallery: {
     eyebrow: 'Gallery',
-    title: 'Our Signature Styles',
-    intro: 'Six distinct looks, each tailored to your home and the buyers in your suburb — from calm Japandi to hotel-grade Modern Luxe.',
+    title: 'Styled, room by room',
+    intro: 'Every zone of the home, styled to sell — living, lounge, dining, kitchen, bedrooms and bathrooms, in the warm contemporary look Sydney buyers respond to.',
     baCaption: 'Drag to compare — the same room, empty and fully furnished (photo: Daniela Margiotta, CC BY-SA 4.0)',
-    hint: 'Tap any photo to see the style story',
+    hint: 'Tap any photo to see how we style that room',
   },
   packages: {
     eyebrow: 'Packages',
@@ -168,9 +168,9 @@ const zh: Dict = {
   },
   hero: {
     eyebrow: '悉尼房产软装与销售布置',
-    sub: 'Vale&Co. Styling 让房子卖得更快、卖得更好——以经得起时间的法式格调，为你的街区与买家量身布置。',
+    sub: 'Vale&Co. Styling 让房子卖得更快、卖得更好——以温暖现代的布置风格，为你的街区与买家量身定制。',
     ctaAI: 'AI 预览我的家',
-    ctaWork: '查看风格作品',
+    ctaWork: '查看布置作品',
     scroll: 'Scroll',
   },
   story: {
@@ -178,16 +178,16 @@ const zh: Dict = {
     quote: '「在 Vale&Co.，我们相信每一个家都有值得讲述的故事。通过用心的布置与经得起时间的设计，我们创造松弛、温暖而隽永的空间。」',
   },
   featured: {
-    eyebrow: '招牌风格',
-    explore: '探索全部六种风格',
+    eyebrow: '分区布置',
+    explore: '探索每一个空间',
   },
   styles: [
-    { name: 'Contemporary', blurb: '利落线条与温暖中性色——最广泛的买家接受度。', desc: '我们被预订最多的风格。温暖的中性色、利落的家具线条与层叠的柔软质感，非常上镜，也能打动最广泛的买家群体——适合追求快速、广泛关注度的房源。', tags: ['暖调中性色', '艺术挂画', '柔软质感'], img: styleImgs[0] },
-    { name: 'Coastal Hamptons', blurb: '明亮、通透、松弛——为海港与海滨街区而生。', desc: '清爽的白色、风化橡木与松弛的亚麻，构成一眼可辨的海滨宁静感。适合海港与海滨住宅——买家买的不只是户型，更是一种生活方式。', tags: ['白色亚麻', '橡木', '蓝色点缀'], img: styleImgs[1] },
-    { name: 'Japandi', blurb: '日式宁静与北欧功能的结合，低调而高级。', desc: '日式极简与北欧温暖的安静融合——低矮家具、天然木材与静谧色调，让空间显得从容、克制而高级。', tags: ['低矮线条', '天然木材', '静谧色调'], img: styleImgs[2] },
-    { name: 'Scandinavian', blurb: '明亮、整洁、适合家庭。', desc: '明亮、实用、适合家庭。浅色木材、白墙与温馨的织物层次，把公寓和家庭住宅的采光与空间感放到最大。', tags: ['浅色木材', '白墙', '温馨层次'], img: styleImgs[3] },
-    { name: 'Modern Luxe', blurb: '酒店级质感，为高端房源而备。', desc: '为高端房源准备的酒店套房质感——丝绒、黄铜、大理石与深色点缀，从广告第一张照片就定下令人向往的基调。', tags: ['丝绒', '黄铜', '深色调'], img: styleImgs[4] },
-    { name: 'Mid-Century', blurb: '为排屋与仓库改造注入个性。', desc: '胡桃木色、曲线轮廓与大地色调，为排屋与仓库改造注入真实个性，同时保持精致宜居。', tags: ['胡桃木', '曲线', '大地色'], img: styleImgs[5] },
+    { name: '客厅', blurb: '每个广告的主图——沙发、电视柜与层次质感。', desc: '买家在网上和开放看房时最先评判的房间。我们以大方的沙发、干净的电视墙与温暖中性色的层次质感来定调——让房源主图一击即中。', tags: ['主沙发', '电视柜', '暖调中性色'], img: styleImgs[0] },
+    { name: '休闲会客区', blurb: '第二个起居场景，卖出更多空间感。', desc: '一把单人椅、一盏落地灯、一块柔软的地毯，就能把闲置角落或第二起居区变成买家记住的场景——证明这个户型有更多种生活方式。', tags: ['单人椅', '落地灯', '阅读角'], img: styleImgs[1] },
+    { name: '餐厅', blurb: '摆好的餐桌，让买家想象在这里的生活。', desc: '木质餐桌、舒适的餐椅、灯光下简洁的摆台。买家会在能想象晚餐的地方停留——我们让餐厅成为家的中心。', tags: ['木质餐桌', '餐桌摆台', '吊灯'], img: styleImgs[2] },
+    { name: '厨房', blurb: '整洁温暖的台面，让厨房保持主角地位。', desc: '厨房是卖房的关键。我们清理杂物，用绿植、砧板与器皿点缀台面，让空间看起来干净、温暖、随时可以下厨。', tags: ['清爽台面', '绿植', '器皿点缀'], img: styleImgs[3] },
+    { name: '卧室', blurb: '层叠床品与柔和灯光，营造避风港。', desc: '层叠的床品、床头灯与柔软质感，让每间卧室都有酒店般的宁静——从主卧套房到需要显大的单人房。', tags: ['层叠床品', '床头布置', '柔和灯光'], img: styleImgs[4] },
+    { name: '卫浴', blurb: '几笔 spa 质感，让小空间也显精致。', desc: '崭新的毛巾、石材色调，加上香薰、木质与绿植几笔 spa 点缀，让全屋最功能性的房间也变得讲究。', tags: ['spa 毛巾', '石材色调', '绿植'], img: styleImgs[5] },
   ],
   services: {
     eyebrow: '服务',
@@ -244,10 +244,10 @@ const zh: Dict = {
   },
   gallery: {
     eyebrow: '作品',
-    title: '我们的招牌风格',
-    intro: '六种截然不同的风格，为你的家与你所在街区的买家量身定制——从宁静的 Japandi 到酒店质感的 Modern Luxe。',
+    title: '逐个空间，逐一布置',
+    intro: '家的每个功能区都为成交而布置——客厅、休闲会客区、餐厅、厨房、卧室与卫浴，皆是悉尼买家青睐的温暖现代风。',
     baCaption: '拖动对比——同一房间，从空房到家具入场（图：Daniela Margiotta，CC BY-SA 4.0）',
-    hint: '点击任意图片，查看风格介绍',
+    hint: '点击任意图片，查看该空间的布置思路',
   },
   packages: {
     eyebrow: '套餐',
@@ -310,9 +310,9 @@ const zhHant: Dict = {
   },
   hero: {
     eyebrow: '雪梨房產軟裝與銷售佈置',
-    sub: 'Vale&Co. Styling 讓房子賣得更快、賣得更好——以經得起時間的法式格調，為你的街區與買家量身佈置。',
+    sub: 'Vale&Co. Styling 讓房子賣得更快、賣得更好——以溫暖現代的佈置風格，為你的街區與買家量身打造。',
     ctaAI: 'AI 預覽我的家',
-    ctaWork: '查看風格作品',
+    ctaWork: '查看佈置作品',
     scroll: 'Scroll',
   },
   story: {
@@ -320,16 +320,16 @@ const zhHant: Dict = {
     quote: '「在 Vale&Co.，我們相信每一個家都有值得講述的故事。透過用心的佈置與經得起時間的設計，我們創造鬆弛、溫暖而雋永的空間。」',
   },
   featured: {
-    eyebrow: '招牌風格',
-    explore: '探索全部六種風格',
+    eyebrow: '分區佈置',
+    explore: '探索每一個空間',
   },
   styles: [
-    { name: 'Contemporary', blurb: '俐落線條與溫暖中性色——最廣泛的買家接受度。', desc: '我們最常被預訂的風格。溫暖的中性色、俐落的家具線條與層疊的柔軟質感，非常上鏡，也能打動最廣泛的買家群體——適合追求快速、廣泛關注度的房源。', tags: ['暖調中性色', '藝術掛畫', '柔軟質感'], img: styleImgs[0] },
-    { name: 'Coastal Hamptons', blurb: '明亮、通透、鬆弛——為海港與海濱街區而生。', desc: '清爽的白色、風化橡木與鬆弛的亞麻，構成一眼可辨的海濱寧靜感。適合海港與海濱住宅——買家買的不只是格局，更是一種生活方式。', tags: ['白色亞麻', '橡木', '藍色點綴'], img: styleImgs[1] },
-    { name: 'Japandi', blurb: '日式寧靜與北歐機能的結合，低調而高級。', desc: '日式極簡與北歐溫暖的安靜融合——低矮家具、天然木材與靜謐色調，讓空間顯得從容、克制而高級。', tags: ['低矮線條', '天然木材', '靜謐色調'], img: styleImgs[2] },
-    { name: 'Scandinavian', blurb: '明亮、整潔、適合家庭。', desc: '明亮、實用、適合家庭。淺色木材、白牆與溫馨的織品層次，把公寓和家庭住宅的採光與空間感放到最大。', tags: ['淺色木材', '白牆', '溫馨層次'], img: styleImgs[3] },
-    { name: 'Modern Luxe', blurb: '飯店級質感，為高端房源而備。', desc: '為高端房源準備的飯店套房質感——絲絨、黃銅、大理石與深色點綴，從廣告第一張照片就定下令人嚮往的基調。', tags: ['絲絨', '黃銅', '深色調'], img: styleImgs[4] },
-    { name: 'Mid-Century', blurb: '為排屋與倉庫改造注入個性。', desc: '胡桃木色、曲線輪廓與大地色調，為排屋與倉庫改造注入真實個性，同時保持精緻宜居。', tags: ['胡桃木', '曲線', '大地色'], img: styleImgs[5] },
+    { name: '客廳', blurb: '每個廣告的主圖——沙發、電視櫃與層次質感。', desc: '買家在網路上和開放看房時最先評判的房間。我們以大方的沙發、乾淨的電視牆與溫暖中性色的層次質感來定調——讓房源主圖一擊即中。', tags: ['主沙發', '電視櫃', '暖調中性色'], img: styleImgs[0] },
+    { name: '休閒會客區', blurb: '第二個起居場景，賣出更多空間感。', desc: '一張單人椅、一盞落地燈、一塊柔軟的地毯，就能把閒置角落或第二起居區變成買家記住的場景——證明這個格局有更多種生活方式。', tags: ['單人椅', '落地燈', '閱讀角'], img: styleImgs[1] },
+    { name: '餐廳', blurb: '擺好的餐桌，讓買家想像在這裡的生活。', desc: '木質餐桌、舒適的餐椅、燈光下簡潔的擺台。買家會在能想像晚餐的地方停留——我們讓餐廳成為家的中心。', tags: ['木質餐桌', '餐桌擺台', '吊燈'], img: styleImgs[2] },
+    { name: '廚房', blurb: '整潔溫暖的檯面，讓廚房保持主角地位。', desc: '廚房是賣房的關鍵。我們清理雜物，用綠植、砧板與器皿點綴檯面，讓空間看起來乾淨、溫暖、隨時可以下廚。', tags: ['清爽檯面', '綠植', '器皿點綴'], img: styleImgs[3] },
+    { name: '臥室', blurb: '層疊床品與柔和燈光，營造避風港。', desc: '層疊的床品、床頭燈與柔軟質感，讓每間臥室都有飯店般的寧靜——從主臥套房到需要顯大的單人房。', tags: ['層疊床品', '床頭佈置', '柔和燈光'], img: styleImgs[4] },
+    { name: '衛浴', blurb: '幾筆 spa 質感，讓小空間也顯精緻。', desc: '嶄新的毛巾、石材色調，加上香氛、木質與綠植幾筆 spa 點綴，讓全屋最機能性的房間也變得講究。', tags: ['spa 毛巾', '石材色調', '綠植'], img: styleImgs[5] },
   ],
   services: {
     eyebrow: '服務',
@@ -386,10 +386,10 @@ const zhHant: Dict = {
   },
   gallery: {
     eyebrow: '作品',
-    title: '我們的招牌風格',
-    intro: '六種截然不同的風格，為你的家與你所在街區的買家量身打造——從寧靜的 Japandi 到飯店質感的 Modern Luxe。',
+    title: '逐個空間，逐一佈置',
+    intro: '家的每個機能區都為成交而佈置——客廳、休閒會客區、餐廳、廚房、臥室與衛浴，皆是雪梨買家青睞的溫暖現代風。',
     baCaption: '拖曳對比——同一房間，從空房到家具進場（圖：Daniela Margiotta，CC BY-SA 4.0）',
-    hint: '點擊任意圖片，查看風格介紹',
+    hint: '點擊任意圖片，查看該空間的佈置思路',
   },
   packages: {
     eyebrow: '方案',
@@ -451,9 +451,9 @@ const ko: Dict = {
   },
   hero: {
     eyebrow: '시드니 프로퍼티 스타일링',
-    sub: 'Vale&Co. Styling은 집이 더 빨리, 더 좋은 가격에 팔리도록 스타일링합니다 — 시간이 지나도 변치 않는 프렌치 감성으로, 지역과 구매자에 맞춘 스타일링.',
+    sub: 'Vale&Co. Styling은 집이 더 빨리, 더 좋은 가격에 팔리도록 스타일링합니다 — 따뜻하고 컨템퍼러리한 인테리어로, 지역과 구매자에 맞춘 스타일링.',
     ctaAI: 'AI로 우리 집 미리보기',
-    ctaWork: '스타일 보러 가기',
+    ctaWork: '작품 보러 가기',
     scroll: 'Scroll',
   },
   story: {
@@ -461,16 +461,16 @@ const ko: Dict = {
     quote: '"Vale&Co.는 모든 집에 들려줄 이야기가 있다고 믿습니다. 세심한 스타일링과 시간이 지나도 변치 않는 디자인으로, 편안하고 따뜻하며 오래도록 아름다운 공간을 만듭니다."',
   },
   featured: {
-    eyebrow: '시그니처 스타일',
-    explore: '여섯 가지 스타일 모두 보기',
+    eyebrow: '공간별 스타일링',
+    explore: '모든 공간 보기',
   },
   styles: [
-    { name: 'Contemporary', blurb: '깔끔한 라인과 따뜻한 뉴트럴 톤 — 가장 폭넓은 구매자에게 어필합니다.', desc: '가장 많이 선택되는 스타일입니다. 따뜻한 뉴트럴 톤, 깔끔한 가구 라인, 레이어드된 부드러운 텍스처는 사진에 아름답게 담기며 가장 넓은 구매자층의 마음을 사로잡습니다.', tags: ['웜 뉴트럴', '아트 포인트', '소프트 텍스처'], img: styleImgs[0] },
-    { name: 'Coastal Hamptons', blurb: '밝고 여유로운 분위기 — 하버·해변 지역에 잘 어울립니다.', desc: '화이트, 웨더드 오크, 린넨이 만드는 한눈에 알아볼 수 있는 해안의 평온함. 구매자가 라이프스타일까지 함께 구매하는 하버·해변 주택에 잘 어울립니다.', tags: ['화이트 린넨', '오크', '블루 포인트'], img: styleImgs[1] },
-    { name: 'Japandi', blurb: '일본의 고요함과 북유럽의 실용성. 조용한 프리미엄.', desc: '일본 미니멀리즘과 북유럽의 따뜻함이 어우러진 스타일 — 낮은 가구, 원목, 차분한 톤이 공간을 정돈되고 고급스럽게 만듭니다.', tags: ['로우 프로파일', '원목', '뮤트 톤'], img: styleImgs[2] },
-    { name: 'Scandinavian', blurb: '밝고 정돈된, 가족 친화적인 스타일.', desc: '밝고 실용적이며 가족 친화적입니다. 밝은 목재, 화이트 월, 포근한 텍스타일이 아파트와 주택의 채광과 공간감을 극대화합니다.', tags: ['라이트 우드', '화이트 월', '코지 레이어'], img: styleImgs[3] },
-    { name: 'Modern Luxe', blurb: '프리미엄 매물을 위한 호텔급 마감.', desc: '벨벳, 브라스, 마블과 딥 톤 포인트가 캠페인의 첫 사진부터 고급스러운 분위기를 완성합니다.', tags: ['벨벳', '브라스', '딥 톤'], img: styleImgs[4] },
-    { name: 'Mid-Century', blurb: '테라스·웨어하우스 개조 주택에 개성을 더합니다.', desc: '월넛 톤, 곡선 실루엣, 어스 톤 컬러가 테라스와 웨어하우스 개조 주택에 세련되면서도 살기 좋은 개성을 더합니다.', tags: ['월넛', '커브', '어스 톤'], img: styleImgs[5] },
+    { name: '거실', blurb: '캠페인의 메인 컷 — 소파, TV장, 레이어드 텍스처.', desc: '구매자가 온라인과 오픈 하우스에서 가장 먼저 평가하는 공간입니다. 넉넉한 소파, 깔끔한 TV 월, 웜 뉴트럴 톤의 레이어드 텍스처로 캠페인의 메인 컷을 완성합니다.', tags: ['메인 소파', 'TV장', '웜 뉴트럴'], img: styleImgs[0] },
+    { name: '라운지 공간', blurb: '여유 공간을 보여주는 두 번째 리빙 존.', desc: '암체어 하나, 플로어 램프 하나, 부드러운 러그면 조용한 코너도 구매자가 기억하는 장면이 됩니다 — 이 집에 더 많은 생활 방식이 있다는 증거입니다.', tags: ['암체어', '플로어 램프', '리딩 코너'], img: styleImgs[1] },
+    { name: '다이닝', blurb: '차려진 식탁은 이 집에서의 생활을 상상하게 합니다.', desc: '원목 테이블, 편안한 의자, 조명 아래 심플한 테이블 세팅. 저녁 식사를 상상할 수 있는 곳에 구매자는 머뭅니다 — 다이닝을 집의 중심으로 만듭니다.', tags: ['원목 테이블', '테이블 세팅', '펜던트 조명'], img: styleImgs[2] },
+    { name: '주방', blurb: '정돈된 벤치탑으로 주방을 주인공으로.', desc: '주방은 집을 팔리게 합니다. 잡동사니를 정리하고 그린, 도마, 도자기로 벤치탑을 스타일링해 깨끗하고 따뜻한, 바로 요리하고 싶은 공간으로 만듭니다.', tags: ['깨끗한 벤치탑', '그린 데코', '도자기 소품'], img: styleImgs[3] },
+    { name: '침실', blurb: '레이어드 베딩과 은은한 조명으로 완성하는 휴식처.', desc: '레이어드 베딩, 침대 옆 조명, 부드러운 텍스처가 모든 침실에 호텔 같은 평온함을 더합니다 — 마스터룸부터 넓어 보여야 하는 작은 방까지.', tags: ['레이어드 베딩', '사이드 스타일링', '은은한 조명'], img: styleImgs[4] },
+    { name: '욕실', blurb: '스파 감성으로 작은 공간도 세심하게.', desc: '새 타월, 스톤 톤, 캔들·우드·그린 몇 가지 스파 터치로 집에서 가장 기능적인 공간을 가장 세심한 공간으로 바꿉니다.', tags: ['스파 타월', '스톤 톤', '그린 데코'], img: styleImgs[5] },
   ],
   services: {
     eyebrow: '서비스',
@@ -527,10 +527,10 @@ const ko: Dict = {
   },
   gallery: {
     eyebrow: '갤러리',
-    title: '시그니처 스타일',
-    intro: '차분한 Japandi부터 호텔급 Modern Luxe까지 — 집과 지역 구매자에 맞춘 여섯 가지 스타일.',
+    title: '공간별 스타일링',
+    intro: '거실, 라운지, 다이닝, 주방, 침실, 욕실 — 시드니 구매자가 선호하는 웜 컨템퍼러리 룩으로 집의 모든 공간을 스타일링합니다.',
     baCaption: '드래그로 비교해 보세요 — 같은 방, 빈집에서 가구 세팅 완료까지(사진: Daniela Margiotta, CC BY-SA 4.0)',
-    hint: '사진을 누르면 스타일 소개를 볼 수 있습니다',
+    hint: '사진을 누르면 각 공간의 스타일링을 볼 수 있습니다',
   },
   packages: {
     eyebrow: '패키지',

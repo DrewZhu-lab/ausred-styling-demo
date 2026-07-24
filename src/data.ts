@@ -39,11 +39,11 @@ export const addressSuggestions = [
   '301/2 Chifley Square, Sydney NSW 2000',
 ]
 
-// 空房（before）与布置完成（after）为两处示意房源；正式上线需换成同一房源的真实对比照。
+// 真实同一房间的 staging 前后对比（Die Home Stagerin, CC BY-SA 3.0, Wikimedia Commons）。
+// 自托管于 public/；正式上线换成 Vale&Co. 自己项目的对比照。
 export const featuredComparison = {
-  suburb: 'Surry Hills',
-  before: img('1757742690834-aa581b9f53b2', 2000),
-  after: img('1742541656775-5fc717774c02', 2000),
+  before: `${import.meta.env.BASE_URL}ba-before.jpg`,
+  after: `${import.meta.env.BASE_URL}ba-after.jpg`,
 }
 
 export const locationRegions = [

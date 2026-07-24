@@ -95,7 +95,7 @@ const en = {
     eyebrow: 'Gallery',
     title: 'Our Signature Styles',
     intro: 'Six distinct looks, each tailored to your home and the buyers in your suburb — from calm Japandi to hotel-grade Modern Luxe.',
-    baCaption: 'Drag to compare — an empty home, then styled for sale (illustrative imagery)',
+    baCaption: 'Drag to compare — the same room before and after staging (photo: Die Home Stagerin, CC BY-SA 3.0)',
     hint: 'Tap any photo to see the style story',
   },
   packages: {
@@ -230,7 +230,7 @@ const zh: Dict = {
     eyebrow: '作品',
     title: '我们的招牌风格',
     intro: '六种截然不同的风格，为你的家与你所在街区的买家量身定制——从宁静的 Japandi 到酒店质感的 Modern Luxe。',
-    baCaption: '拖动对比——从空房到布置完成（示意图）',
+    baCaption: '拖动对比——同一房间布置前后的真实案例（图：Die Home Stagerin，CC BY-SA 3.0）',
     hint: '点击任意图片，查看风格介绍',
   },
   packages: {
@@ -364,7 +364,7 @@ const zhHant: Dict = {
     eyebrow: '作品',
     title: '我們的招牌風格',
     intro: '六種截然不同的風格，為你的家與你所在街區的買家量身打造——從寧靜的 Japandi 到飯店質感的 Modern Luxe。',
-    baCaption: '拖曳對比——從空房到佈置完成（示意圖）',
+    baCaption: '拖曳對比——同一房間佈置前後的真實案例（圖：Die Home Stagerin，CC BY-SA 3.0）',
     hint: '點擊任意圖片，查看風格介紹',
   },
   packages: {
@@ -497,7 +497,7 @@ const ko: Dict = {
     eyebrow: '갤러리',
     title: '시그니처 스타일',
     intro: '차분한 Japandi부터 호텔급 Modern Luxe까지 — 집과 지역 구매자에 맞춘 여섯 가지 스타일.',
-    baCaption: '드래그로 비교해 보세요 — 빈집에서 스타일링 완성까지(예시 이미지)',
+    baCaption: '드래그로 비교해 보세요 — 같은 방의 스테이징 전후 실제 사례(사진: Die Home Stagerin, CC BY-SA 3.0)',
     hint: '사진을 누르면 스타일 소개를 볼 수 있습니다',
   },
   packages: {

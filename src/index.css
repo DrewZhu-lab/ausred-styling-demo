@@ -3,11 +3,11 @@
 @theme {
   --color-brand: #7d8574;
   --color-brand-dark: #66705f;
-  --color-ink: #2a231a;
-  --color-cream: #e4d9c7;
-  --color-sand: #cdbca2;
-  --color-linen: #f0e7d8;
-  --color-oak: #97795a;
+  --color-ink: #33291d;
+  --color-cream: #eee3d1;
+  --color-sand: #dbcbb0;
+  --color-linen: #f7efe2;
+  --color-oak: #a0825f;
   --font-display: "Playfair Display", Georgia, serif;
   --font-sans: "Montserrat", system-ui, sans-serif;
 }
@@ -20,6 +20,13 @@ body {
   @apply bg-cream font-sans text-ink antialiased;
   /* 细腻灰泥质感：低透明度噪点纹理 */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+}
+
+@layer base {
+  /* 全站照片统一提亮 + 淡暖调（base 层，可被 grayscale 等 utility 覆盖） */
+  img {
+    filter: brightness(1.05) saturate(1.06) sepia(0.07);
+  }
 }
 
 @keyframes kenburns {

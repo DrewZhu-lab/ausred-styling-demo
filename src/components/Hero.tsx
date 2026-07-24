@@ -54,7 +54,7 @@ export default function Hero() {
           />
         </div>
       ))}
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/30 to-ink/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/25 to-ink/15" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
         <p

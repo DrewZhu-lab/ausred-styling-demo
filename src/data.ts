@@ -39,9 +39,8 @@ export const addressSuggestions = [
   '301/2 Chifley Square, Sydney NSW 2000',
 ]
 
-// 真实同一房间的 staging 前后对比：空房 → 家具入场（Daniela Margiotta, CC BY-SA 4.0,
-// Wikimedia Commons "Prima e dopo un intervento di home staging"，从合成图裁出两个面板）。
-// 自托管于 public/；正式上线换成 Vale&Co. 自己项目的对比照。
+// 同一房间的 staging 前后对比：悉尼公寓空房 → 布置完成（用户提供的小红书素材裁切，
+// 仅限 demo 演示——正式上线前必须换成 Vale&Co. 自有案例或取得授权的图片）。
 export const featuredComparison = {
   before: `${import.meta.env.BASE_URL}ba-before.jpg`,
   after: `${import.meta.env.BASE_URL}ba-after.jpg`,

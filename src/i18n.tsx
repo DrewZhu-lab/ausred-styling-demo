@@ -103,7 +103,7 @@ const en = {
     eyebrow: 'Gallery',
     title: 'Styled, room by room',
     intro: 'Every zone of the home, styled to sell — living, lounge, dining, kitchen, bedrooms and bathrooms, in the warm contemporary look Sydney buyers respond to.',
-    baCaption: 'Drag to compare — the same room, empty and fully furnished (photo: Daniela Margiotta, CC BY-SA 4.0)',
+    baCaption: 'Drag to compare — the same room, empty and fully styled (demo imagery)',
     hint: 'Tap any photo to see how we style that room',
   },
   packages: {
@@ -246,7 +246,7 @@ const zh: Dict = {
     eyebrow: '作品',
     title: '逐个空间，逐一布置',
     intro: '家的每个功能区都为成交而布置——客厅、休闲会客区、餐厅、厨房、卧室与卫浴，皆是悉尼买家青睐的温暖现代风。',
-    baCaption: '拖动对比——同一房间，从空房到家具入场（图：Daniela Margiotta，CC BY-SA 4.0）',
+    baCaption: '拖动对比——同一房间，从空房到布置完成（示意素材）',
     hint: '点击任意图片，查看该空间的布置思路',
   },
   packages: {
@@ -388,7 +388,7 @@ const zhHant: Dict = {
     eyebrow: '作品',
     title: '逐個空間，逐一佈置',
     intro: '家的每個機能區都為成交而佈置——客廳、休閒會客區、餐廳、廚房、臥室與衛浴，皆是雪梨買家青睞的溫暖現代風。',
-    baCaption: '拖曳對比——同一房間，從空房到家具進場（圖：Daniela Margiotta，CC BY-SA 4.0）',
+    baCaption: '拖曳對比——同一房間，從空房到佈置完成（示意素材）',
     hint: '點擊任意圖片，查看該空間的佈置思路',
   },
   packages: {
@@ -529,7 +529,7 @@ const ko: Dict = {
     eyebrow: '갤러리',
     title: '공간별 스타일링',
     intro: '거실, 라운지, 다이닝, 주방, 침실, 욕실 — 시드니 구매자가 선호하는 웜 컨템퍼러리 룩으로 집의 모든 공간을 스타일링합니다.',
-    baCaption: '드래그로 비교해 보세요 — 같은 방, 빈집에서 가구 세팅 완료까지(사진: Daniela Margiotta, CC BY-SA 4.0)',
+    baCaption: '드래그로 비교해 보세요 — 같은 방, 빈집에서 스타일링 완료까지(데모 이미지)',
     hint: '사진을 누르면 각 공간의 스타일링을 볼 수 있습니다',
   },
   packages: {

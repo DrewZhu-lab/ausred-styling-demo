@@ -2,19 +2,16 @@ import { Check } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import PageHeader from '../components/PageHeader'
 import CTABand from '../components/CTABand'
-import { packages } from '../data'
+import { useLang } from '../i18n'
 
 export default function PackagesPage() {
+  const { t } = useLang()
   return (
     <main className="pt-2">
-      <PageHeader
-        eyebrow="Packages"
-        title="Four ways to work with us"
-        intro="Every home is different, so every quote is tailored. Choose the package that fits your campaign — we confirm the details and investment at your free consultation."
-      />
+      <PageHeader eyebrow={t.packages.eyebrow} title={t.packages.title} intro={t.packages.intro} />
       <section className="pb-24">
         <div className="mx-auto grid max-w-6xl gap-6 px-6 sm:grid-cols-2 lg:grid-cols-4">
-          {packages.map((p) => (
+          {t.packages.items.map((p) => (
             <article
               key={p.name}
               className={`flex flex-col rounded-2xl border p-6 transition-shadow hover:shadow-md ${
@@ -23,7 +20,7 @@ export default function PackagesPage() {
             >
               {p.featured && (
                 <span className="mb-3 self-start rounded-full bg-brand px-3 py-1 text-xs font-medium text-white">
-                  Most popular
+                  {t.packages.mostPopular}
                 </span>
               )}
               <h2 className="font-display text-2xl">{p.name}</h2>
@@ -45,15 +42,13 @@ export default function PackagesPage() {
                     : 'border border-ink/20 text-ink hover:border-brand hover:text-brand'
                 }`}
               >
-                Get a tailored quote
+                {t.packages.quoteBtn}
               </Link>
             </article>
           ))}
         </div>
         <p className="mx-auto mt-10 max-w-2xl px-6 text-center text-sm text-ink/50">
-          Pricing is confirmed at your free consultation and depends on property size,
-          hire period and furniture tier. Extensions available week to week; flexible
-          payment options on request.
+          {t.packages.footnote}
         </p>
       </section>
       <CTABand />

@@ -8,50 +8,14 @@ export const heroSlides = [
   { img: img('1600210492486-724fe5c67fb0', 2000), alt: 'Tan leather living room with gallery wall', caption: 'Northbridge House' },
 ]
 
-export type StylePreview = {
-  name: string
-  blurb: string
-  tags: string[]
-  img: string
-}
-
-export const stylePreviews: StylePreview[] = [
-  {
-    name: 'Contemporary',
-    blurb: 'Clean lines and warm neutrals — the broadest buyer appeal.',
-    tags: ['Warm neutrals', 'Statement art', 'Soft texture'],
-    img: img('1616486338812-3dadae4b4ace'),
-  },
-  {
-    name: 'Coastal Hamptons',
-    blurb: 'Light, airy and relaxed — made for harbour and beachside suburbs.',
-    tags: ['White linen', 'Oak', 'Blue accents'],
-    img: img('1505693416388-ac5ce068fe85'),
-  },
-  {
-    name: 'Japandi',
-    blurb: 'Japanese calm meets Scandi function. Quietly premium.',
-    tags: ['Low profile', 'Natural timber', 'Muted palette'],
-    img: img('1554995207-c18c203602cb'),
-  },
-  {
-    name: 'Scandinavian',
-    blurb: 'Bright, uncluttered and family-friendly.',
-    tags: ['Light timber', 'White walls', 'Cosy layers'],
-    img: img('1556228453-efd6c1ff04f6'),
-  },
-  {
-    name: 'Modern Luxe',
-    blurb: 'Hotel-grade finish for premium listings.',
-    tags: ['Velvet', 'Brass', 'Deep tones'],
-    img: img('1540518614846-7eded433c457'),
-  },
-  {
-    name: 'Mid-Century',
-    blurb: 'Character styling for terraces and warehouse conversions.',
-    tags: ['Walnut', 'Curves', 'Earthy hues'],
-    img: img('1493809842364-78817add7ffb'),
-  },
+// 六种风格的配图（顺序固定：Contemporary, Coastal Hamptons, Japandi, Scandinavian, Modern Luxe, Mid-Century）
+export const styleImgs = [
+  img('1616486338812-3dadae4b4ace'),
+  img('1505693416388-ac5ce068fe85'),
+  img('1554995207-c18c203602cb'),
+  img('1556228453-efd6c1ff04f6'),
+  img('1540518614846-7eded433c457'),
+  img('1493809842364-78817add7ffb'),
 ]
 
 export const addressSuggestions = [
@@ -72,37 +36,6 @@ export const featuredComparison = {
   img: img('1522708323590-d24dbb6b0267', 2000),
 }
 
-export const packages = [
-  {
-    name: 'The Essential',
-    tagline: '公寓与紧凑户型的核心布置',
-    blurb: 'Styling for the rooms that sell — living, dining and master bedroom. Ideal for apartments and compact homes going to market.',
-    includes: ['Living, dining & master styling', 'Art & accessories', '6-week hire, delivery & install', 'Pre-photography style check'],
-    featured: false,
-  },
-  {
-    name: 'The Signature',
-    tagline: 'Most popular',
-    blurb: 'Whole-home staging with a cohesive style story from entry to outdoor space — our most-booked package for houses and townhouses.',
-    includes: ['Every room styled', 'Full art, greenery & soft styling', '6-week hire, delivery & install', 'Open-home refresh visit'],
-    featured: true,
-  },
-  {
-    name: 'The Luxe',
-    tagline: '高端物业',
-    blurb: 'Designer furniture and layered styling for prestige listings where presentation drives the price conversation.',
-    includes: ['Premium designer pieces', 'Dual living & outdoor zones', 'Extended hire options', 'Stylist on-site for photography'],
-    featured: false,
-  },
-  {
-    name: 'Turn-Key Living',
-    tagline: 'Airbnb 与出租房',
-    blurb: 'A complete purchase package for short-stay and rental properties — furniture, linen and styling kit, ready for the first booking.',
-    includes: ['Furniture purchase package', 'Linen & styling kit', 'Install & listing-photo styling', 'Restock recommendations'],
-    featured: false,
-  },
-]
-
 export const locationRegions = [
   { region: 'Eastern Suburbs', suburbs: ['Bondi', 'Double Bay', 'Bellevue Hill', 'Randwick', 'Coogee', 'Kensington'] },
   { region: 'Lower North Shore', suburbs: ['Mosman', 'Cremorne', 'Neutral Bay', 'Northbridge', 'Chatswood', 'Lane Cove'] },
@@ -111,33 +44,3 @@ export const locationRegions = [
   { region: 'City & South', suburbs: ['Sydney CBD', 'Zetland', 'Mascot', 'Wolli Creek', 'Hurstville', 'Sutherland'] },
 ]
 
-export const processSteps = [
-  { step: '01', title: 'Discovery Call', text: 'A quick call about your property, timeline and campaign — within 24 hours of your enquiry.' },
-  { step: '02', title: 'Consultation & Proposal', text: 'On-site or video walkthrough, then a tailored styling proposal and quote.' },
-  { step: '03', title: 'Styling Day', text: 'Our team delivers and installs everything in a single day, ready for the camera.' },
-  { step: '04', title: 'Photography & Open Homes', text: 'Your agent shoots and lists; we keep the home open-home ready.' },
-  { step: '05', title: 'Collection', text: 'Sold? We collect everything — or extend week to week until it is.' },
-]
-
-export const services = [
-  {
-    title: 'Full Property Staging',
-    blurb: 'Complete furniture, art and accessories for vacant homes going to market.',
-    includes: ['Furniture hire (6 weeks)', 'Delivery & install', 'Pre-photography style check'],
-  },
-  {
-    title: 'Partial Styling',
-    blurb: 'We work with what you own and layer in what sells.',
-    includes: ['On-site consultation', 'Blending hire pieces', 'Declutter guidance'],
-  },
-  {
-    title: 'Airbnb & Short-Stay',
-    blurb: 'Photogenic, durable fit-outs that lift nightly rates and reviews.',
-    includes: ['Turn-key furnishing', 'Linen & styling kit', 'Listing photo styling'],
-  },
-  {
-    title: 'Interior Design',
-    blurb: 'Personalised design for the home you plan to keep.',
-    includes: ['Concept & mood boards', 'Furniture procurement', 'Install & finishing'],
-  },
-]

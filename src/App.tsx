@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { HashRouter, Route, Routes, useLocation } from 'react-router-dom'
+import { LanguageProvider } from './i18n'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -21,21 +22,23 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <HashRouter>
-      <ScrollToTop />
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/ai" element={<AIPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/packages" element={<PackagesPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/locations" element={<LocationsPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
-      <Footer />
-    </HashRouter>
+    <LanguageProvider>
+      <HashRouter>
+        <ScrollToTop />
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/ai" element={<AIPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/packages" element={<PackagesPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/locations" element={<LocationsPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+        <Footer />
+      </HashRouter>
+    </LanguageProvider>
   )
 }

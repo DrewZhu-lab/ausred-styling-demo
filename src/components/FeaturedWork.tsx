@@ -1,18 +1,19 @@
 import { Link } from 'react-router-dom'
-import { stylePreviews } from '../data'
+import { useLang } from '../i18n'
 
 export default function FeaturedWork() {
+  const { t } = useLang()
   return (
     <section className="py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand">
-            Signature Styles
+            {t.featured.eyebrow}
           </p>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
-          {stylePreviews.slice(0, 3).map((s) => (
+          {t.styles.slice(0, 3).map((s) => (
             <figure key={s.name} className="group relative overflow-hidden rounded-t-[9rem] rounded-b-2xl">
               <img
                 src={s.img}
@@ -33,7 +34,7 @@ export default function FeaturedWork() {
             to="/gallery"
             className="inline-block rounded-full border border-ink/20 px-8 py-3 font-medium text-ink transition-colors hover:border-brand hover:text-brand"
           >
-            Explore all six styles
+            {t.featured.explore}
           </Link>
         </div>
       </div>

@@ -1,21 +1,23 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
-
-const links = [
-  { to: '/', label: 'Home' },
-  { to: '/ai', label: 'AI Preview' },
-  { to: '/services', label: 'Services' },
-  { to: '/packages', label: 'Packages' },
-  { to: '/gallery', label: 'Gallery' },
-  { to: '/locations', label: 'Locations' },
-  { to: '/about', label: 'About' },
-]
+import { Globe, Menu, X } from 'lucide-react'
+import { useLang } from '../i18n'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const { pathname } = useLocation()
+  const { lang, setLang, t } = useLang()
+
+  const links = [
+    { to: '/', label: t.nav.home },
+    { to: '/ai', label: t.nav.ai },
+    { to: '/services', label: t.nav.services },
+    { to: '/packages', label: t.nav.packages },
+    { to: '/gallery', label: t.nav.gallery },
+    { to: '/locations', label: t.nav.locations },
+    { to: '/about', label: t.nav.about },
+  ]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -28,6 +30,8 @@ export default function Nav() {
 
   // 只有首页顶部（深色 hero 之上）用透明白字，其余一律实底深字
   const solid = scrolled || pathname !== '/' || open
+
+  const toggleLang = () => setLang(lang === 'en' ? 'zh' : 'en')
 
   return (
     <header
@@ -47,7 +51,7 @@ export default function Nav() {
           </span>
         </Link>
 
-        <div className="hidden items-center gap-7 lg:flex">
+        <div className="hidden items-center gap-6 lg:flex">
           {links.map((l) => (
             <NavLink
               key={l.to}
@@ -70,11 +74,21 @@ export default function Nav() {
         </div>
 
         <div className="flex items-center gap-3">
+          <button
+            onClick={toggleLang}
+            aria-label="Switch language"
+            className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
+              solid ? 'text-ink/70 hover:text-brand' : 'text-white/85 hover:text-white'
+            }`}
+          >
+            <Globe size={15} />
+            {t.nav.langSwitch}
+          </button>
           <Link
             to="/contact"
             className="hidden rounded-full bg-brand px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-dark sm:block"
           >
-            Free consultation
+            {t.nav.consult}
           </Link>
           <button
             onClick={() => setOpen(!open)}
@@ -104,7 +118,7 @@ export default function Nav() {
               to="/contact"
               className="mt-2 rounded-full bg-brand px-5 py-2.5 text-center text-sm font-medium text-white"
             >
-              Free consultation
+              {t.nav.consult}
             </Link>
           </div>
         </div>

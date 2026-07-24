@@ -2,15 +2,13 @@ import { MapPin } from 'lucide-react'
 import PageHeader from '../components/PageHeader'
 import CTABand from '../components/CTABand'
 import { locationRegions } from '../data'
+import { useLang } from '../i18n'
 
 export default function LocationsPage() {
+  const { t } = useLang()
   return (
     <main className="pt-2">
-      <PageHeader
-        eyebrow="Locations"
-        title="Styling homes across Sydney"
-        intro="From the Eastern Suburbs to the Hills, our team delivers and installs across greater Sydney — with service in English and Mandarin. 我们提供中英双语服务。"
-      />
+      <PageHeader eyebrow={t.locations.eyebrow} title={t.locations.title} intro={t.locations.intro} />
       <section className="pb-24">
         <div className="mx-auto grid max-w-6xl gap-6 px-6 sm:grid-cols-2 lg:grid-cols-3">
           {locationRegions.map((r) => (
@@ -30,8 +28,7 @@ export default function LocationsPage() {
           ))}
         </div>
         <p className="mx-auto mt-10 max-w-2xl px-6 text-center text-sm text-ink/50">
-          Not on the list? We regularly style beyond these areas — ask us about your
-          suburb at a free consultation.
+          {t.locations.note}
         </p>
       </section>
       <CTABand />

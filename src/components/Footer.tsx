@@ -1,6 +1,17 @@
 import { Link } from 'react-router-dom'
+import { useLang } from '../i18n'
 
 export default function Footer() {
+  const { t } = useLang()
+  const links = [
+    { to: '/ai', label: t.nav.ai },
+    { to: '/services', label: t.nav.services },
+    { to: '/packages', label: t.nav.packages },
+    { to: '/gallery', label: t.nav.gallery },
+    { to: '/locations', label: t.nav.locations },
+    { to: '/about', label: t.nav.about },
+    { to: '/contact', label: t.nav.consult },
+  ]
   return (
     <footer className="bg-ink text-cream/60">
       <div className="border-b border-cream/10 py-6 text-center">
@@ -16,13 +27,11 @@ export default function Footer() {
           </span>
         </p>
         <nav className="flex flex-wrap justify-center gap-6">
-          <Link to="/ai" className="hover:text-cream">AI Preview</Link>
-          <Link to="/services" className="hover:text-cream">Services</Link>
-          <Link to="/packages" className="hover:text-cream">Packages</Link>
-          <Link to="/gallery" className="hover:text-cream">Gallery</Link>
-          <Link to="/locations" className="hover:text-cream">Locations</Link>
-          <Link to="/about" className="hover:text-cream">About</Link>
-          <Link to="/contact" className="hover:text-cream">Contact</Link>
+          {links.map((l) => (
+            <Link key={l.to} to={l.to} className="hover:text-cream">
+              {l.label}
+            </Link>
+          ))}
         </nav>
         <p className="text-xs text-cream/40">
           © 2026 Vale&amp;Co. Styling · A brand of Ausred International Investment Group

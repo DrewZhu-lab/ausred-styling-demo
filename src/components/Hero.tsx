@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { heroSlides } from '../data'
+import { useLang } from '../i18n'
 
 const SLOGAN_LINES = ['Style Spaces.', 'Elevate Living.', 'Inspire Value.']
 const INTRO_LIFT_MS = 2300
@@ -11,6 +12,7 @@ const SLIDE_MS = 6000
 let introPlayed = false
 
 export default function Hero() {
+  const { t } = useLang()
   const [index, setIndex] = useState(0)
   // 0: intro overlay showing · 1: overlay lifting, content revealing · 2: done
   const [stage, setStage] = useState(introPlayed ? 2 : 0)
@@ -61,7 +63,7 @@ export default function Hero() {
           }`}
           style={{ animationDelay: '0.1s' }}
         >
-          Property Styling · Sydney
+          {t.hero.eyebrow}
         </p>
         <h1 className="font-display max-w-4xl text-5xl leading-[1.08] md:text-7xl">
           {SLOGAN_LINES.map((line, i) => (
@@ -79,8 +81,7 @@ export default function Hero() {
           className={`mt-6 max-w-xl text-white/85 ${stage >= 1 ? 'animate-fade-in-slow' : 'opacity-0'}`}
           style={{ animationDelay: '1s' }}
         >
-          Vale&amp;Co. Styling stages homes that sell faster, for more — and with our AI
-          Style Studio, you can preview your own home restyled before we lift a cushion.
+          {t.hero.sub}
         </p>
         <div
           className={`mt-9 flex flex-wrap justify-center gap-4 ${
@@ -92,13 +93,13 @@ export default function Hero() {
             to="/ai"
             className="rounded-full bg-brand px-7 py-3 font-medium text-white transition-colors hover:bg-brand-dark"
           >
-            Preview my home with AI
+            {t.hero.ctaAI}
           </Link>
           <Link
             to="/gallery"
             className="rounded-full border border-white/60 px-7 py-3 font-medium text-white transition-colors hover:bg-white/10"
           >
-            View our work
+            {t.hero.ctaWork}
           </Link>
         </div>
       </div>
@@ -133,7 +134,7 @@ export default function Hero() {
       {/* 滚动提示 */}
       {stage >= 2 && (
         <div className="absolute bottom-8 right-8 z-10 hidden flex-col items-center gap-2 text-white/70 md:flex">
-          <span className="text-[9px] font-medium uppercase tracking-[0.35em]">Scroll</span>
+          <span className="text-[9px] font-medium uppercase tracking-[0.35em]">{t.hero.scroll}</span>
           <span className="animate-scroll-cue block h-8 w-px bg-white/60" />
         </div>
       )}

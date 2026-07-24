@@ -1,19 +1,21 @@
-import { featuredComparison, stylePreviews } from '../data'
+import { featuredComparison } from '../data'
+import { useLang } from '../i18n'
 import BeforeAfter from './BeforeAfter'
 
 export default function Portfolio() {
+  const { t } = useLang()
   return (
     <section id="portfolio" className="pb-24 pt-4">
       <div className="mx-auto max-w-6xl px-6">
         <div>
           <BeforeAfter image={featuredComparison.img} />
           <p className="mt-3 text-center text-sm text-ink/50">
-            Drag to compare — every style begins with the same room (demo imagery)
+            {t.gallery.baCaption}
           </p>
         </div>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {stylePreviews.map((s) => (
+          {t.styles.map((s) => (
             <figure key={s.name} className="group relative overflow-hidden rounded-t-[9rem] rounded-b-2xl">
               <img
                 src={s.img}

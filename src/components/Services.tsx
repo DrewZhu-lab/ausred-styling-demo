@@ -1,23 +1,23 @@
 import { BedDouble, Check, Palette, Sofa, Home } from 'lucide-react'
-import { services } from '../data'
+import { useLang } from '../i18n'
 
 const icons = [Sofa, Home, BedDouble, Palette]
 
 export default function Services() {
+  const { t } = useLang()
   return (
     <section id="services" className="bg-ink py-24 text-cream">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-brand">Services</p>
-          <h2 className="font-display text-3xl md:text-5xl">Styling for every campaign</h2>
-          <p className="mt-4 text-cream/60">
-            From a single consultation to a full turn-key fit-out, we scale to the
-            property and the market.
+          <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-brand">
+            {t.services.eyebrow}
           </p>
+          <h2 className="font-display text-3xl md:text-5xl">{t.services.title}</h2>
+          <p className="mt-4 text-cream/60">{t.services.intro}</p>
         </div>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((s, i) => {
+          {t.services.items.map((s, i) => {
             const Icon = icons[i % icons.length]
             return (
               <article

@@ -78,7 +78,7 @@ export default function Hero() {
           ))}
         </h1>
         <p
-          className={`mt-6 max-w-xl text-white/85 ${stage >= 1 ? 'animate-fade-in-slow' : 'opacity-0'}`}
+          className={`mt-6 hidden max-w-xl text-white/85 md:block ${stage >= 1 ? 'animate-fade-in-slow' : 'opacity-0'}`}
           style={{ animationDelay: '1s' }}
         >
           {t.hero.sub}

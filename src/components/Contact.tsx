@@ -16,7 +16,7 @@ export default function Contact() {
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-brand">
             {t.contact.eyebrow}
           </p>
-          <h2 className="font-display text-3xl md:text-5xl">{t.contact.title}</h2>
+          <h2 className="font-display text-3xl md:text-[2.5rem]">{t.contact.title}</h2>
           <p className="mt-4 text-ink/70">{t.contact.intro}</p>
         </div>
 

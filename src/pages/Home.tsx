@@ -8,7 +8,10 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Story />
+      {/* 移动端首页不展示大段文字 */}
+      <div className="hidden md:block">
+        <Story />
+      </div>
       <FeaturedWork />
       <Services />
       <CTABand />

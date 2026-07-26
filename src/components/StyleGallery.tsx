@@ -8,10 +8,13 @@ import { useLang } from '../i18n'
 export default function StyleGallery({ preview = false }: { preview?: boolean }) {
   const { t } = useLang()
 
+  // 首页预览 6 格：六个空间轮流展示三个系列（豪宅/温馨公寓/撞色）
+  const PREVIEW_IDX = [0, 4, 8, 9, 13, 17]
+
   if (preview) {
     return (
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-        {roomPairs.map((p, i) => ({ p, i })).filter(({ i }) => i % 3 === 0).map(({ p, i }) => (
+        {PREVIEW_IDX.map((i) => ({ p: roomPairs[i], i })).map(({ p, i }) => (
           <Link
             key={p.after}
             to="/gallery"

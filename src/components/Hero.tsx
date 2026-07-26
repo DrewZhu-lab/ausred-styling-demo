@@ -57,15 +57,16 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/25 to-ink/15" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
+        {/* 移动端首屏不显示大片文字：眉题/标语/副文案仅 md 以上展示 */}
         <p
-          className={`mb-5 text-xs font-medium uppercase tracking-[0.35em] text-white/80 ${
+          className={`mb-5 hidden text-xs font-medium uppercase tracking-[0.35em] text-white/80 md:block ${
             stage >= 1 ? 'animate-fade-in-slow' : 'opacity-0'
           }`}
           style={{ animationDelay: '0.1s' }}
         >
           {t.hero.eyebrow}
         </p>
-        <h1 className="font-display max-w-4xl text-5xl leading-[1.08] md:text-7xl">
+        <h1 className="font-display hidden max-w-4xl text-5xl leading-[1.08] md:block md:text-7xl">
           {SLOGAN_LINES.map((line, i) => (
             <span key={line} className="block overflow-hidden py-[0.06em]">
               <span

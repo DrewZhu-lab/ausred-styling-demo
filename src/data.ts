@@ -7,20 +7,27 @@ const pair = (name: string) => ({
   after: `${import.meta.env.BASE_URL}pair-${name}-after.jpg`,
 })
 
-// 12 对，按房间交错：每个空间「大宅奢华版 + 温暖简约版」并排，与 t.styles 同序。
+// 18 对，按房间分组（每行 3 格 = 同一空间的三种风格），与 t.styles 同序：
+// 无后缀=大宅奢华系，2=温暖简约系，3=撞色个性系。
 export const roomPairs = [
   pair('living'),
   pair('living2'),
+  pair('living3'),
   pair('lounge'),
   pair('lounge2'),
+  pair('lounge3'),
   pair('dining'),
   pair('dining2'),
+  pair('dining3'),
   pair('kitchen'),
   pair('kitchen2'),
+  pair('kitchen3'),
   pair('bedroom'),
   pair('bedroom2'),
+  pair('bedroom3'),
   pair('bath'),
   pair('bath2'),
+  pair('bath3'),
 ]
 
 // 各功能区代表图 = 布置后（供 i18n 与 MoodBoard 使用）

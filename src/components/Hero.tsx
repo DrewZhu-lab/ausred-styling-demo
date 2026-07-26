@@ -17,6 +17,10 @@ export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const audioRef = useRef<HTMLAudioElement>(null)
   const [muted, setMuted] = useState(true)
+  // 竖屏/手机加载竖版短片（9:16，人物取景），横屏加载横版
+  const [portrait] = useState(
+    () => window.matchMedia('(max-width: 767px), (orientation: portrait)').matches
+  )
   // 0: intro overlay showing · 1: overlay lifting, content revealing · 2: done
   const [stage, setStage] = useState(introPlayed ? 2 : 0)
 
@@ -41,6 +45,8 @@ export default function Hero() {
     const enable = (e: PointerEvent) => {
       if ((e.target as HTMLElement | null)?.closest('[data-sound-toggle]')) return
       a.play()
+      // 手机省电模式会禁止自动播放视频，首次点击一并触发
+      videoRef.current?.play().catch(() => {})
       setMuted(false)
       window.removeEventListener('pointerdown', enable)
     }
@@ -81,8 +87,8 @@ export default function Hero() {
       {/* 背景短片：浏览器要求自动播放必须静音，右下角按钮可开启音乐 */}
       <video
         ref={videoRef}
-        src={`${BASE}hero.mp4`}
-        poster={`${BASE}hero-poster.jpg`}
+        src={`${BASE}${portrait ? 'hero-m.mp4' : 'hero.mp4'}`}
+        poster={`${BASE}${portrait ? 'hero-poster-m.jpg' : 'hero-poster.jpg'}`}
         autoPlay
         muted
         loop

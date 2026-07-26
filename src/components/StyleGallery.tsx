@@ -11,7 +11,7 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
   if (preview) {
     return (
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-        {roomPairs.map((p, i) => ({ p, i })).filter(({ i }) => i % 2 === 0).map(({ p, i }) => (
+        {roomPairs.map((p, i) => ({ p, i })).filter(({ i }) => i % 3 === 0).map(({ p, i }) => (
           <Link
             key={p.after}
             to="/gallery"
@@ -36,11 +36,11 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
 
   return (
     <>
-      <div className="grid gap-x-8 gap-y-12 md:grid-cols-2">
+      <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
         {roomPairs.map((p, i) => (
           <div key={p.after}>
             <BeforeAfter before={p.before} after={p.after} />
-            <h3 className="font-display mt-4 text-2xl">{t.styles[i].name}</h3>
+            <h3 className="font-display mt-3.5 text-xl">{t.styles[i].name}</h3>
             <p className="mt-1.5 text-sm leading-relaxed text-ink/65">{t.styles[i].blurb}</p>
             <div className="mt-3 flex flex-wrap gap-1.5">
               {t.styles[i].tags.map((tag) => (

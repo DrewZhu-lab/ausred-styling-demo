@@ -1,12 +1,4 @@
-const img = (id: string, w = 1600) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
-
-export const heroSlides = [
-  { img: img('1633505899118-4ca6bd143043', 2000), alt: 'Bright living room with two cream sofas and olive tree', caption: 'Mosman Residence' },
-  { img: img('1600488999806-8efb986d87b1', 2000), alt: 'Walnut dining table with black-framed windows', caption: 'Double Bay Apartment' },
-  { img: img('1631048500344-8d01227385b3', 2000), alt: 'Neutral styled bedroom with oak floors', caption: 'Bellevue Hill House' },
-  { img: img('1750639258774-9a714379a093', 2000), alt: 'Curved cream sofa with paired artwork', caption: 'Paddington Terrace' },
-]
+// 首屏背景短片素材在 public/hero.mp4（由 6 张布置后图片合成，含音乐），Hero.tsx 直接引用。
 
 // 六个功能区的「空房 → 布置后」对比图（AI 生成示意素材，同一房间同一机位；
 // 顺序固定：客厅、休闲会客区、餐厅、厨房、卧室、卫浴 — 与 i18n t.styles 同序）

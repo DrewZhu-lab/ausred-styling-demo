@@ -1,19 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { heroSlides } from '../data'
+import { Volume2, VolumeX } from 'lucide-react'
 import { useLang } from '../i18n'
 
 const SLOGAN_LINES = ['Style Spaces.', 'Elevate Living.', 'Inspire Value.']
 const INTRO_LIFT_MS = 2300
 const INTRO_DONE_MS = 3150
-const SLIDE_MS = 6000
 
 // 开场动画每个会话只播一次（切换页面回来不重播）
 let introPlayed = false
 
+const BASE = import.meta.env.BASE_URL
+
 export default function Hero() {
   const { t } = useLang()
-  const [index, setIndex] = useState(0)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [muted, setMuted] = useState(true)
   // 0: intro overlay showing · 1: overlay lifting, content revealing · 2: done
   const [stage, setStage] = useState(introPlayed ? 2 : 0)
 
@@ -30,30 +32,27 @@ export default function Hero() {
     }
   }, [])
 
-  useEffect(() => {
-    if (stage < 2) return
-    const t = setInterval(() => setIndex((i) => (i + 1) % heroSlides.length), SLIDE_MS)
-    return () => clearInterval(t)
-  }, [stage])
+  const toggleSound = () => {
+    const v = videoRef.current
+    if (!v) return
+    v.muted = !v.muted
+    if (!v.muted) v.play()
+    setMuted(v.muted)
+  }
 
   return (
     <section id="top" className="relative h-screen min-h-[560px] overflow-hidden bg-ink">
-      {heroSlides.map((s, i) => (
-        <div
-          key={s.img}
-          className={`absolute inset-0 transition-opacity duration-[1500ms] ${
-            i === index ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <img
-            src={s.img}
-            alt={s.alt}
-            className={`h-full w-full object-cover ${
-              i === index ? (i % 2 ? 'animate-kenburns-b' : 'animate-kenburns-a') : ''
-            }`}
-          />
-        </div>
-      ))}
+      {/* 背景短片：浏览器要求自动播放必须静音，右下角按钮可开启音乐 */}
+      <video
+        ref={videoRef}
+        src={`${BASE}hero.mp4`}
+        poster={`${BASE}hero-poster.jpg`}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/25 to-ink/15" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
@@ -105,36 +104,20 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* 项目名角标：随幻灯片切换 */}
+      {/* 音乐开关 */}
       {stage >= 2 && (
-        <div key={`cap-${index}`} className="animate-fade-in-slow absolute bottom-9 left-8 z-10 hidden md:block">
-          <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-white/60">
-            {heroSlides[index].caption}
-          </p>
-        </div>
+        <button
+          onClick={toggleSound}
+          aria-label={muted ? 'Unmute background music' : 'Mute background music'}
+          className="absolute bottom-8 right-8 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-ink/40 text-white/85 backdrop-blur transition-colors hover:bg-ink/60"
+        >
+          {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+        </button>
       )}
-
-      {/* 进度条式指示器 */}
-      <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 gap-3">
-        {heroSlides.map((s, i) => (
-          <button
-            key={s.img}
-            onClick={() => setIndex(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className="flex h-5 items-center"
-          >
-            <span className="block h-[3px] w-10 overflow-hidden rounded-full bg-white/25">
-              {i === index && stage >= 2 && (
-                <span key={`p-${index}`} className="animate-progress block h-full bg-white" />
-              )}
-            </span>
-          </button>
-        ))}
-      </div>
 
       {/* 滚动提示 */}
       {stage >= 2 && (
-        <div className="absolute bottom-8 right-8 z-10 hidden flex-col items-center gap-2 text-white/70 md:flex">
+        <div className="absolute bottom-8 left-8 z-10 hidden flex-col items-center gap-2 text-white/70 md:flex">
           <span className="text-[9px] font-medium uppercase tracking-[0.35em]">{t.hero.scroll}</span>
           <span className="animate-scroll-cue block h-8 w-px bg-white/60" />
         </div>

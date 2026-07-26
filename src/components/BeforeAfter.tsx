@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
-// 左右为两张真实照片：空房（before）与布置完成（after）。
+// 同一房间的空房（before）与布置完成（after）对比滑块。
 export default function BeforeAfter({ before, after }: { before: string; after: string }) {
   const [pos, setPos] = useState(50)
 
   return (
-    <div className="relative aspect-[16/9] select-none overflow-hidden rounded-2xl shadow-md">
+    <div className="relative aspect-[3/2] select-none overflow-hidden rounded-2xl shadow-md">
       <img src={after} alt="After styling" className="absolute inset-0 h-full w-full object-cover" />
       <img
         src={before}

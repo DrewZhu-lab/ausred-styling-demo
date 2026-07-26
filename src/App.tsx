@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { HashRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { LanguageProvider } from './i18n'
 import Nav from './components/Nav'
+import MusicPlayer from './components/MusicPlayer'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import ServicesPage from './pages/ServicesPage'
@@ -25,6 +26,7 @@ export default function App() {
       <HashRouter>
         <ScrollToTop />
         <Nav />
+        <MusicPlayer />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicesPage />} />

@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Volume2, VolumeX } from 'lucide-react'
 import { useLang } from '../i18n'
 
 const SLOGAN_LINES = ['Style Spaces.', 'Elevate Living.', 'Inspire Value.']
@@ -15,8 +14,6 @@ const BASE = import.meta.env.BASE_URL
 export default function Hero() {
   const { t } = useLang()
   const videoRef = useRef<HTMLVideoElement>(null)
-  const audioRef = useRef<HTMLAudioElement>(null)
-  const [muted, setMuted] = useState(true)
   // 竖屏/手机加载竖版短片（9:16，人物取景），横屏加载横版
   const [portrait] = useState(
     () => window.matchMedia('(max-width: 767px), (orientation: portrait)').matches
@@ -37,50 +34,25 @@ export default function Hero() {
     }
   }, [])
 
-  // 音乐与视频解耦：音乐是独立的整首曲目循环播放，不随 18 秒视频重头。
-  // 默认尝试直接播放；被浏览器拦截时，用户第一次点击页面任意处即开声。
+  // 静音视频始终允许自动播放；个别浏览器在资源加载竞态、省电模式或标签页
+  // 由后台转前台时会暂停，这里做三重兜底：挂载即播、回到前台续播、首次点击触发。
   useEffect(() => {
-    const a = audioRef.current
-    if (!a) return
-    const enable = (e: PointerEvent) => {
-      if ((e.target as HTMLElement | null)?.closest('[data-sound-toggle]')) return
-      a.play()
-      // 手机省电模式会禁止自动播放视频，首次点击一并触发
-      videoRef.current?.play().catch(() => {})
-      setMuted(false)
-      window.removeEventListener('pointerdown', enable)
-    }
-    // 静音视频始终允许自动播放；个别浏览器在资源加载竞态或标签页由后台转前台时会暂停，这里兜底
-    videoRef.current?.play().catch(() => {})
+    const play = () => videoRef.current?.play().catch(() => {})
+    play()
     const resume = () => {
-      if (!document.hidden) videoRef.current?.play().catch(() => {})
+      if (!document.hidden) play()
+    }
+    const tap = () => {
+      play()
+      window.removeEventListener('pointerdown', tap)
     }
     document.addEventListener('visibilitychange', resume)
-    a.volume = 0.85
-    a.play()
-      .then(() => setMuted(false))
-      .catch(() => {
-        setMuted(true)
-        window.addEventListener('pointerdown', enable)
-      })
+    window.addEventListener('pointerdown', tap)
     return () => {
-      window.removeEventListener('pointerdown', enable)
       document.removeEventListener('visibilitychange', resume)
-      a.pause()
+      window.removeEventListener('pointerdown', tap)
     }
   }, [])
-
-  const toggleSound = () => {
-    const a = audioRef.current
-    if (!a) return
-    if (a.paused) {
-      a.play()
-      setMuted(false)
-    } else {
-      a.pause()
-      setMuted(true)
-    }
-  }
 
   return (
     <section id="top" className="relative h-screen min-h-[560px] overflow-hidden bg-ink">
@@ -95,7 +67,6 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <audio ref={audioRef} src={`${BASE}hero-music.mp3`} loop preload="none" />
       <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/25 to-ink/15" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
@@ -146,33 +117,6 @@ export default function Hero() {
           </Link>
         </div>
       </div>
-
-      {/* 音乐开关：静音时用醒目的胶囊按钮邀请开声 */}
-      {stage >= 2 &&
-        (muted ? (
-          <button
-            data-sound-toggle
-            onClick={toggleSound}
-            aria-label="Unmute background music"
-            className="absolute bottom-8 right-6 z-10 flex items-center gap-2.5 rounded-full bg-white/95 px-5 py-3 font-medium text-ink shadow-xl transition-transform hover:scale-105 md:right-8"
-          >
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-brand" />
-            </span>
-            <VolumeX size={18} />
-            {t.hero.musicOn}
-          </button>
-        ) : (
-          <button
-            data-sound-toggle
-            onClick={toggleSound}
-            aria-label="Mute background music"
-            className="absolute bottom-8 right-6 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-ink shadow-lg transition-transform hover:scale-105 md:right-8"
-          >
-            <Volume2 size={20} />
-          </button>
-        ))}
 
       {/* 滚动提示 */}
       {stage >= 2 && (

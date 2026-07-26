@@ -6,10 +6,16 @@ export default function BeforeAfter({ before, after }: { before: string; after: 
 
   return (
     <div className="relative aspect-[3/2] select-none overflow-hidden rounded-2xl shadow-md">
-      <img src={after} alt="After styling" className="absolute inset-0 h-full w-full object-cover" />
+      <img
+        src={after}
+        alt="After styling"
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
       <img
         src={before}
         alt="Before styling"
+        loading="lazy"
         className="absolute inset-0 h-full w-full object-cover"
         style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
       />

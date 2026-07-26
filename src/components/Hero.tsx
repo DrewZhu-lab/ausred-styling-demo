@@ -95,7 +95,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <audio ref={audioRef} src={`${BASE}hero-music.mp3`} loop preload="auto" />
+      <audio ref={audioRef} src={`${BASE}hero-music.mp3`} loop preload="none" />
       <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/25 to-ink/15" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">

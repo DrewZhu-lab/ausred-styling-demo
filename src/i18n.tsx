@@ -27,6 +27,7 @@ const en = {
     ctaAI: 'Preview my home with AI',
     ctaWork: 'View our work',
     scroll: 'Scroll',
+    musicOn: 'Play music',
   },
   story: {
     eyebrow: 'Our Story',
@@ -172,6 +173,7 @@ const zh: Dict = {
     ctaAI: 'AI 预览我的家',
     ctaWork: '查看布置作品',
     scroll: 'Scroll',
+    musicOn: '打开音乐',
   },
   story: {
     eyebrow: '品牌故事',
@@ -314,6 +316,7 @@ const zhHant: Dict = {
     ctaAI: 'AI 預覽我的家',
     ctaWork: '查看佈置作品',
     scroll: 'Scroll',
+    musicOn: '開啟音樂',
   },
   story: {
     eyebrow: '品牌故事',
@@ -455,6 +458,7 @@ const ko: Dict = {
     ctaAI: 'AI로 우리 집 미리보기',
     ctaWork: '작품 보러 가기',
     scroll: 'Scroll',
+    musicOn: '음악 켜기',
   },
   story: {
     eyebrow: '브랜드 스토리',

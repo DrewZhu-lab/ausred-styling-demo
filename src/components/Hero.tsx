@@ -32,6 +32,30 @@ export default function Hero() {
     }
   }, [])
 
+  // 音乐默认打开：先尝试有声自动播放；被浏览器拦截时，用户在页面上的
+  // 第一次点击/触摸即自动开声（点音量按钮除外，交给按钮自己处理）。
+  useEffect(() => {
+    const v = videoRef.current
+    if (!v) return
+    const enable = (e: PointerEvent) => {
+      if ((e.target as HTMLElement | null)?.closest('[data-sound-toggle]')) return
+      v.muted = false
+      v.play()
+      setMuted(false)
+      window.removeEventListener('pointerdown', enable)
+    }
+    v.muted = false
+    v.play()
+      .then(() => setMuted(false))
+      .catch(() => {
+        v.muted = true
+        v.play()
+        setMuted(true)
+        window.addEventListener('pointerdown', enable)
+      })
+    return () => window.removeEventListener('pointerdown', enable)
+  }, [])
+
   const toggleSound = () => {
     const v = videoRef.current
     if (!v) return
@@ -104,16 +128,32 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* 音乐开关 */}
-      {stage >= 2 && (
-        <button
-          onClick={toggleSound}
-          aria-label={muted ? 'Unmute background music' : 'Mute background music'}
-          className="absolute bottom-8 right-8 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-ink/40 text-white/85 backdrop-blur transition-colors hover:bg-ink/60"
-        >
-          {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
-        </button>
-      )}
+      {/* 音乐开关：静音时用醒目的胶囊按钮邀请开声 */}
+      {stage >= 2 &&
+        (muted ? (
+          <button
+            data-sound-toggle
+            onClick={toggleSound}
+            aria-label="Unmute background music"
+            className="absolute bottom-8 right-6 z-10 flex items-center gap-2.5 rounded-full bg-white/95 px-5 py-3 font-medium text-ink shadow-xl transition-transform hover:scale-105 md:right-8"
+          >
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-brand" />
+            </span>
+            <VolumeX size={18} />
+            {t.hero.musicOn}
+          </button>
+        ) : (
+          <button
+            data-sound-toggle
+            onClick={toggleSound}
+            aria-label="Mute background music"
+            className="absolute bottom-8 right-6 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-ink shadow-lg transition-transform hover:scale-105 md:right-8"
+          >
+            <Volume2 size={20} />
+          </button>
+        ))}
 
       {/* 滚动提示 */}
       {stage >= 2 && (

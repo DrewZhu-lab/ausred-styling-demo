@@ -15,6 +15,7 @@ const BASE = import.meta.env.BASE_URL
 export default function Hero() {
   const { t } = useLang()
   const videoRef = useRef<HTMLVideoElement>(null)
+  const audioRef = useRef<HTMLAudioElement>(null)
   const [muted, setMuted] = useState(true)
   // 0: intro overlay showing · 1: overlay lifting, content revealing · 2: done
   const [stage, setStage] = useState(introPlayed ? 2 : 0)
@@ -32,36 +33,47 @@ export default function Hero() {
     }
   }, [])
 
-  // 音乐默认打开：先尝试有声自动播放；被浏览器拦截时，用户在页面上的
-  // 第一次点击/触摸即自动开声（点音量按钮除外，交给按钮自己处理）。
+  // 音乐与视频解耦：音乐是独立的整首曲目循环播放，不随 18 秒视频重头。
+  // 默认尝试直接播放；被浏览器拦截时，用户第一次点击页面任意处即开声。
   useEffect(() => {
-    const v = videoRef.current
-    if (!v) return
+    const a = audioRef.current
+    if (!a) return
     const enable = (e: PointerEvent) => {
       if ((e.target as HTMLElement | null)?.closest('[data-sound-toggle]')) return
-      v.muted = false
-      v.play()
+      a.play()
       setMuted(false)
       window.removeEventListener('pointerdown', enable)
     }
-    v.muted = false
-    v.play()
+    // 静音视频始终允许自动播放；个别浏览器在资源加载竞态或标签页由后台转前台时会暂停，这里兜底
+    videoRef.current?.play().catch(() => {})
+    const resume = () => {
+      if (!document.hidden) videoRef.current?.play().catch(() => {})
+    }
+    document.addEventListener('visibilitychange', resume)
+    a.volume = 0.85
+    a.play()
       .then(() => setMuted(false))
       .catch(() => {
-        v.muted = true
-        v.play()
         setMuted(true)
         window.addEventListener('pointerdown', enable)
       })
-    return () => window.removeEventListener('pointerdown', enable)
+    return () => {
+      window.removeEventListener('pointerdown', enable)
+      document.removeEventListener('visibilitychange', resume)
+      a.pause()
+    }
   }, [])
 
   const toggleSound = () => {
-    const v = videoRef.current
-    if (!v) return
-    v.muted = !v.muted
-    if (!v.muted) v.play()
-    setMuted(v.muted)
+    const a = audioRef.current
+    if (!a) return
+    if (a.paused) {
+      a.play()
+      setMuted(false)
+    } else {
+      a.pause()
+      setMuted(true)
+    }
   }
 
   return (
@@ -77,6 +89,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       />
+      <audio ref={audioRef} src={`${BASE}hero-music.mp3`} loop preload="auto" />
       <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/25 to-ink/15" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">

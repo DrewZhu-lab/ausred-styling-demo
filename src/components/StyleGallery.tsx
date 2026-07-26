@@ -11,7 +11,7 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
   if (preview) {
     return (
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-        {roomPairs.map((p, i) => (
+        {roomPairs.map((p, i) => ({ p, i })).filter(({ i }) => i % 2 === 0).map(({ p, i }) => (
           <Link
             key={p.after}
             to="/gallery"

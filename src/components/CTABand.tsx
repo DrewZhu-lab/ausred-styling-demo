@@ -6,7 +6,7 @@ export default function CTABand() {
   return (
     <section className="bg-ink py-20 text-center text-cream">
       <p className="px-6 text-xs font-medium uppercase tracking-[0.35em] text-cream/60">
-        Style Spaces. Elevate Living. Inspire Value.
+        Style Spaces. Inspire Living. Elevate Value.
       </p>
       <h2 className="font-display mt-4 px-6 text-3xl md:text-4xl">
         {t.cta.title}

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLang } from '../i18n'
 
-const SLOGAN_LINES = ['Style Spaces.', 'Elevate Living.', 'Inspire Value.']
+const SLOGAN_LINES = ['Style Spaces.', 'Inspire Living.', 'Elevate Value.']
 const INTRO_LIFT_MS = 2300
 const INTRO_DONE_MS = 3150
 

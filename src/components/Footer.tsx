@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className="bg-ink text-cream/60">
       <div className="border-b border-cream/10 py-6 text-center">
         <p className="px-6 text-xs font-medium tracking-[0.35em] text-cream/80">
-          STYLE SPACES. ELEVATE LIVING. INSPIRE VALUE.
+          STYLE SPACES. INSPIRE LIVING. ELEVATE VALUE.
         </p>
       </div>
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-10 text-center text-sm">

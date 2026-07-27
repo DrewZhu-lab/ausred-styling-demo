@@ -54,9 +54,9 @@ const en = {
     { name: 'Bedroom · Hotel Suite', blurb: 'A panelled bedhead wall and layered bedding with a view.', desc: 'A hotel-suite master: upholstered panel wall, layered bedding, symmetrical lamps and floor-to-ceiling water views.', tags: ['Hotel Suite', 'Panelled bedhead', 'Water views'], img: styleImgs[12] },
     { name: 'Bedroom · Soft Neutral', blurb: 'Layered linen bedding and warm artwork.', desc: 'A soft-neutral master: layered linen bedding, paired artworks and warm lamplight — the calm, broad-appeal bedroom.', tags: ['Soft Neutral', 'Linen layers', 'Paired art'], img: styleImgs[13] },
     { name: 'Bedroom · Caramel & Navy', blurb: 'A caramel leather bedhead wall with navy layers and rust art.', desc: 'A tailored masculine-luxe bedroom: caramel channel-stitched leather bedhead wall, navy bedding and rust abstract art against treetop views.', tags: ['Caramel & Navy', 'Leather bedhead', 'Rust accents'], img: styleImgs[14] },
-    { name: 'Bathroom · Resort Spa', blurb: 'A stone tub, timber-battened ceiling and private garden.', desc: 'Resort-spa calm: a sculptural stone tub beneath a timber-battened skylight and tropical greenery through full-height glass.', tags: ['Resort Spa', 'Stone tub', 'Garden outlook'], img: styleImgs[15] },
-    { name: 'Bathroom · Stone Minimal', blurb: 'Travertine, an arched mirror and matte-black fittings.', desc: 'An urban stone bathroom: travertine surfaces, an arched mirror and matte-black tapware, styled with towels and greenery.', tags: ['Stone Minimal', 'Travertine', 'Matte black'], img: styleImgs[16] },
-    { name: 'Bathroom · Emerald Retreat', blurb: 'Green marble, copper tapware and a courtyard of palms.', desc: 'An emerald retreat: green marble walls, copper tapware and an antique runner, opened to a private palm courtyard under skylights.', tags: ['Emerald Retreat', 'Green marble', 'Copper tapware'], img: styleImgs[17] },
+    { name: 'Entryway · Warm Welcome', blurb: 'A slim oak console, round mirror and layered natural textures.', desc: 'An ordinary house entry transformed with a portable oak console, round mirror, lamp, runner and greenery — a warm first impression without renovation.', tags: ['Warm Welcome', 'Oak console', 'Layered textures'], img: styleImgs[15] },
+    { name: 'Entryway · Apartment Welcome', blurb: 'A walnut sideboard, sculptural bench and vintage runner.', desc: 'A compact apartment arrival zone styled with warm walnut, tactile seating, artwork and a vintage runner so the home feels inviting from the front door.', tags: ['Apartment Entry', 'Walnut sideboard', 'Vintage runner'], img: styleImgs[16] },
+    { name: 'Entryway · Collected Character', blurb: 'Art, greenery and warm timber lift a previously blank arrival.', desc: 'A practical entry composition made entirely from movable furniture, lighting, art and accessories.', tags: ['Collected Entry', 'Portable styling', 'First impression'], img: styleImgs[17] },
   ],
   services: {
     eyebrow: 'Services',
@@ -115,9 +115,9 @@ const en = {
   gallery: {
     eyebrow: 'Gallery',
     title: 'Styled, room by room',
-    intro: 'Every zone of the home, styled to sell — six distinct looks, from modern luxe to resort spa, scaled for space, light and drama.',
+    intro: 'Every zone of the home, styled to sell — from the living room to the first impression at the entry, scaled for real houses and apartments.',
     baCaption: 'Drag to compare — the same room, empty and fully styled (demo imagery)',
-    rooms: ['Living', 'Lounge', 'Dining', 'Kitchen', 'Bedroom', 'Bathroom'],
+    rooms: ['Living', 'Lounge', 'Dining', 'Kitchen', 'Bedroom', 'Entryway'],
     hint: 'Drag any photo to compare before and after styling (AI demo imagery)',
   },
   packages: {
@@ -212,9 +212,9 @@ const zh: Dict = {
     { name: '卧室 · 精品酒店', blurb: '软包背景墙与层叠床品，窗外即水景。', desc: '酒店套房式主卧：软包板背景墙、层叠床品、对称台灯，落地窗外是开阔水景。', tags: ['酒店套房', '软包背景墙', '水景落地窗'], img: styleImgs[12] },
     { name: '卧室 · 柔和素色', blurb: '亚麻层叠床品与成对暖调挂画。', desc: '柔和素色主卧：亚麻层叠床品、成对挂画与暖光台灯——安静、耐看、接受度最广。', tags: ['柔和素色', '亚麻床品', '成对挂画'], img: styleImgs[13] },
     { name: '卧室 · 焦糖海军蓝', blurb: '焦糖皮革床头墙、海军蓝床品与铁锈橘挂画。', desc: '利落的轻奢卧室：焦糖色车线皮革床头墙、海军蓝层叠床品与铁锈橘抽象画，窗外是树冠景观。', tags: ['焦糖海军蓝', '皮革床头墙', '铁锈橘点缀'], img: styleImgs[14] },
-    { name: '卫浴 · 度假水疗', blurb: '石质浴缸、木格栅顶与私属庭院。', desc: '度假酒店水疗般的松弛：木格栅天窗下的雕塑感石缸，整面玻璃引入热带绿意。', tags: ['度假水疗', '石质浴缸', '庭院绿意'], img: styleImgs[15] },
-    { name: '卫浴 · 石材极简', blurb: '洞石、拱形镜与哑光黑五金。', desc: '都会感石材卫浴：洞石表面、拱形镜与哑光黑龙头，以毛巾与绿植做点睛。', tags: ['石材极简', '洞石', '哑光黑'], img: styleImgs[16] },
-    { name: '卫浴 · 祖母绿', blurb: '绿色大理石、铜质龙头与棕榈庭院。', desc: '祖母绿的度假感：绿色大理石墙面、铜质五金与古董地毯，天窗下开向私属棕榈庭院。', tags: ['祖母绿', '绿大理石', '铜质五金'], img: styleImgs[17] },
+    { name: '玄关 · 温暖迎宾', blurb: '窄款橡木玄关桌、圆镜与自然质感软装。', desc: '普通住宅的入户区，用可搬运的橡木玄关桌、圆镜、台灯、地毯与绿植立即营造温暖第一印象。', tags: ['温暖迎宾', '橡木玄关桌', '自然层次'], img: styleImgs[15] },
+    { name: '玄关 · 公寓暖意', blurb: '胡桃木边柜、软包换鞋凳与复古地毯。', desc: '紧凑公寓入户区，通过温润胡桃木、软包换鞋凳、装饰画和复古地毯，让开门的第一眼立即有氛围。', tags: ['公寓玄关', '胡桃木边柜', '复古地毯'], img: styleImgs[16] },
+    { name: '玄关 · 集藏格调', blurb: '艺术画、绿植与温润木色点亮空白入户区。', desc: '全部由可搬动家具、灯具、艺术品与饰品完成的实用玄关布置。', tags: ['集藏玄关', '可搬软装', '第一印象'], img: styleImgs[17] },
   ],
   services: {
     eyebrow: '服务',
@@ -272,9 +272,9 @@ const zh: Dict = {
   gallery: {
     eyebrow: '作品',
     title: '逐个空间，逐一布置',
-    intro: '家的每个功能区都为成交而布置——从现代轻奢到度假水疗，六种鲜明风格，一格一景。',
+    intro: '家的每个功能区都为成交而布置——从客厅到第一眼的入户玄关，以软装让空置空间立即有温度。',
     baCaption: '拖动对比——同一房间，从空房到布置完成（示意素材）',
-    rooms: ['客厅', '会客区', '餐厅', '厨房', '卧室', '卫浴'],
+    rooms: ['客厅', '会客区', '餐厅', '厨房', '卧室', '玄关'],
     hint: '拖动任意图片，对比布置前后（AI 示意图）',
   },
   packages: {
@@ -368,9 +368,9 @@ const zhHant: Dict = {
     { name: '臥室 · 精品飯店', blurb: '軟包背景牆與層疊床品，窗外即水景。', desc: '飯店套房式主臥：軟包板背景牆、層疊床品、對稱檯燈，落地窗外是開闊水景。', tags: ['飯店套房', '軟包背景牆', '水景落地窗'], img: styleImgs[12] },
     { name: '臥室 · 柔和素色', blurb: '亞麻層疊床品與成對暖調掛畫。', desc: '柔和素色主臥：亞麻層疊床品、成對掛畫與暖光檯燈——安靜、耐看、接受度最廣。', tags: ['柔和素色', '亞麻床品', '成對掛畫'], img: styleImgs[13] },
     { name: '臥室 · 焦糖海軍藍', blurb: '焦糖皮革床頭牆、海軍藍床品與鐵鏽橘掛畫。', desc: '利落的輕奢臥室：焦糖色車線皮革床頭牆、海軍藍層疊床品與鐵鏽橘抽象畫，窗外是樹冠景觀。', tags: ['焦糖海軍藍', '皮革床頭牆', '鐵鏽橘點綴'], img: styleImgs[14] },
-    { name: '衛浴 · 度假水療', blurb: '石質浴缸、木格柵頂與私屬庭院。', desc: '度假飯店水療般的鬆弛：木格柵天窗下的雕塑感石缸，整面玻璃引入熱帶綠意。', tags: ['度假水療', '石質浴缸', '庭院綠意'], img: styleImgs[15] },
-    { name: '衛浴 · 石材極簡', blurb: '洞石、拱形鏡與啞光黑五金。', desc: '都會感石材衛浴：洞石表面、拱形鏡與啞光黑龍頭，以毛巾與綠植做點睛。', tags: ['石材極簡', '洞石', '啞光黑'], img: styleImgs[16] },
-    { name: '衛浴 · 祖母綠', blurb: '綠色大理石、銅質龍頭與棕櫚庭院。', desc: '祖母綠的度假感：綠色大理石牆面、銅質五金與古董地毯，天窗下開向私屬棕櫚庭院。', tags: ['祖母綠', '綠大理石', '銅質五金'], img: styleImgs[17] },
+    { name: '玄關 · 溫暖迎賓', blurb: '窄款橡木玄關桌、圓鏡與自然質感軟裝。', desc: '普通住宅的入戶區，用可搬運的橡木玄關桌、圓鏡、檯燈、地毯與綠植立即營造溫暖第一印象。', tags: ['溫暖迎賓', '橡木玄關桌', '自然層次'], img: styleImgs[15] },
+    { name: '玄關 · 公寓暖意', blurb: '胡桃木邊櫃、軟包換鞋凳與復古地毯。', desc: '緊湊公寓入戶區，透過溫潤胡桃木、軟包換鞋凳、裝飾畫和復古地毯，讓開門的第一眼立即有氛圍。', tags: ['公寓玄關', '胡桃木邊櫃', '復古地毯'], img: styleImgs[16] },
+    { name: '玄關 · 集藏格調', blurb: '藝術畫、綠植與溫潤木色點亮空白入戶區。', desc: '全部由可搬動家具、燈具、藝術品與飾品完成的實用玄關佈置。', tags: ['集藏玄關', '可搬軟裝', '第一印象'], img: styleImgs[17] },
   ],
   services: {
     eyebrow: '服務',
@@ -428,9 +428,9 @@ const zhHant: Dict = {
   gallery: {
     eyebrow: '作品',
     title: '逐個空間，逐一佈置',
-    intro: '家的每個機能區都為成交而佈置——從現代輕奢到度假水療，六種鮮明風格，一格一景。',
+    intro: '家的每個機能區都為成交而佈置——從客廳到第一眼的入戶玄關，以軟裝讓空置空間立即有溫度。',
     baCaption: '拖曳對比——同一房間，從空房到佈置完成（示意素材）',
-    rooms: ['客廳', '會客區', '餐廳', '廚房', '臥室', '衛浴'],
+    rooms: ['客廳', '會客區', '餐廳', '廚房', '臥室', '玄關'],
     hint: '拖曳任意圖片，對比佈置前後（AI 示意圖）',
   },
   packages: {
@@ -523,9 +523,9 @@ const ko: Dict = {
     { name: '침실 · 호텔 스위트', blurb: '패널 헤드월과 레이어드 베딩, 워터뷰.', desc: '호텔 스위트 마스터룸: 패브릭 패널 월, 레이어드 베딩, 대칭 조명, 통유리 너머의 워터뷰.', tags: ['호텔 스위트', '패널 헤드월', '워터뷰'], img: styleImgs[12] },
     { name: '침실 · 소프트 뉴트럴', blurb: '린넨 레이어드 베딩과 웜 톤 아트 페어.', desc: '소프트 뉴트럴 마스터룸: 린넨 레이어드 베딩, 아트 페어와 따뜻한 램프 빛 — 차분하고 폭넓게 어필합니다.', tags: ['소프트 뉴트럴', '린넨 레이어', '아트 페어'], img: styleImgs[13] },
     { name: '침실 · 캐러멜 & 네이비', blurb: '캐러멜 레더 헤드월, 네이비 베딩, 러스트 아트.', desc: '테일러드한 럭스 침실: 캐러멜 채널 스티치 레더 헤드월, 네이비 레이어드 베딩과 러스트 추상화, 창밖의 트리뷰.', tags: ['캐러멜 & 네이비', '레더 헤드월', '러스트 포인트'], img: styleImgs[14] },
-    { name: '욕실 · 리조트 스파', blurb: '스톤 욕조, 우드 루버 천장, 프라이빗 가든.', desc: '리조트 스파의 여유: 우드 루버 스카이라이트 아래 조각 같은 스톤 욕조, 통유리 가득한 열대 그린.', tags: ['리조트 스파', '스톤 욕조', '가든 뷰'], img: styleImgs[15] },
-    { name: '욕실 · 스톤 미니멀', blurb: '트래버틴, 아치 미러, 매트 블랙 피팅.', desc: '어반 스톤 욕실: 트래버틴 표면, 아치 미러와 매트 블랙 수전, 타월과 그린으로 마무리.', tags: ['스톤 미니멀', '트래버틴', '매트 블랙'], img: styleImgs[16] },
-    { name: '욕실 · 에메랄드 리트리트', blurb: '그린 마블, 코퍼 수전, 팜 가든 뷰.', desc: '에메랄드 리트리트: 그린 마블 월, 코퍼 수전과 앤티크 러너, 스카이라이트 아래 프라이빗 팜 가든.', tags: ['에메랄드', '그린 마블', '코퍼 수전'], img: styleImgs[17] },
+    { name: '현관 · 따뜻한 첫인상', blurb: '슬림한 오크 콘솔, 원형 거울, 자연스러운 텍스처.', desc: '평범한 주택 현관에 이동 가능한 오크 콘솔, 거울, 램프, 러너와 그린을 더해 리노베이션 없이 따뜻한 첫인상을 만들었습니다.', tags: ['따뜻한 환영', '오크 콘솔', '레이어드 텍스처'], img: styleImgs[15] },
+    { name: '현관 · 아파트 웰컴', blurb: '월넛 사이드보드, 스컬프처럴 벤치, 빈티지 러너.', desc: '컴팩트한 아파트 입구에 월넛 가구, 촉감 있는 벤치, 아트와 빈티지 러너를 더해 문을 여는 순간부터 아늑하게 연출했습니다.', tags: ['아파트 현관', '월넛 수납장', '빈티지 러너'], img: styleImgs[16] },
+    { name: '현관 · 컬렉티드 무드', blurb: '아트, 그린, 따뜻한 우드가 빈 입구를 살립니다.', desc: '이동 가능한 가구, 조명, 아트와 소품만으로 완성한 실용적인 현관 스타일링입니다.', tags: ['컬렉티드 현관', '이동식 스타일링', '첫인상'], img: styleImgs[17] },
   ],
   services: {
     eyebrow: '서비스',
@@ -583,9 +583,9 @@ const ko: Dict = {
   gallery: {
     eyebrow: '갤러리',
     title: '공간별 스타일링',
-    intro: '모던 럭스부터 리조트 스파까지 — 여섯 가지 뚜렷한 스타일로 집의 모든 공간을 스타일링합니다.',
+    intro: '거실부터 첫인상을 만드는 현관까지, 실제 주택과 아파트에 맞게 모든 공간을 스타일링합니다.',
     baCaption: '드래그로 비교해 보세요 — 같은 방, 빈집에서 스타일링 완료까지(데모 이미지)',
-    rooms: ['거실', '라운지', '다이닝', '주방', '침실', '욕실'],
+    rooms: ['거실', '라운지', '다이닝', '주방', '침실', '현관'],
     hint: '사진을 드래그해 스타일링 전후를 비교해 보세요 (AI 데모 이미지)',
   },
   packages: {

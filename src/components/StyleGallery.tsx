@@ -7,7 +7,7 @@ import { useLang } from '../i18n'
 // 六个功能区 × 两种公开风格，每格一个「空房 → 布置后」拖动对比。
 // preview 模式（首页）只显示 6 格布置后的静态方格，点击进入 /gallery。
 // 完整模式按房间分节：桌面端左侧粘性快速跳转，移动端顶部横向胶囊条。
-const ROOM_IDS = ['living', 'lounge', 'dining', 'kitchen', 'bedroom', 'bathroom']
+const ROOM_IDS = ['living', 'lounge', 'dining', 'kitchen', 'bedroom', 'entryway']
 
 export default function StyleGallery({ preview = false }: { preview?: boolean }) {
   const { t } = useLang()
@@ -137,7 +137,7 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
       <div className="min-w-0">
         <div className="space-y-16">
           {groups.map((g) => (
-            <section key={g.id} id={g.id} className="scroll-mt-28">
+            <section key={g.id} id={g.id} className="scroll-mt-36">
               <div className="mb-5 flex items-center gap-4">
                 <h2 className="font-display text-2xl">{g.label}</h2>
                 <span className="h-px flex-1 bg-oak/25" />

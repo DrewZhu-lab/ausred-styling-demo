@@ -1,7 +1,7 @@
 // 首屏背景短片素材在 public/hero.mp4（由 6 张布置后图片合成，含音乐），Hero.tsx 直接引用。
 
 // 六个功能区的「空房 → 布置后」对比图（AI 生成示意素材，同一房间同一机位；
-// 顺序固定：客厅、休闲会客区、餐厅、厨房、卧室、卫浴 — 与 i18n t.styles 同序）
+// 顺序固定：客厅、休闲会客区、餐厅、厨房、卧室、玄关 — 与 i18n t.styles 同序）
 const pair = (name: string) => ({
   before: `${import.meta.env.BASE_URL}pair-${name}-before.jpg`,
   after: `${import.meta.env.BASE_URL}pair-${name}-after.jpg`,
@@ -25,12 +25,12 @@ export const roomPairs = [
   pair('bedroom'),
   pair('bedroom2-v2'),
   pair('bedroom3'),
-  pair('bath'),
-  pair('bath2'),
-  pair('bath3'),
+  pair('entryway-warm'),
+  pair('entryway-apartment'),
+  pair('entryway-warm'),
 ]
 
-// 公开展示 12 组，仅保留两组明确豪宅风：Living · Modern Luxe、Bathroom · Resort Spa。
+// 公开展示 12 组，明确豪宅风仅保留 Living · Modern Luxe。
 export const visibleStyleIndicesByRoom = [
   [0, 1],
   [4, 5],

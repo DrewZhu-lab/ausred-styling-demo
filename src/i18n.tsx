@@ -41,7 +41,7 @@ const en = {
   styles: [
     { name: 'Living · Modern Luxe', blurb: 'A double-height marble backdrop, staged with portable velvet seating and brass accents.', desc: 'The original double-height architecture stays intact, while standard rental sofas, compact chairs, a freestanding media console, wool rug, marble-top table and brass accents create a practical Modern Luxe setting.', tags: ['Modern Luxe', 'Marble backdrop', 'Rental-ready furniture'], img: styleImgs[0] },
     { name: 'Living · Warm Minimal', blurb: 'An oak media unit, cloud sofa and olive greens.', desc: 'The broad-appeal contemporary living look: white-oak media unit, cloud-like sofa and layered warm neutrals — made for apartments and family homes.', tags: ['Warm Minimal', 'Oak media unit', 'Cloud sofa'], img: styleImgs[1] },
-    { name: 'Living · Art Deco Bold', blurb: 'Navy velvet sofas, rust accents and gallery-scale art.', desc: 'A confident colour statement: navy velvet sofas, rust and ochre art, brass and glass — for vendors who want the campaign remembered.', tags: ['Art Deco Bold', 'Navy velvet', 'Statement art'], img: styleImgs[2] },
+    { name: 'Living · Art Deco Bold', blurb: 'An ivory cloud sofa, navy accents and gallery-scale art.', desc: 'A softer Art Deco composition: an ivory cloud sofa, a single navy velvet accent chair, rust and ochre artwork, plus brass and glass details.', tags: ['Art Deco Bold', 'Cloud sofa', 'Navy accents'], img: styleImgs[2] },
     { name: 'Lounge · French Elegance', blurb: 'Panelled walls, arched windows and a marble fireplace.', desc: 'A French salon mood: wall panelling, arched steel windows, a classical fireplace and curved bouclé chairs beneath a crystal chandelier.', tags: ['French Elegance', 'Arched windows', 'Marble fireplace'], img: styleImgs[3] },
     { name: 'Lounge · Organic Modern', blurb: 'A bouclé armchair, paper floor lamp and fiddle-leaf fig.', desc: 'A quiet reading corner in organic-modern style: bouclé curves, warm timber and greenery — calm, tactile, liveable.', tags: ['Organic Modern', 'Bouclé chair', 'Reading nook'], img: styleImgs[4] },
     { name: 'Lounge · Vintage Glam', blurb: 'Plum velvet chairs, a gilt mirror and a floral rug.', desc: 'Vintage glamour in the salon: plum and mauve velvet, a gilt overmantel mirror and a floral rug — romantic and collected.', tags: ['Vintage Glam', 'Plum velvet', 'Gilt mirror'], img: styleImgs[5] },
@@ -198,7 +198,7 @@ const zh: Dict = {
   styles: [
     { name: '客厅 · 现代轻奢', blurb: '保留挑空大理石背景，以可搬运丝绒座椅与黄铜细节完成布置。', desc: '保留原有挑空与大理石建筑背景，采用标准租赁沙发、轻巧单椅、落地电视柜、羊毛地毯、大理石茶几与黄铜软装，形成可实际执行的现代轻奢方案。', tags: ['现代轻奢', '大理石背景', '可租赁家具'], img: styleImgs[0] },
     { name: '客厅 · 温暖简约', blurb: '白橡木电视柜、云朵沙发与橄榄绿点缀。', desc: '接受度最广的现代客厅：白橡木电视柜、云朵般的布艺沙发与温暖中性色层次——公寓与家庭住宅皆宜。', tags: ['温暖简约', '橡木电视柜', '云朵沙发'], img: styleImgs[1] },
-    { name: '客厅 · 摩登撞色', blurb: '海军蓝丝绒沙发与铁锈橘巨幅挂画。', desc: '自信的色彩宣言：海军蓝丝绒沙发、铁锈橘与赭石色巨幅挂画、黄铜与玻璃细节——让买家记住这一场。', tags: ['摩登撞色', '海军蓝丝绒', '巨幅挂画'], img: styleImgs[2] },
+    { name: '客厅 · 摩登撞色', blurb: '象牙白云朵沙发、海军蓝点缀与巨幅艺术画。', desc: '更柔和的摩登撞色：象牙白云朵沙发搭配单张海军蓝丝绒单椅、铁锈橘与赭石挂画，以及黄铜与玻璃细节。', tags: ['摩登撞色', '云朵沙发', '海军蓝点缀'], img: styleImgs[2] },
     { name: '会客区 · 法式优雅', blurb: '护墙板、拱形窗与大理石壁炉。', desc: '法式沙龙氛围：护墙板线条、拱形钢窗、古典壁炉与弧形羊羔绒单椅，水晶灯下安静而大气。', tags: ['法式优雅', '拱形窗', '大理石壁炉'], img: styleImgs[3] },
     { name: '会客区 · 自然有机', blurb: '羊羔绒单椅、纸艺落地灯与琴叶榕。', desc: '自然有机风的阅读角：羊羔绒曲线、温暖木质与绿植——安静、松弛、有生活的手感。', tags: ['自然有机', '羊羔绒单椅', '阅读角'], img: styleImgs[4] },
     { name: '会客区 · 复古格调', blurb: '梅子色丝绒单椅、鎏金镜与花卉地毯。', desc: '沙龙里的复古华丽：梅子紫与藕荷色丝绒、壁炉上的鎏金镜与花卉地毯——浪漫而有收藏感。', tags: ['复古格调', '梅子丝绒', '鎏金镜'], img: styleImgs[5] },
@@ -353,7 +353,7 @@ const zhHant: Dict = {
   styles: [
     { name: '客廳 · 現代輕奢', blurb: '保留挑空大理石背景，以可搬運絲絨座椅與黃銅細節完成佈置。', desc: '保留原有挑空與大理石建築背景，採用標準租賃沙發、輕巧單椅、落地電視櫃、羊毛地毯、大理石茶几與黃銅軟裝，形成可實際執行的現代輕奢方案。', tags: ['現代輕奢', '大理石背景', '可租賃家具'], img: styleImgs[0] },
     { name: '客廳 · 溫暖簡約', blurb: '白橡木電視櫃、雲朵沙發與橄欖綠點綴。', desc: '接受度最廣的現代客廳：白橡木電視櫃、雲朵般的布藝沙發與溫暖中性色層次——公寓與家庭住宅皆宜。', tags: ['溫暖簡約', '橡木電視櫃', '雲朵沙發'], img: styleImgs[1] },
-    { name: '客廳 · 摩登撞色', blurb: '海軍藍絲絨沙發與鐵鏽橘巨幅掛畫。', desc: '自信的色彩宣言：海軍藍絲絨沙發、鐵鏽橘與赭石色巨幅掛畫、黃銅與玻璃細節——讓買家記住這一場。', tags: ['摩登撞色', '海軍藍絲絨', '巨幅掛畫'], img: styleImgs[2] },
+    { name: '客廳 · 摩登撞色', blurb: '象牙白雲朵沙發、海軍藍點綴與巨幅藝術畫。', desc: '更柔和的摩登撞色：象牙白雲朵沙發搭配單張海軍藍絲絨單椅、鐵鏽橘與赭石掛畫，以及黃銅與玻璃細節。', tags: ['摩登撞色', '雲朵沙發', '海軍藍點綴'], img: styleImgs[2] },
     { name: '會客區 · 法式優雅', blurb: '護牆板、拱形窗與大理石壁爐。', desc: '法式沙龍氛圍：護牆板線條、拱形鋼窗、古典壁爐與弧形羊羔絨單椅，水晶燈下安靜而大氣。', tags: ['法式優雅', '拱形窗', '大理石壁爐'], img: styleImgs[3] },
     { name: '會客區 · 自然有機', blurb: '羊羔絨單椅、紙藝落地燈與琴葉榕。', desc: '自然有機風的閱讀角：羊羔絨曲線、溫暖木質與綠植——安靜、鬆弛、有生活的手感。', tags: ['自然有機', '羊羔絨單椅', '閱讀角'], img: styleImgs[4] },
     { name: '會客區 · 復古格調', blurb: '梅子色絲絨單椅、鎏金鏡與花卉地毯。', desc: '沙龍裡的復古華麗：梅子紫與藕荷色絲絨、壁爐上的鎏金鏡與花卉地毯——浪漫而有收藏感。', tags: ['復古格調', '梅子絲絨', '鎏金鏡'], img: styleImgs[5] },
@@ -507,7 +507,7 @@ const ko: Dict = {
   styles: [
     { name: '거실 · 모던 럭스', blurb: '복층 마블 배경은 유지하고 이동 가능한 벨벳 좌석과 브라스 소품으로 스타일링했습니다.', desc: '기존 복층 구조와 마블 벽은 그대로 두고, 표준 렌탈 소파, 소형 암체어, 독립형 TV 콘솔, 울 러그, 대리석 상판 테이블과 브라스 소품으로 실제 설치 가능한 모던 럭스를 완성했습니다.', tags: ['모던 럭스', '마블 배경', '렌탈 가구'], img: styleImgs[0] },
     { name: '거실 · 웜 미니멀', blurb: '오크 TV장, 클라우드 소파, 올리브 그린 포인트.', desc: '가장 폭넓게 어필하는 컨템퍼러리 거실: 화이트 오크 TV장, 구름 같은 소파와 웜 뉴트럴 레이어 — 아파트와 주택 모두에 어울립니다.', tags: ['웜 미니멀', '오크 TV장', '클라우드 소파'], img: styleImgs[1] },
-    { name: '거실 · 아트 데코 볼드', blurb: '네이비 벨벳 소파와 러스트 톤 대형 아트.', desc: '자신감 있는 컬러 선언: 네이비 벨벳 소파, 러스트·오커 대형 아트, 브라스와 글라스 디테일 — 기억에 남는 캠페인을 위해.', tags: ['아트 데코 볼드', '네이비 벨벳', '대형 아트'], img: styleImgs[2] },
+    { name: '거실 · 아트 데코 볼드', blurb: '아이보리 클라우드 소파, 네이비 포인트와 대형 아트.', desc: '한층 부드러운 아트 데코 구성: 아이보리 클라우드 소파에 네이비 벨벳 암체어 하나, 러스트와 오커 아트, 브라스와 글라스 디테일을 더했습니다.', tags: ['아트 데코 볼드', '클라우드 소파', '네이비 포인트'], img: styleImgs[2] },
     { name: '라운지 · 프렌치 엘레강스', blurb: '패널 월, 아치 창, 마블 벽난로.', desc: '프렌치 살롱 무드: 월 패널링, 아치형 창, 클래식 벽난로와 커브드 부클레 체어 — 샹들리에 아래의 조용한 그랜저.', tags: ['프렌치 엘레강스', '아치 창', '마블 벽난로'], img: styleImgs[3] },
     { name: '라운지 · 오가닉 모던', blurb: '부클레 암체어, 페이퍼 램프, 휘커스 그린.', desc: '오가닉 모던 리딩 코너: 부클레 커브, 따뜻한 우드, 그린 — 조용하고 편안한 촉감의 공간.', tags: ['오가닉 모던', '부클레 체어', '리딩 누크'], img: styleImgs[4] },
     { name: '라운지 · 빈티지 글램', blurb: '플럼 벨벳 체어, 길트 미러, 플로럴 러그.', desc: '살롱의 빈티지 글래머: 플럼과 모브 벨벳, 벽난로 위 길트 미러와 플로럴 러그 — 로맨틱한 컬렉티드 무드.', tags: ['빈티지 글램', '플럼 벨벳', '길트 미러'], img: styleImgs[5] },

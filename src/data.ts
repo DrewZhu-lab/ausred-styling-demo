@@ -12,7 +12,7 @@ const pair = (name: string) => ({
 export const roomPairs = [
   pair('living-v3'),
   pair('living2'),
-  pair('living3'),
+  pair('living3-v2'),
   pair('lounge'),
   pair('lounge2'),
   pair('lounge3'),

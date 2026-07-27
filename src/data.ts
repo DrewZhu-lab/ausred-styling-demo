@@ -8,25 +8,25 @@ const pair = (name: string) => ({
 })
 
 // 18 对素材按房间分组保存，与 t.styles 同序。
-// 每个房间公开 3 组：近景普通、中景、远景豪华法式。
+// 每个房间公开 3 组：普通近景、另一个房间的法式近景、豪华法式远景。
 export const roomPairs = [
-  pair('living-v3'),
+  pair('living-reference-close'),
   pair('living2-v2'),
   pair('living-grand-french'),
   pair('lounge-grand-french'),
   pair('lounge2-v2'),
-  pair('lounge3-v2'),
+  pair('lounge-reference-close'),
   pair('dining-grand-french'),
   pair('dining2-v2'),
-  pair('dining3-v2'),
+  pair('dining-reference-close'),
   pair('kitchen-grand-french'),
   pair('kitchen2-v2'),
-  pair('kitchen3'),
+  pair('kitchen-reference-close'),
   pair('bedroom-grand-french'),
   pair('bedroom2-v2'),
-  pair('bedroom3-v2'),
+  pair('bedroom-reference-close'),
   pair('entryway-warm'),
-  pair('entryway-apartment'),
+  pair('entryway-reference-close'),
   pair('entryway-grand-french'),
 ]
 

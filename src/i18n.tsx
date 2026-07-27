@@ -39,7 +39,7 @@ const en = {
     explore: 'Explore every room',
   },
   styles: [
-    { name: 'Living · Modern Luxe', blurb: 'A double-height marble media wall and curved velvet sofas.', desc: 'A double-height void, a marble feature wall with mounted screen, curved velvet sofas and brass detailing — immediate wow for prestige campaigns.', tags: ['Modern Luxe', 'Marble media wall', 'Velvet & brass'], img: styleImgs[0] },
+    { name: 'Living · Modern Luxe', blurb: 'Curved velvet, a marble-topped table and brass details in a real family living room.', desc: 'Modern luxe delivered entirely through removable styling: a curved velvet sofa, marble-topped coffee table, wool rug, framed art and brass accents in an ordinary Sydney living room.', tags: ['Modern Luxe', 'Velvet sofa', 'Movable styling'], img: styleImgs[0] },
     { name: 'Living · Warm Minimal', blurb: 'An oak media unit, cloud sofa and olive greens.', desc: 'The broad-appeal contemporary living look: white-oak media unit, cloud-like sofa and layered warm neutrals — made for apartments and family homes.', tags: ['Warm Minimal', 'Oak media unit', 'Cloud sofa'], img: styleImgs[1] },
     { name: 'Living · Art Deco Bold', blurb: 'Navy velvet sofas, rust accents and gallery-scale art.', desc: 'A confident colour statement: navy velvet sofas, rust and ochre art, brass and glass — for vendors who want the campaign remembered.', tags: ['Art Deco Bold', 'Navy velvet', 'Statement art'], img: styleImgs[2] },
     { name: 'Lounge · French Elegance', blurb: 'Panelled walls, arched windows and a marble fireplace.', desc: 'A French salon mood: wall panelling, arched steel windows, a classical fireplace and curved bouclé chairs beneath a crystal chandelier.', tags: ['French Elegance', 'Arched windows', 'Marble fireplace'], img: styleImgs[3] },
@@ -196,7 +196,7 @@ const zh: Dict = {
     explore: '探索每一个空间',
   },
   styles: [
-    { name: '客厅 · 现代轻奢', blurb: '挑空大理石电视墙与弧形丝绒沙发。', desc: '挑空客厅、大理石主题墙与壁挂大屏、弧形丝绒沙发配黄铜细节——为高端房源带来第一眼的震撼。', tags: ['现代轻奢', '大理石电视墙', '丝绒黄铜'], img: styleImgs[0] },
+    { name: '客厅 · 现代轻奢', blurb: '弧形丝绒、家具级大理石与黄铜细节，落地于真实住宅客厅。', desc: '保留普通住宅的墙面与层高，只通过可搬运的弧形丝绒沙发、大理石茶几、羊毛地毯、装框艺术与黄铜细节营造现代轻奢。', tags: ['现代轻奢', '丝绒沙发', '可搬运软装'], img: styleImgs[0] },
     { name: '客厅 · 温暖简约', blurb: '白橡木电视柜、云朵沙发与橄榄绿点缀。', desc: '接受度最广的现代客厅：白橡木电视柜、云朵般的布艺沙发与温暖中性色层次——公寓与家庭住宅皆宜。', tags: ['温暖简约', '橡木电视柜', '云朵沙发'], img: styleImgs[1] },
     { name: '客厅 · 摩登撞色', blurb: '海军蓝丝绒沙发与铁锈橘巨幅挂画。', desc: '自信的色彩宣言：海军蓝丝绒沙发、铁锈橘与赭石色巨幅挂画、黄铜与玻璃细节——让买家记住这一场。', tags: ['摩登撞色', '海军蓝丝绒', '巨幅挂画'], img: styleImgs[2] },
     { name: '会客区 · 法式优雅', blurb: '护墙板、拱形窗与大理石壁炉。', desc: '法式沙龙氛围：护墙板线条、拱形钢窗、古典壁炉与弧形羊羔绒单椅，水晶灯下安静而大气。', tags: ['法式优雅', '拱形窗', '大理石壁炉'], img: styleImgs[3] },
@@ -351,7 +351,7 @@ const zhHant: Dict = {
     explore: '探索每一個空間',
   },
   styles: [
-    { name: '客廳 · 現代輕奢', blurb: '挑空大理石電視牆與弧形絲絨沙發。', desc: '挑空客廳、大理石主題牆與壁掛大屏、弧形絲絨沙發配黃銅細節——為高端房源帶來第一眼的震撼。', tags: ['現代輕奢', '大理石電視牆', '絲絨黃銅'], img: styleImgs[0] },
+    { name: '客廳 · 現代輕奢', blurb: '弧形絲絨、家具級大理石與黃銅細節，落地於真實住宅客廳。', desc: '保留普通住宅的牆面與層高，只透過可搬運的弧形絲絨沙發、大理石茶几、羊毛地毯、裝框藝術與黃銅細節營造現代輕奢。', tags: ['現代輕奢', '絲絨沙發', '可搬運軟裝'], img: styleImgs[0] },
     { name: '客廳 · 溫暖簡約', blurb: '白橡木電視櫃、雲朵沙發與橄欖綠點綴。', desc: '接受度最廣的現代客廳：白橡木電視櫃、雲朵般的布藝沙發與溫暖中性色層次——公寓與家庭住宅皆宜。', tags: ['溫暖簡約', '橡木電視櫃', '雲朵沙發'], img: styleImgs[1] },
     { name: '客廳 · 摩登撞色', blurb: '海軍藍絲絨沙發與鐵鏽橘巨幅掛畫。', desc: '自信的色彩宣言：海軍藍絲絨沙發、鐵鏽橘與赭石色巨幅掛畫、黃銅與玻璃細節——讓買家記住這一場。', tags: ['摩登撞色', '海軍藍絲絨', '巨幅掛畫'], img: styleImgs[2] },
     { name: '會客區 · 法式優雅', blurb: '護牆板、拱形窗與大理石壁爐。', desc: '法式沙龍氛圍：護牆板線條、拱形鋼窗、古典壁爐與弧形羊羔絨單椅，水晶燈下安靜而大氣。', tags: ['法式優雅', '拱形窗', '大理石壁爐'], img: styleImgs[3] },
@@ -505,7 +505,7 @@ const ko: Dict = {
     explore: '모든 공간 보기',
   },
   styles: [
-    { name: '거실 · 모던 럭스', blurb: '복층 높이의 마블 미디어 월과 커브드 벨벳 소파.', desc: '복층 보이드, 마블 피처 월과 대형 스크린, 커브드 벨벳 소파와 브라스 디테일 — 프리미엄 매물을 위한 첫눈의 임팩트.', tags: ['모던 럭스', '마블 미디어 월', '벨벳·브라스'], img: styleImgs[0] },
+    { name: '거실 · 모던 럭스', blurb: '실제 주택 거실에 커브드 벨벳, 대리석 상판과 브라스 디테일을 더했습니다.', desc: '일반적인 시드니 주택의 벽과 층고는 그대로 두고, 커브드 벨벳 소파, 대리석 상판 테이블, 울 러그, 액자와 브라스 소품 등 이동 가능한 스타일링만으로 완성한 모던 럭스입니다.', tags: ['모던 럭스', '벨벳 소파', '이동식 스타일링'], img: styleImgs[0] },
     { name: '거실 · 웜 미니멀', blurb: '오크 TV장, 클라우드 소파, 올리브 그린 포인트.', desc: '가장 폭넓게 어필하는 컨템퍼러리 거실: 화이트 오크 TV장, 구름 같은 소파와 웜 뉴트럴 레이어 — 아파트와 주택 모두에 어울립니다.', tags: ['웜 미니멀', '오크 TV장', '클라우드 소파'], img: styleImgs[1] },
     { name: '거실 · 아트 데코 볼드', blurb: '네이비 벨벳 소파와 러스트 톤 대형 아트.', desc: '자신감 있는 컬러 선언: 네이비 벨벳 소파, 러스트·오커 대형 아트, 브라스와 글라스 디테일 — 기억에 남는 캠페인을 위해.', tags: ['아트 데코 볼드', '네이비 벨벳', '대형 아트'], img: styleImgs[2] },
     { name: '라운지 · 프렌치 엘레강스', blurb: '패널 월, 아치 창, 마블 벽난로.', desc: '프렌치 살롱 무드: 월 패널링, 아치형 창, 클래식 벽난로와 커브드 부클레 체어 — 샹들리에 아래의 조용한 그랜저.', tags: ['프렌치 엘레강스', '아치 창', '마블 벽난로'], img: styleImgs[3] },

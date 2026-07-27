@@ -84,10 +84,10 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
             <button
               key={g.id}
               onClick={() => jump(g.id)}
-              className={`whitespace-nowrap rounded-full border px-4 py-1.5 text-sm transition-colors ${
+              className={`whitespace-nowrap rounded-full border px-4.5 py-2 text-[15px] transition-colors ${
                 active === g.id
-                  ? 'border-brand bg-brand text-white'
-                  : 'border-ink/20 text-ink/70'
+                  ? 'border-brand bg-brand font-medium text-white'
+                  : 'border-ink/25 text-ink/70'
               }`}
             >
               {g.label}
@@ -96,31 +96,31 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
         </div>
       </div>
 
-      {/* 宽屏：左侧书签圆点导航（固定在屏幕左缘，dot + 房间名常显） */}
+      {/* 宽屏：左侧书签圆点导航（固定在屏幕左缘，衬底卡片 + 大号 dot + 房间名常显） */}
       <nav
         aria-label="Room bookmarks"
-        className="fixed left-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-3.5 min-[1400px]:flex"
+        className="fixed left-7 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-5 rounded-2xl border border-oak/15 bg-linen/90 px-5 py-6 shadow-lg backdrop-blur min-[1400px]:flex"
       >
         {groups.map((g) => (
           <button
             key={g.id}
             onClick={() => jump(g.id)}
-            className="group flex items-center gap-2.5"
+            className="group flex items-center gap-3.5"
           >
-            <span className="flex h-4 w-4 items-center justify-center">
+            <span className="flex h-5 w-5 items-center justify-center">
               <span
                 className={`rounded-full transition-all duration-300 ${
                   active === g.id
-                    ? 'h-3.5 w-3.5 bg-brand shadow'
-                    : 'h-2 w-2 bg-ink/25 group-hover:h-3 group-hover:w-3 group-hover:bg-ink/50'
+                    ? 'h-4.5 w-4.5 bg-brand shadow ring-4 ring-brand/20'
+                    : 'h-3 w-3 bg-ink/25 group-hover:h-4 group-hover:w-4 group-hover:bg-ink/50'
                 }`}
               />
             </span>
             <span
-              className={`whitespace-nowrap text-xs transition-colors ${
+              className={`whitespace-nowrap text-[15px] transition-colors ${
                 active === g.id
-                  ? 'font-medium text-brand-dark'
-                  : 'text-ink/45 group-hover:text-ink/75'
+                  ? 'font-semibold text-brand-dark'
+                  : 'text-ink/55 group-hover:text-ink/85'
               }`}
             >
               {g.label}

@@ -10,7 +10,7 @@ const pair = (name: string) => ({
 // 18 对，按房间分组（每行 3 格 = 同一空间的三种风格），与 t.styles 同序：
 // 无后缀=大宅奢华系，2=温暖简约系，3=撞色个性系。
 export const roomPairs = [
-  pair('living-v2'),
+  pair('living-v3'),
   pair('living2'),
   pair('living3'),
   pair('lounge'),

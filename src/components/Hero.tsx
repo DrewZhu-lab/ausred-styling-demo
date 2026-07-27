@@ -79,7 +79,7 @@ export default function Hero() {
         >
           {t.hero.eyebrow}
         </p>
-        <h1 className="font-display hidden max-w-4xl text-5xl leading-[1.08] md:block md:text-7xl">
+        <h1 className="font-display hidden max-w-4xl text-[3.125rem] leading-[1.08] md:block md:text-[4.875rem]">
           {SLOGAN_LINES.map((line, i) => (
             <span key={line} className="block overflow-hidden py-[0.06em]">
               <span

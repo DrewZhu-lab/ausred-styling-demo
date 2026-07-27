@@ -8,12 +8,17 @@
   --color-sand: #dbcbb0;
   --color-linen: #f7efe2;
   --color-oak: #a0825f;
-  --font-display: "Fraunces", "Noto Sans SC", Georgia, serif;
-  --font-sans: "Nunito Sans", "Noto Sans SC", system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", "Noto Sans SC", Georgia, serif;
+  --font-sans: "Inter", "Noto Sans SC", system-ui, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Cormorant 笔画纤细，标题统一用 Medium 字重（方案 E 规格） */
+.font-display {
+  font-weight: 500;
 }
 
 body {

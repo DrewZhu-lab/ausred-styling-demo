@@ -12,7 +12,7 @@ export default function Services() {
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-brand">
             {t.services.eyebrow}
           </p>
-          <h2 className="font-display text-3xl md:text-[2.5rem]">{t.services.title}</h2>
+          <h2 className="font-display text-3xl md:text-[2.75rem]">{t.services.title}</h2>
           <p className="mt-4 text-ink/60">{t.services.intro}</p>
         </div>
 

@@ -15,7 +15,7 @@ export const roomPairs = [
   pair('living3-v3'),
   pair('lounge'),
   pair('lounge2'),
-  pair('lounge3'),
+  pair('lounge3-v2'),
   pair('dining'),
   pair('dining2'),
   pair('dining3'),

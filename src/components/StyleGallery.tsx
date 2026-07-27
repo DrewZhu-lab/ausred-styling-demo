@@ -164,7 +164,6 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
             </section>
           ))}
         </div>
-        <p className="mt-12 text-center text-xs text-ink/45">{t.gallery.hint}</p>
       </div>
     </div>
   )

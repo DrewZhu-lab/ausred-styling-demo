@@ -2,7 +2,7 @@
 
 // 六个功能区的「空房 → 布置后」对比图（AI 生成示意素材，同一房间同一机位；
 // 顺序固定：客厅、休闲会客区、餐厅、厨房、卧室、玄关 — 与 i18n t.styles 同序）
-const galleryAssetVersion = '20260727-4'
+const galleryAssetVersion = '20260727-5'
 
 const pair = (name: string) => ({
   before: `${import.meta.env.BASE_URL}pair-${name}-before.jpg?v=${galleryAssetVersion}`,
@@ -10,7 +10,7 @@ const pair = (name: string) => ({
 })
 
 // 18 对素材按房间分组保存，与 t.styles 同序。
-// 每个房间公开 3 组：普通近景、另一个房间的法式近景、豪华法式远景。
+// 每个房间公开 3 组：普通近景、不同房间的中景、相对精致的远景。
 export const roomPairs = [
   pair('living-reference-close'),
   pair('living2-v2'),
@@ -32,7 +32,7 @@ export const roomPairs = [
   pair('entryway-grand-french'),
 ]
 
-// 公开展示 18 组：由近到远、由普通到豪华法式。
+// 公开展示 18 组：由近到远、由普通到精致。
 export const visibleStyleIndicesByRoom = [
   [1, 0, 2],
   [4, 5, 3],

@@ -1,15 +1,38 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import BeforeAfter from './BeforeAfter'
 import { roomPairs } from '../data'
 import { useLang } from '../i18n'
 
-// 六个功能区，每格一个「空房 → 布置后」拖动对比。
-// preview 模式（首页）只显示布置后的静态方格，点击进入 /gallery。
+// 六个功能区 × 三种风格，每格一个「空房 → 布置后」拖动对比。
+// preview 模式（首页）只显示 6 格布置后的静态方格，点击进入 /gallery。
+// 完整模式按房间分节：桌面端左侧粘性快速跳转，移动端顶部横向胶囊条。
+const ROOM_IDS = ['living', 'lounge', 'dining', 'kitchen', 'bedroom', 'bathroom']
+
 export default function StyleGallery({ preview = false }: { preview?: boolean }) {
   const { t } = useLang()
+  const [active, setActive] = useState(ROOM_IDS[0])
 
   // 首页预览 6 格：六个空间轮流展示三个系列（豪宅/温馨公寓/撞色）
   const PREVIEW_IDX = [0, 4, 8, 9, 13, 17]
+
+  // 滚动监听：高亮当前所在房间（仅完整模式）
+  useEffect(() => {
+    if (preview) return
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActive(e.target.id)
+        })
+      },
+      { rootMargin: '-25% 0px -65% 0px' }
+    )
+    ROOM_IDS.forEach((id) => {
+      const el = document.getElementById(id)
+      if (el) obs.observe(el)
+    })
+    return () => obs.disconnect()
+  }, [preview])
 
   if (preview) {
     return (
@@ -37,25 +60,108 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
     )
   }
 
+  // HashRouter 下不能用 #anchor 链接（会被当作路由），改为程序化滚动
+  const jump = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  // 按房间分组：每组 3 格（与 roomPairs / t.styles 同序）
+  const groups = ROOM_IDS.map((id, g) => ({
+    id,
+    label: t.gallery.rooms[g],
+    items: [0, 1, 2].map((k) => {
+      const i = g * 3 + k
+      return { pair: roomPairs[i], style: t.styles[i] }
+    }),
+  }))
+
   return (
-    <>
-      <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-        {roomPairs.map((p, i) => (
-          <div key={p.after}>
-            <BeforeAfter before={p.before} after={p.after} />
-            <h3 className="font-display mt-3.5 text-xl">{t.styles[i].name}</h3>
-            <p className="mt-1.5 text-sm leading-relaxed text-ink/65">{t.styles[i].blurb}</p>
-            <div className="mt-3 flex flex-wrap gap-1.5">
-              {t.styles[i].tags.map((tag) => (
-                <span key={tag} className="rounded-full bg-sand/60 px-2.5 py-1 text-xs text-ink/70">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
+    <div>
+      {/* 窄屏：顶部横向胶囊跳转条 */}
+      <div className="sticky top-16 z-30 -mx-6 mb-8 overflow-x-auto bg-cream/95 px-6 py-3 backdrop-blur min-[1400px]:hidden">
+        <div className="flex w-max gap-2">
+          {groups.map((g) => (
+            <button
+              key={g.id}
+              onClick={() => jump(g.id)}
+              className={`whitespace-nowrap rounded-full border px-4 py-1.5 text-sm transition-colors ${
+                active === g.id
+                  ? 'border-brand bg-brand text-white'
+                  : 'border-ink/20 text-ink/70'
+              }`}
+            >
+              {g.label}
+            </button>
+          ))}
+        </div>
       </div>
-      <p className="mt-10 text-center text-xs text-ink/45">{t.gallery.hint}</p>
-    </>
+
+      {/* 宽屏：左侧书签圆点导航（固定在屏幕左缘，dot + 房间名常显） */}
+      <nav
+        aria-label="Room bookmarks"
+        className="fixed left-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-3.5 min-[1400px]:flex"
+      >
+        {groups.map((g) => (
+          <button
+            key={g.id}
+            onClick={() => jump(g.id)}
+            className="group flex items-center gap-2.5"
+          >
+            <span className="flex h-4 w-4 items-center justify-center">
+              <span
+                className={`rounded-full transition-all duration-300 ${
+                  active === g.id
+                    ? 'h-3.5 w-3.5 bg-brand shadow'
+                    : 'h-2 w-2 bg-ink/25 group-hover:h-3 group-hover:w-3 group-hover:bg-ink/50'
+                }`}
+              />
+            </span>
+            <span
+              className={`whitespace-nowrap text-xs transition-colors ${
+                active === g.id
+                  ? 'font-medium text-brand-dark'
+                  : 'text-ink/45 group-hover:text-ink/75'
+              }`}
+            >
+              {g.label}
+            </span>
+          </button>
+        ))}
+      </nav>
+
+      {/* 分组内容 */}
+      <div className="min-w-0">
+        <div className="space-y-16">
+          {groups.map((g) => (
+            <section key={g.id} id={g.id} className="scroll-mt-28">
+              <div className="mb-5 flex items-center gap-4">
+                <h2 className="font-display text-2xl">{g.label}</h2>
+                <span className="h-px flex-1 bg-oak/25" />
+              </div>
+              <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-3">
+                {g.items.map(({ pair: p, style: s }) => (
+                  <div key={p.after}>
+                    <BeforeAfter before={p.before} after={p.after} />
+                    <h3 className="font-display mt-3.5 text-xl">{s.name}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-ink/65">{s.blurb}</p>
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {s.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full bg-sand/60 px-2.5 py-1 text-xs text-ink/70"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+        <p className="mt-12 text-center text-xs text-ink/45">{t.gallery.hint}</p>
+      </div>
+    </div>
   )
 }

@@ -8,21 +8,21 @@ const pair = (name: string) => ({
 })
 
 // 18 对素材按房间分组保存，与 t.styles 同序。
-// 每个房间公开 3 组：现有两组 + 最后一列法式软装。
+// 每个房间公开 3 组：近景普通、中景、远景豪华法式。
 export const roomPairs = [
   pair('living-v3'),
   pair('living2-v2'),
-  pair('living-french'),
-  pair('lounge-french'),
+  pair('living-grand-french'),
+  pair('lounge-grand-french'),
   pair('lounge2-v2'),
   pair('lounge3-v2'),
-  pair('dining-french'),
+  pair('dining-grand-french'),
   pair('dining2-v2'),
   pair('dining3-v2'),
-  pair('kitchen-french'),
+  pair('kitchen-grand-french'),
   pair('kitchen2-v2'),
   pair('kitchen3'),
-  pair('bedroom-french'),
+  pair('bedroom-grand-french'),
   pair('bedroom2-v2'),
   pair('bedroom3-v2'),
   pair('entryway-warm'),
@@ -30,9 +30,9 @@ export const roomPairs = [
   pair('entryway-french'),
 ]
 
-// 公开展示 18 组，每行最后一列固定为法式。
+// 公开展示 18 组：由近到远、由普通到豪华法式。
 export const visibleStyleIndicesByRoom = [
-  [0, 1, 2],
+  [1, 0, 2],
   [4, 5, 3],
   [7, 8, 6],
   [10, 11, 9],

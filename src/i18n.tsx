@@ -56,7 +56,7 @@ const en = {
     { name: 'Bedroom · Caramel & Navy', blurb: 'A freestanding caramel bed, navy layers and portable table lamps.', desc: 'A practical tailored bedroom: a freestanding caramel leather bed, independent walnut bedside tables, plug-in linen-shade lamps, navy bedding and rust artwork against treetop views.', tags: ['Caramel & Navy', 'Freestanding bed', 'Table lamps'], img: styleImgs[14] },
     { name: 'Entryway · Warm Welcome', blurb: 'A slim oak console, round mirror and layered natural textures.', desc: 'An ordinary house entry transformed with a portable oak console, round mirror, lamp, runner and greenery — a warm first impression without renovation.', tags: ['Warm Welcome', 'Oak console', 'Layered textures'], img: styleImgs[15] },
     { name: 'Entryway · Apartment Welcome', blurb: 'A walnut sideboard, sculptural bench and vintage runner.', desc: 'A compact apartment arrival zone styled with warm walnut, tactile seating, artwork and a vintage runner so the home feels inviting from the front door.', tags: ['Apartment Entry', 'Walnut sideboard', 'Vintage runner'], img: styleImgs[16] },
-    { name: 'Entryway · French Welcome', blurb: 'A walnut console, gilt mirror and dusty-blue vintage runner.', desc: 'A memorable French first impression created with a slim portable console, leaning gilt mirror, plug-in lamp, petite bench, ceramics, artwork and runner.', tags: ['French Welcome', 'Walnut console', 'Vintage runner'], img: styleImgs[17] },
+    { name: 'Entryway · French Foyer Luxe', blurb: 'A gilt mirror, walnut console and blue-grey Persian runner.', desc: 'A wide French foyer completes the progression from ordinary to grand, with a formal walnut console, antique gilt mirror, sculptural bench, crystal chandelier and a long view through the residence.', tags: ['French Foyer', 'Gilt mirror', 'Grand arrival'], img: styleImgs[17] },
   ],
   services: {
     eyebrow: 'Services',
@@ -214,7 +214,7 @@ const zh: Dict = {
     { name: '卧室 · 焦糖海军蓝', blurb: '独立焦糖色软包床、海军蓝床品与可搬台灯。', desc: '可实际落地的利落卧室：独立焦糖色皮革软包床、胡桃木床头柜、插电式亚麻灯罩台灯、海军蓝层叠床品与铁锈橘挂画。', tags: ['焦糖海军蓝', '独立软包床', '床头台灯'], img: styleImgs[14] },
     { name: '玄关 · 温暖迎宾', blurb: '窄款橡木玄关桌、圆镜与自然质感软装。', desc: '普通住宅的入户区，用可搬运的橡木玄关桌、圆镜、台灯、地毯与绿植立即营造温暖第一印象。', tags: ['温暖迎宾', '橡木玄关桌', '自然层次'], img: styleImgs[15] },
     { name: '玄关 · 公寓暖意', blurb: '胡桃木边柜、软包换鞋凳与复古地毯。', desc: '紧凑公寓入户区，通过温润胡桃木、软包换鞋凳、装饰画和复古地毯，让开门的第一眼立即有氛围。', tags: ['公寓玄关', '胡桃木边柜', '复古地毯'], img: styleImgs[16] },
-    { name: '玄关 · 法式迎宾', blurb: '胡桃木玄关桌、金框镜与灰蓝复古地毯。', desc: '由窄款可搬玄关桌、落地金框镜、插电台灯、小型换鞋凳、陶器、艺术画与地毯营造难忘的法式第一印象。', tags: ['法式迎宾', '胡桃木玄关桌', '复古地毯'], img: styleImgs[17] },
+    { name: '玄关 · 豪华法式迎宾', blurb: '金框镜、胡桃木玄关桌与灰蓝波斯地毯。', desc: '以开阔远景完成从普通到豪华的递进：正式胡桃木玄关桌、古董金框镜、造型换鞋凳、水晶吊灯与贯穿住宅的深远视线。', tags: ['豪华法式玄关', '金框镜', '大宅迎宾'], img: styleImgs[17] },
   ],
   services: {
     eyebrow: '服务',
@@ -370,7 +370,7 @@ const zhHant: Dict = {
     { name: '臥室 · 焦糖海軍藍', blurb: '獨立焦糖色軟包床、海軍藍床品與可搬檯燈。', desc: '可實際落地的利落臥室：獨立焦糖色皮革軟包床、胡桃木床頭櫃、插電式亞麻燈罩檯燈、海軍藍層疊床品與鐵鏽橘掛畫。', tags: ['焦糖海軍藍', '獨立軟包床', '床頭檯燈'], img: styleImgs[14] },
     { name: '玄關 · 溫暖迎賓', blurb: '窄款橡木玄關桌、圓鏡與自然質感軟裝。', desc: '普通住宅的入戶區，用可搬運的橡木玄關桌、圓鏡、檯燈、地毯與綠植立即營造溫暖第一印象。', tags: ['溫暖迎賓', '橡木玄關桌', '自然層次'], img: styleImgs[15] },
     { name: '玄關 · 公寓暖意', blurb: '胡桃木邊櫃、軟包換鞋凳與復古地毯。', desc: '緊湊公寓入戶區，透過溫潤胡桃木、軟包換鞋凳、裝飾畫和復古地毯，讓開門的第一眼立即有氛圍。', tags: ['公寓玄關', '胡桃木邊櫃', '復古地毯'], img: styleImgs[16] },
-    { name: '玄關 · 法式迎賓', blurb: '胡桃木玄關桌、金框鏡與灰藍復古地毯。', desc: '由窄款可搬玄關桌、落地金框鏡、插電檯燈、小型換鞋凳、陶器、藝術畫與地毯營造難忘的法式第一印象。', tags: ['法式迎賓', '胡桃木玄關桌', '復古地毯'], img: styleImgs[17] },
+    { name: '玄關 · 豪華法式迎賓', blurb: '金框鏡、胡桃木玄關桌與灰藍波斯地毯。', desc: '以開闊遠景完成從普通到豪華的遞進：正式胡桃木玄關桌、古董金框鏡、造型換鞋凳、水晶吊燈與貫穿住宅的深遠視線。', tags: ['豪華法式玄關', '金框鏡', '大宅迎賓'], img: styleImgs[17] },
   ],
   services: {
     eyebrow: '服務',
@@ -525,7 +525,7 @@ const ko: Dict = {
     { name: '침실 · 캐러멜 & 네이비', blurb: '독립형 캐러멜 업홀스터드 베드, 네이비 베딩, 테이블 램프.', desc: '실제 스타일링이 가능한 침실: 독립형 캐러멜 레더 베드, 월넛 베드사이드 테이블, 플러그인 린넨 셰이드 램프, 네이비 레이어드 베딩과 러스트 아트.', tags: ['캐러멜 & 네이비', '독립형 베드', '테이블 램프'], img: styleImgs[14] },
     { name: '현관 · 따뜻한 첫인상', blurb: '슬림한 오크 콘솔, 원형 거울, 자연스러운 텍스처.', desc: '평범한 주택 현관에 이동 가능한 오크 콘솔, 거울, 램프, 러너와 그린을 더해 리노베이션 없이 따뜻한 첫인상을 만들었습니다.', tags: ['따뜻한 환영', '오크 콘솔', '레이어드 텍스처'], img: styleImgs[15] },
     { name: '현관 · 아파트 웰컴', blurb: '월넛 사이드보드, 스컬프처럴 벤치, 빈티지 러너.', desc: '컴팩트한 아파트 입구에 월넛 가구, 촉감 있는 벤치, 아트와 빈티지 러너를 더해 문을 여는 순간부터 아늑하게 연출했습니다.', tags: ['아파트 현관', '월넛 수납장', '빈티지 러너'], img: styleImgs[16] },
-    { name: '현관 · 프렌치 웰컴', blurb: '월넛 콘솔, 길트 미러, 더스티 블루 빈티지 러너.', desc: '슬림한 이동식 콘솔, 기대어 둔 길트 미러, 플러그인 램프, 작은 벤치, 도자기, 아트와 러너로 완성한 프렌치 첫인상.', tags: ['프렌치 웰컴', '월넛 콘솔', '빈티지 러너'], img: styleImgs[17] },
+    { name: '현관 · 프렌치 포이어 럭스', blurb: '길트 미러, 월넛 콘솔, 블루그레이 페르시안 러너.', desc: '넓은 원경으로 평범함에서 그랜드 프렌치까지의 흐름을 완성합니다. 포멀한 월넛 콘솔, 앤티크 길트 미러, 조형 벤치, 크리스털 샹들리에와 깊은 복도 전망을 담았습니다.', tags: ['프렌치 포이어', '길트 미러', '그랜드 웰컴'], img: styleImgs[17] },
   ],
   services: {
     eyebrow: '서비스',

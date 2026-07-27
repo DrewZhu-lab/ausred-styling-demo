@@ -27,7 +27,7 @@ export const roomPairs = [
   pair('bedroom3-v2'),
   pair('entryway-warm'),
   pair('entryway-apartment'),
-  pair('entryway-french'),
+  pair('entryway-grand-french'),
 ]
 
 // 公开展示 18 组：由近到远、由普通到豪华法式。

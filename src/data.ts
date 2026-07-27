@@ -7,8 +7,8 @@ const pair = (name: string) => ({
   after: `${import.meta.env.BASE_URL}pair-${name}-after.jpg`,
 })
 
-// 18 对，按房间分组（每行 3 格 = 同一空间的三种风格），与 t.styles 同序：
-// 无后缀=大宅奢华系，2=温暖简约系，3=撞色个性系。
+// 18 对源素材仍按房间分组保存，与 t.styles 同序。
+// 公开页面通过 visibleStyleIndicesByRoom 收敛为每个房间 2 组。
 export const roomPairs = [
   pair('living-v3'),
   pair('living2-v2'),
@@ -18,7 +18,7 @@ export const roomPairs = [
   pair('lounge3-v2'),
   pair('dining'),
   pair('dining2-v2'),
-  pair('dining3'),
+  pair('dining3-v2'),
   pair('kitchen'),
   pair('kitchen2-v2'),
   pair('kitchen3'),
@@ -29,6 +29,18 @@ export const roomPairs = [
   pair('bath2'),
   pair('bath3'),
 ]
+
+// 公开展示 12 组，仅保留两组明确豪宅风：Living · Modern Luxe、Bathroom · Resort Spa。
+export const visibleStyleIndicesByRoom = [
+  [0, 1],
+  [4, 5],
+  [7, 8],
+  [10, 11],
+  [13, 14],
+  [15, 16],
+]
+
+export const visibleStyleIndices = visibleStyleIndicesByRoom.flat()
 
 // 各功能区代表图 = 布置后（供 i18n 与 MoodBoard 使用）
 export const styleImgs = roomPairs.map((p) => p.after)

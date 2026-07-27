@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import BeforeAfter from './BeforeAfter'
-import { roomPairs } from '../data'
+import { roomPairs, visibleStyleIndicesByRoom } from '../data'
 import { useLang } from '../i18n'
 
-// 六个功能区 × 三种风格，每格一个「空房 → 布置后」拖动对比。
+// 六个功能区 × 两种公开风格，每格一个「空房 → 布置后」拖动对比。
 // preview 模式（首页）只显示 6 格布置后的静态方格，点击进入 /gallery。
 // 完整模式按房间分节：桌面端左侧粘性快速跳转，移动端顶部横向胶囊条。
 const ROOM_IDS = ['living', 'lounge', 'dining', 'kitchen', 'bedroom', 'bathroom']
@@ -13,8 +13,8 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
   const { t } = useLang()
   const [active, setActive] = useState(ROOM_IDS[0])
 
-  // 首页预览 6 格：六个空间轮流展示三个系列（豪宅/温馨公寓/撞色）
-  const PREVIEW_IDX = [0, 4, 8, 9, 13, 17]
+  // 首页预览每个房间 1 格，仅保留 Living 一组豪宅作为首屏代表。
+  const PREVIEW_IDX = [0, 4, 8, 10, 13, 16]
 
   // 滚动监听：高亮当前所在房间（仅完整模式）
   useEffect(() => {
@@ -65,12 +65,11 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
-  // 按房间分组：每组 3 格（与 roomPairs / t.styles 同序）
+  // 按房间分组：每组 2 格，源素材索引仍与 roomPairs / t.styles 对齐。
   const groups = ROOM_IDS.map((id, g) => ({
     id,
     label: t.gallery.rooms[g],
-    items: [0, 1, 2].map((k) => {
-      const i = g * 3 + k
+    items: visibleStyleIndicesByRoom[g].map((i) => {
       return { pair: roomPairs[i], style: t.styles[i] }
     }),
   }))
@@ -96,37 +95,42 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
         </div>
       </div>
 
-      {/* 宽屏：左侧书签圆点导航（固定在屏幕左缘，衬底卡片 + 大号 dot + 房间名常显） */}
+      {/* 宽屏：左侧书签导航——品牌菱形 ◆ + 细竖线的编辑感设计 */}
       <nav
         aria-label="Room bookmarks"
-        className="fixed left-7 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-5 rounded-2xl border border-oak/15 bg-linen/90 px-5 py-6 shadow-lg backdrop-blur min-[1400px]:flex"
+        className="fixed left-10 top-1/2 z-40 hidden -translate-y-1/2 min-[1400px]:block"
       >
-        {groups.map((g) => (
-          <button
-            key={g.id}
-            onClick={() => jump(g.id)}
-            className="group flex items-center gap-3.5"
-          >
-            <span className="flex h-5 w-5 items-center justify-center">
-              <span
-                className={`rounded-full transition-all duration-300 ${
-                  active === g.id
-                    ? 'h-4.5 w-4.5 bg-brand shadow ring-4 ring-brand/20'
-                    : 'h-3 w-3 bg-ink/25 group-hover:h-4 group-hover:w-4 group-hover:bg-ink/50'
-                }`}
-              />
-            </span>
-            <span
-              className={`whitespace-nowrap text-[15px] transition-colors ${
-                active === g.id
-                  ? 'font-semibold text-brand-dark'
-                  : 'text-ink/55 group-hover:text-ink/85'
-              }`}
-            >
-              {g.label}
-            </span>
-          </button>
-        ))}
+        <div className="relative">
+          <span className="absolute bottom-3 left-[5.5px] top-3 w-px bg-oak/30" aria-hidden />
+          <div className="flex flex-col gap-7">
+            {groups.map((g) => (
+              <button
+                key={g.id}
+                onClick={() => jump(g.id)}
+                className="group flex items-center gap-4"
+              >
+                <span className="relative z-10 flex h-3 w-3 items-center justify-center">
+                  <span
+                    className={`block rotate-45 transition-all duration-300 ${
+                      active === g.id
+                        ? 'h-3 w-3 bg-brand shadow-sm'
+                        : 'h-2 w-2 border border-oak/70 bg-cream group-hover:bg-oak/40'
+                    }`}
+                  />
+                </span>
+                <span
+                  className={`font-display whitespace-nowrap text-[17px] tracking-wide transition-colors ${
+                    active === g.id
+                      ? 'text-ink'
+                      : 'text-ink/45 group-hover:text-ink/80'
+                  }`}
+                >
+                  {g.label}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
       </nav>
 
       {/* 分组内容 */}
@@ -138,7 +142,7 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
                 <h2 className="font-display text-2xl">{g.label}</h2>
                 <span className="h-px flex-1 bg-oak/25" />
               </div>
-              <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-3">
+              <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2">
                 {g.items.map(({ pair: p, style: s }) => (
                   <div key={p.after}>
                     <BeforeAfter before={p.before} after={p.after} />

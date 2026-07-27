@@ -4,7 +4,7 @@ import BeforeAfter from './BeforeAfter'
 import { roomPairs, visibleStyleIndicesByRoom } from '../data'
 import { useLang } from '../i18n'
 
-// 六个功能区 × 两种公开风格，每格一个「空房 → 布置后」拖动对比。
+// 六个功能区 × 三种公开风格，每行最后一列固定为法式。
 // preview 模式（首页）只显示 6 格布置后的静态方格，点击进入 /gallery。
 // 完整模式按房间分节：桌面端左侧粘性快速跳转，移动端顶部横向胶囊条。
 const ROOM_IDS = ['living', 'lounge', 'dining', 'kitchen', 'bedroom', 'entryway']
@@ -65,7 +65,7 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
-  // 按房间分组：每组 2 格，源素材索引仍与 roomPairs / t.styles 对齐。
+  // 按房间分组：每组 3 格，源素材索引仍与 roomPairs / t.styles 对齐。
   const groups = ROOM_IDS.map((id, g) => ({
     id,
     label: t.gallery.rooms[g],
@@ -142,7 +142,7 @@ export default function StyleGallery({ preview = false }: { preview?: boolean })
                 <h2 className="font-display text-2xl">{g.label}</h2>
                 <span className="h-px flex-1 bg-oak/25" />
               </div>
-              <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2">
+              <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-3">
                 {g.items.map(({ pair: p, style: s }) => (
                   <div key={p.after}>
                     <BeforeAfter before={p.before} after={p.after} />

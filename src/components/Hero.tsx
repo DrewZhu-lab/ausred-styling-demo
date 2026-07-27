@@ -67,7 +67,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-ink/15 to-ink/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/45 via-ink/10 to-ink/5" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
         {/* 移动端首屏不显示大片文字：眉题/标语/副文案仅 md 以上展示 */}
@@ -129,15 +129,15 @@ export default function Hero() {
       {/* 品牌开场动画 */}
       {stage < 2 && (
         <div
-          className={`absolute inset-0 z-30 flex flex-col items-center justify-center bg-ink transition-transform duration-[850ms] ease-[cubic-bezier(0.76,0,0.24,1)] ${
+          className={`absolute inset-0 z-30 flex flex-col items-center justify-center bg-cream transition-transform duration-[850ms] ease-[cubic-bezier(0.76,0,0.24,1)] ${
             stage >= 1 ? '-translate-y-full' : ''
           }`}
         >
-          <p className="animate-intro-logo font-display text-5xl text-cream md:text-6xl">
+          <p className="animate-intro-logo font-display text-5xl text-ink md:text-6xl">
             Vale&amp;Co.
           </p>
           <p
-            className="animate-fade-in-slow mt-4 text-[11px] font-medium uppercase tracking-[0.6em] text-cream/70"
+            className="animate-fade-in-slow mt-4 text-[11px] font-medium uppercase tracking-[0.6em] text-ink/55"
             style={{ animationDelay: '0.9s' }}
           >
             Styling

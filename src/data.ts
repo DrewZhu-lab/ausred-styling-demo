@@ -7,37 +7,37 @@ const pair = (name: string) => ({
   after: `${import.meta.env.BASE_URL}pair-${name}-after.jpg`,
 })
 
-// 18 对源素材仍按房间分组保存，与 t.styles 同序。
-// 公开页面通过 visibleStyleIndicesByRoom 收敛为每个房间 2 组。
+// 18 对素材按房间分组保存，与 t.styles 同序。
+// 每个房间公开 3 组：现有两组 + 最后一列法式软装。
 export const roomPairs = [
   pair('living-v3'),
   pair('living2-v2'),
-  pair('living3-v3'),
-  pair('lounge'),
+  pair('living-french'),
+  pair('lounge-french'),
   pair('lounge2-v2'),
   pair('lounge3-v2'),
-  pair('dining'),
+  pair('dining-french'),
   pair('dining2-v2'),
   pair('dining3-v2'),
-  pair('kitchen'),
+  pair('kitchen-french'),
   pair('kitchen2-v2'),
   pair('kitchen3'),
-  pair('bedroom'),
+  pair('bedroom-french'),
   pair('bedroom2-v2'),
   pair('bedroom3-v2'),
   pair('entryway-warm'),
   pair('entryway-apartment'),
-  pair('entryway-warm'),
+  pair('entryway-french'),
 ]
 
-// 公开展示 12 组，明确豪宅风仅保留 Living · Modern Luxe。
+// 公开展示 18 组，每行最后一列固定为法式。
 export const visibleStyleIndicesByRoom = [
-  [0, 1],
-  [4, 5],
-  [7, 8],
-  [10, 11],
-  [13, 14],
-  [15, 16],
+  [0, 1, 2],
+  [4, 5, 3],
+  [7, 8, 6],
+  [10, 11, 9],
+  [13, 14, 12],
+  [15, 16, 17],
 ]
 
 export const visibleStyleIndices = visibleStyleIndicesByRoom.flat()

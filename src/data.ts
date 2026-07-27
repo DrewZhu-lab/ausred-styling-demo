@@ -2,7 +2,7 @@
 
 // 六个功能区的「空房 → 布置后」对比图（AI 生成示意素材，同一房间同一机位；
 // 顺序固定：客厅、休闲会客区、餐厅、厨房、卧室、玄关 — 与 i18n t.styles 同序）
-const galleryAssetVersion = '20260727-3'
+const galleryAssetVersion = '20260727-4'
 
 const pair = (name: string) => ({
   before: `${import.meta.env.BASE_URL}pair-${name}-before.jpg?v=${galleryAssetVersion}`,

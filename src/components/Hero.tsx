@@ -67,7 +67,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/25 to-ink/15" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-ink/15 to-ink/10" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
         {/* 移动端首屏不显示大片文字：眉题/标语/副文案仅 md 以上展示 */}

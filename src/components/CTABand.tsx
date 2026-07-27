@@ -4,8 +4,8 @@ import { useLang } from '../i18n'
 export default function CTABand() {
   const { t } = useLang()
   return (
-    <section className="bg-ink py-20 text-center text-cream">
-      <p className="px-6 text-xs font-medium uppercase tracking-[0.35em] text-cream/60">
+    <section className="bg-brand py-20 text-center text-white">
+      <p className="px-6 text-xs font-medium uppercase tracking-[0.35em] text-white/70">
         Style Spaces. Inspire Living. Elevate Value.
       </p>
       <h2 className="font-display mt-4 px-6 text-3xl md:text-4xl">
@@ -13,7 +13,7 @@ export default function CTABand() {
       </h2>
       <Link
         to="/contact"
-        className="mt-8 inline-block rounded-full bg-brand px-8 py-3 font-medium text-white transition-colors hover:bg-brand-dark"
+        className="mt-8 inline-block rounded-full bg-white px-8 py-3 font-medium text-brand-dark transition-colors hover:bg-linen"
       >
         {t.cta.button}
       </Link>

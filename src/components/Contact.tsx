@@ -9,6 +9,27 @@ export default function Contact() {
   const { t } = useLang()
   const [sent, setSent] = useState(false)
 
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    const formData = new FormData(event.currentTarget)
+    const value = (name: string) => String(formData.get(name) ?? '').trim()
+    const subject = `Vale & Co. website enquiry - ${value('service')}`
+    const body = [
+      `Name: ${value('name')}`,
+      `Phone: ${value('phone')}`,
+      `Email: ${value('email')}`,
+      `Property address: ${value('address') || 'Not provided'}`,
+      `Service: ${value('service')}`,
+      '',
+      'Property details:',
+      value('message') || 'Not provided',
+    ].join('\n')
+
+    setSent(true)
+    window.location.href = `mailto:admin@valeandco.com.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  }
+
   return (
     <section id="contact" className="py-24">
       <div className="mx-auto max-w-6xl px-6">
@@ -25,25 +46,41 @@ export default function Contact() {
             <div className="flex flex-col items-center justify-center rounded-2xl bg-sand/60 p-10 text-center">
               <p className="font-display text-2xl">{t.contact.thanks}</p>
               <p className="mt-2 max-w-sm text-ink/70">{t.contact.received}</p>
+              <a
+                href="mailto:admin@valeandco.com.au"
+                className="mt-5 text-sm font-medium text-brand underline decoration-brand/30 underline-offset-4 hover:text-brand-dark"
+              >
+                admin@valeandco.com.au
+              </a>
             </div>
           ) : (
             <form
-              onSubmit={(e) => {
-                e.preventDefault()
-                setSent(true)
-              }}
+              onSubmit={handleSubmit}
               className="grid gap-4 sm:grid-cols-2"
             >
-              <input required placeholder={t.contact.name} className={inputClass} />
-              <input required type="tel" placeholder={t.contact.phone} className={inputClass} />
+              <input required name="name" aria-label={t.contact.name} placeholder={t.contact.name} className={inputClass} />
+              <input required name="phone" aria-label={t.contact.phone} type="tel" placeholder={t.contact.phone} className={inputClass} />
               <input
                 required
+                name="email"
+                aria-label={t.contact.email}
                 type="email"
                 placeholder={t.contact.email}
                 className={`${inputClass} sm:col-span-2`}
               />
-              <input placeholder={t.contact.address} className={`${inputClass} sm:col-span-2`} />
-              <select required defaultValue="" className={`${inputClass} sm:col-span-2 text-ink/70`}>
+              <input
+                name="address"
+                aria-label={t.contact.address}
+                placeholder={t.contact.address}
+                className={`${inputClass} sm:col-span-2`}
+              />
+              <select
+                required
+                name="service"
+                aria-label={t.contact.service}
+                defaultValue=""
+                className={`${inputClass} sm:col-span-2 text-ink/70`}
+              >
                 <option value="" disabled>
                   {t.contact.service}
                 </option>
@@ -52,6 +89,8 @@ export default function Contact() {
                 ))}
               </select>
               <textarea
+                name="message"
+                aria-label={t.contact.message}
                 rows={4}
                 placeholder={t.contact.message}
                 className={`${inputClass} resize-none sm:col-span-2`}

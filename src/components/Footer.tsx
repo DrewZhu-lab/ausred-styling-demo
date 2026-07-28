@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { brandLogo } from '../brand'
 import { useLang } from '../i18n'
 
 export default function Footer() {
@@ -19,12 +20,12 @@ export default function Footer() {
         </p>
       </div>
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-10 text-center text-sm">
-        <p className="leading-none text-cream">
-          <span className="font-display text-xl tracking-[0.06em]">Vale&amp;Co.</span>
-          <span className="mt-1 block text-[9px] font-medium tracking-[0.5em] text-cream/60">
-            PROPERTY STYLING
-          </span>
-        </p>
+        <img
+          src={brandLogo}
+          alt="Vale & Co. Property Styling"
+          className="w-40 max-w-[70vw] border border-cream/10"
+          loading="lazy"
+        />
         <nav className="flex flex-wrap justify-center gap-6">
           {links.map((l) => (
             <Link key={l.to} to={l.to} className="hover:text-cream">

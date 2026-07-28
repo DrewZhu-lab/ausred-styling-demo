@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { brandLogo } from '../brand'
 import { useLang } from '../i18n'
 
 const SLOGAN_LINES = ['Style Spaces.', 'Inspire Living.', 'Elevate Value.']
@@ -133,15 +134,11 @@ export default function Hero() {
             stage >= 1 ? '-translate-y-full' : ''
           }`}
         >
-          <p className="animate-intro-logo font-display text-5xl text-ink md:text-6xl">
-            Vale&amp;Co.
-          </p>
-          <p
-            className="animate-fade-in-slow mt-4 text-[11px] font-medium uppercase tracking-[0.6em] text-ink/55"
-            style={{ animationDelay: '0.9s' }}
-          >
-            Property Styling
-          </p>
+          <img
+            src={brandLogo}
+            alt="Vale & Co. Property Styling"
+            className="animate-intro-logo w-[min(78vw,360px)]"
+          />
         </div>
       )}
     </section>

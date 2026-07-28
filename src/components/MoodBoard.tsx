@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react'
+import { brandLogo } from '../brand'
 import { styleImgs } from '../data'
 import { useLang } from '../i18n'
 
@@ -39,9 +40,12 @@ export default function MoodBoard() {
         {/* 原生拼贴：模拟一份 Vale&Co. 提案 mood board */}
         <div className="rounded-2xl border border-oak/15 bg-linen p-5 shadow-md">
           <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-            <p className="leading-none">
-              <span className="font-display text-lg tracking-[0.06em]">Vale&amp;Co.</span>
-            </p>
+            <img
+              src={brandLogo}
+              alt="Vale & Co. Property Styling"
+              className="h-14 w-14 object-cover"
+              loading="lazy"
+            />
             <p className="text-[10px] font-medium uppercase tracking-[0.25em] text-ink/45">
               {t.moodboard.boardLabel}
             </p>

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { ChevronDown, Globe, Menu, X } from 'lucide-react'
+import { brandLogo } from '../brand'
 import { langOptions, useLang } from '../i18n'
 
 export default function Nav() {
@@ -47,16 +48,13 @@ export default function Nav() {
         solid ? 'bg-cream/95 shadow-sm backdrop-blur' : 'bg-transparent'
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className={`leading-none ${solid ? 'text-ink' : 'text-white'}`}>
-          <span className="font-display text-2xl tracking-[0.06em]">Vale&amp;Co.</span>
-          <span
-            className={`mt-1 block text-center text-[9px] font-medium tracking-[0.5em] ${
-              solid ? 'text-ink/60' : 'text-white/75'
-            }`}
-          >
-            PROPERTY STYLING
-          </span>
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-1">
+        <Link to="/" aria-label="Vale & Co. Property Styling" className="shrink-0">
+          <img
+            src={brandLogo}
+            alt="Vale & Co. Property Styling"
+            className={`h-16 w-16 object-cover sm:h-20 sm:w-20 ${solid ? '' : 'shadow-sm'}`}
+          />
         </Link>
 
         <div className="hidden items-center gap-6 lg:flex">

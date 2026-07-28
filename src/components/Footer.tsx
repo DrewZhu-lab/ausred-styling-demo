@@ -1,10 +1,8 @@
-import { Link, useLocation } from 'react-router-dom'
-import { brandLogo } from '../brand'
+import { Link } from 'react-router-dom'
 import { useLang } from '../i18n'
 
 export default function Footer() {
   const { t } = useLang()
-  const { pathname } = useLocation()
   const links = [
     { to: '/services', label: t.nav.services },
     { to: '/packages', label: t.nav.packages },
@@ -21,14 +19,6 @@ export default function Footer() {
         </p>
       </div>
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-10 text-center text-sm">
-        {pathname !== '/' && (
-          <img
-            src={brandLogo}
-            alt="Vale & Co. Property Styling"
-            className="w-40 max-w-[70vw] border border-cream/10"
-            loading="lazy"
-          />
-        )}
         <nav className="flex flex-wrap justify-center gap-6">
           {links.map((l) => (
             <Link key={l.to} to={l.to} className="hover:text-cream">

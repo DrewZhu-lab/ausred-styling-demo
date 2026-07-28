@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { ChevronDown, Globe, Menu, X } from 'lucide-react'
-import { brandLogo } from '../brand'
 import { langOptions, useLang } from '../i18n'
 
 export default function Nav() {
@@ -49,17 +48,7 @@ export default function Nav() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-1">
-        {pathname === '/' ? (
-          <span className="h-16 w-16 shrink-0 sm:h-20 sm:w-20" aria-hidden="true" />
-        ) : (
-          <Link to="/" aria-label="Vale & Co. Property Styling" className="shrink-0">
-            <img
-              src={brandLogo}
-              alt="Vale & Co. Property Styling"
-              className="h-16 w-16 object-cover sm:h-20 sm:w-20"
-            />
-          </Link>
-        )}
+        <span className="h-16 w-16 shrink-0 sm:h-20 sm:w-20" aria-hidden="true" />
 
         <div className="hidden items-center gap-6 lg:flex">
           {links.map((l) => (

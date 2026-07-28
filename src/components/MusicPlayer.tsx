@@ -70,30 +70,16 @@ export default function MusicPlayer() {
   return (
     <>
       <audio ref={audioRef} src={`${BASE}hero-music.mp3`} autoPlay loop preload="auto" playsInline />
-      {muted ? (
-        <button
-          data-sound-toggle
-          onClick={toggle}
-          aria-label="Play background music"
-          className="fixed bottom-6 right-5 z-40 flex items-center gap-2.5 rounded-full bg-white/95 px-5 py-3 font-medium text-ink shadow-xl transition-transform hover:scale-105 md:right-8 md:bottom-8"
-        >
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-brand" />
-          </span>
-          <VolumeX size={18} />
-          {t.hero.musicOn}
-        </button>
-      ) : (
-        <button
-          data-sound-toggle
-          onClick={toggle}
-          aria-label="Mute background music"
-          className="fixed bottom-6 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-ink shadow-lg transition-transform hover:scale-105 md:right-8 md:bottom-8"
-        >
-          <Volume2 size={20} />
-        </button>
-      )}
+      <button
+        data-sound-toggle
+        onClick={toggle}
+        aria-label={muted ? t.hero.musicOn : t.hero.musicOff}
+        aria-pressed={!muted}
+        className="fixed right-4 top-24 z-40 flex h-11 items-center gap-2 rounded-full bg-brand px-4 text-sm font-medium text-white shadow-xl ring-1 ring-white/30 transition-colors hover:bg-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand md:right-8 md:top-28"
+      >
+        {muted ? <Volume2 size={18} /> : <VolumeX size={18} />}
+        <span>{muted ? t.hero.musicOn : t.hero.musicOff}</span>
+      </button>
     </>
   )
 }

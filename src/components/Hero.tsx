@@ -1,14 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { brandLogo } from '../brand'
 import { useLang } from '../i18n'
 
 const SLOGAN_LINES = ['Style Spaces.', 'Inspire Living.', 'Elevate Value.']
-const INTRO_LIFT_MS = 2300
-const INTRO_DONE_MS = 3150
-
-// 开场动画每个会话只播一次（切换页面回来不重播）
-let introPlayed = false
 
 const BASE = import.meta.env.BASE_URL
 
@@ -19,21 +13,6 @@ export default function Hero() {
   const [portrait] = useState(
     () => window.matchMedia('(max-width: 767px), (orientation: portrait)').matches
   )
-  // 0: intro overlay showing · 1: overlay lifting, content revealing · 2: done
-  const [stage, setStage] = useState(introPlayed ? 2 : 0)
-
-  useEffect(() => {
-    if (introPlayed) return
-    const t1 = window.setTimeout(() => setStage(1), INTRO_LIFT_MS)
-    const t2 = window.setTimeout(() => {
-      setStage(2)
-      introPlayed = true
-    }, INTRO_DONE_MS)
-    return () => {
-      clearTimeout(t1)
-      clearTimeout(t2)
-    }
-  }, [])
 
   // 静音视频始终允许自动播放；个别浏览器在资源加载竞态、省电模式或标签页
   // 由后台转前台时会暂停，这里做三重兜底：挂载即播、回到前台续播、首次点击触发。
@@ -73,9 +52,7 @@ export default function Hero() {
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
         {/* 移动端首屏不显示大片文字：眉题/标语/副文案仅 md 以上展示 */}
         <p
-          className={`mb-5 hidden text-xs font-medium uppercase tracking-[0.35em] text-white/80 md:block ${
-            stage >= 1 ? 'animate-fade-in-slow' : 'opacity-0'
-          }`}
+          className="mb-5 hidden animate-fade-in-slow text-xs font-medium uppercase tracking-[0.35em] text-white/80 md:block"
           style={{ animationDelay: '0.1s' }}
         >
           {t.hero.eyebrow}
@@ -84,7 +61,7 @@ export default function Hero() {
           {SLOGAN_LINES.map((line, i) => (
             <span key={line} className="block overflow-hidden py-[0.06em]">
               <span
-                className={`block ${stage >= 1 ? 'animate-rise' : 'opacity-0'}`}
+                className="block animate-rise"
                 style={{ animationDelay: `${0.15 + i * 0.18}s` }}
               >
                 {line}
@@ -93,15 +70,13 @@ export default function Hero() {
           ))}
         </h1>
         <p
-          className={`mt-6 hidden max-w-xl text-white/85 md:block ${stage >= 1 ? 'animate-fade-in-slow' : 'opacity-0'}`}
+          className="mt-6 hidden max-w-xl animate-fade-in-slow text-white/85 md:block"
           style={{ animationDelay: '1s' }}
         >
           {t.hero.sub}
         </p>
         <div
-          className={`mt-9 flex flex-wrap justify-center gap-4 ${
-            stage >= 1 ? 'animate-fade-in-slow' : 'opacity-0'
-          }`}
+          className="mt-9 flex animate-fade-in-slow flex-wrap justify-center gap-4"
           style={{ animationDelay: '1.25s' }}
         >
           <Link
@@ -120,27 +95,10 @@ export default function Hero() {
       </div>
 
       {/* 滚动提示 */}
-      {stage >= 2 && (
-        <div className="absolute bottom-8 left-8 z-10 hidden flex-col items-center gap-2 text-white/70 md:flex">
-          <span className="text-[9px] font-medium uppercase tracking-[0.35em]">{t.hero.scroll}</span>
-          <span className="animate-scroll-cue block h-8 w-px bg-white/60" />
-        </div>
-      )}
-
-      {/* 品牌开场动画 */}
-      {stage < 2 && (
-        <div
-          className={`absolute inset-0 z-30 flex flex-col items-center justify-center bg-cream transition-transform duration-[850ms] ease-[cubic-bezier(0.76,0,0.24,1)] ${
-            stage >= 1 ? '-translate-y-full' : ''
-          }`}
-        >
-          <img
-            src={brandLogo}
-            alt="Vale & Co. Property Styling"
-            className="animate-intro-logo w-[min(78vw,360px)]"
-          />
-        </div>
-      )}
+      <div className="absolute bottom-8 left-8 z-10 hidden flex-col items-center gap-2 text-white/70 md:flex">
+        <span className="text-[9px] font-medium uppercase tracking-[0.35em]">{t.hero.scroll}</span>
+        <span className="animate-scroll-cue block h-8 w-px bg-white/60" />
+      </div>
     </section>
   )
 }

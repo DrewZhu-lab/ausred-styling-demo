@@ -55,7 +55,7 @@ export default function Nav() {
               solid ? 'text-ink/60' : 'text-white/75'
             }`}
           >
-            STYLING
+            PROPERTY STYLING
           </span>
         </Link>
 

@@ -22,7 +22,7 @@ export default function Footer() {
         <p className="leading-none text-cream">
           <span className="font-display text-xl tracking-[0.06em]">Vale&amp;Co.</span>
           <span className="mt-1 block text-[9px] font-medium tracking-[0.5em] text-cream/60">
-            STYLING
+            PROPERTY STYLING
           </span>
         </p>
         <nav className="flex flex-wrap justify-center gap-6">

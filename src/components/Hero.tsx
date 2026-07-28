@@ -140,7 +140,7 @@ export default function Hero() {
             className="animate-fade-in-slow mt-4 text-[11px] font-medium uppercase tracking-[0.6em] text-ink/55"
             style={{ animationDelay: '0.9s' }}
           >
-            Styling
+            Property Styling
           </p>
         </div>
       )}

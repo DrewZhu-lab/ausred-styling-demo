@@ -48,7 +48,20 @@ export default function Nav() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-1">
-        <span className="h-16 w-16 shrink-0 sm:h-20 sm:w-20" aria-hidden="true" />
+        <Link
+          to="/"
+          aria-label="Vale & Co. Property Styling home"
+          className={`flex h-16 w-[126px] shrink-0 flex-col justify-center transition-colors sm:h-20 sm:w-[150px] ${
+            solid ? 'text-ink' : 'text-white drop-shadow-sm'
+          }`}
+        >
+          <span className="font-display text-[1.65rem] leading-[0.8] sm:text-[1.9rem]">
+            Vale&amp;Co.
+          </span>
+          <span className="mt-2 text-[0.43rem] font-medium uppercase leading-none sm:text-[0.5rem]">
+            Property Styling
+          </span>
+        </Link>
 
         <div className="hidden items-center gap-6 lg:flex">
           {links.map((l) => (

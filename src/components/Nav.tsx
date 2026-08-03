@@ -51,7 +51,7 @@ export default function Nav() {
         <Link
           to="/"
           aria-label="Vale & Co. Property Styling home"
-          className={`flex h-16 w-[126px] shrink-0 flex-col justify-center transition-colors sm:h-20 sm:w-[150px] ${
+          className={`flex h-16 w-[126px] shrink-0 flex-col items-center justify-center text-center transition-colors sm:h-20 sm:w-[150px] ${
             solid ? 'text-ink' : 'text-white drop-shadow-sm'
           }`}
         >
